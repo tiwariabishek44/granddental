@@ -108,9 +108,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 transition-all duration-300">
       {/* 1. Top Pre-Header Bar */}
       <div
-        className={`bg-[#5C205E] text-white text-xs sm:text-[13px] transition-all duration-300 font-medium ${
-          isScrolled ? "max-h-0 opacity-0 overflow-hidden py-0" : "max-h-12 opacity-100 py-2 border-b border-white/10"
-        }`}
+        className={`bg-[#5C205E] text-white text-xs sm:text-[13px] transition-all duration-300 font-medium ${isScrolled ? "max-h-0 opacity-0 overflow-hidden py-0" : "max-h-12 opacity-100 py-2 border-b border-white/10"
+          }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Left: Accreditations & Hours */}
@@ -154,23 +153,30 @@ export default function Header() {
 
       {/* 2. Main Navigation Bar */}
       <div
-        className={`bg-white/95 backdrop-blur-md text-gray-900 border-b border-gray-100 transition-all duration-300 ${
-          isScrolled ? "shadow-md bg-white/95 py-1" : "shadow-2xs py-2"
-        }`}
+        className={`bg-white/95 backdrop-blur-md text-gray-900 border-b border-gray-100 transition-all duration-300 ${isScrolled ? "shadow-md bg-white/95 py-1" : "shadow-2xs py-2"
+          }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-18">
             {/* Brand Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative h-11 w-36 sm:h-12 sm:w-44 flex items-center">
+              <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0 flex items-center justify-center rounded-full border border-[#F3D5F9] bg-white p-0.5 shadow-2xs">
                 <Image
                   src="/logo.png"
-                  alt="Grand Dental Clinic"
-                  width={176}
+                  alt="Grand Dental Clinic Logo"
+                  width={48}
                   height={48}
-                  className="object-contain max-h-11 sm:max-h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
+                  className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
                   priority
                 />
+              </div>
+              <div className="flex flex-col justify-center">
+                <span className="font-serif text-2xl sm:text-[26px] font-normal tracking-tight text-gray-950 leading-none group-hover:text-[#5C205E] transition-colors">
+                  Grand Dental
+                </span>
+                <span className="text-[9.5px] sm:text-[10px] font-bold tracking-[0.22em] uppercase text-[#74267A] mt-1 font-sans">
+                  Clinic &bull; Kathmandu
+                </span>
               </div>
             </Link>
 
@@ -178,22 +184,20 @@ export default function Header() {
             <nav className="hidden lg:flex items-center gap-1.5 xl:gap-3 text-[15px] xl:text-base font-medium">
               <Link
                 href="/"
-                className={`px-4 py-2 rounded-full transition-all duration-200 ${
-                  isActive("/")
-                    ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                    : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
-                }`}
+                className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/")
+                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
+                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  }`}
               >
                 Home
               </Link>
 
               <Link
                 href="/about"
-                className={`px-4 py-2 rounded-full transition-all duration-200 ${
-                  isActive("/about")
-                    ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                    : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
-                }`}
+                className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/about")
+                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
+                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  }`}
               >
                 About
               </Link>
@@ -206,28 +210,25 @@ export default function Header() {
               >
                 <button
                   type="button"
-                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer ${
-                    isServicesOpen || pathname.startsWith("/services")
-                      ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                      : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
-                  }`}
+                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer ${isServicesOpen || pathname.startsWith("/services")
+                    ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
+                    : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                    }`}
                   aria-expanded={isServicesOpen}
                 >
                   <span>Services</span>
                   <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      isServicesOpen ? "rotate-180 text-[#74267A]" : "text-gray-400"
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180 text-[#74267A]" : "text-gray-400"
+                      }`}
                   />
                 </button>
 
                 {/* Mega-Menu Dropdown Card */}
                 <div
-                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[780px] transition-all duration-200 z-50 ${
-                    isServicesOpen
-                      ? "opacity-100 translate-y-0 pointer-events-auto visible"
-                      : "opacity-0 translate-y-2 pointer-events-none invisible"
-                  }`}
+                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[780px] transition-all duration-200 z-50 ${isServicesOpen
+                    ? "opacity-100 translate-y-0 pointer-events-auto visible"
+                    : "opacity-0 translate-y-2 pointer-events-none invisible"
+                    }`}
                 >
                   <div className="rounded-3xl bg-white p-6 shadow-xl border border-gray-100 grid grid-cols-12 gap-6">
                     {/* Left: Featured Clinical Services Grid (8 Cols) */}
@@ -313,22 +314,20 @@ export default function Header() {
 
               <Link
                 href="/doctors"
-                className={`px-4 py-2 rounded-full transition-all duration-200 ${
-                  isActive("/doctors")
-                    ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                    : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
-                }`}
+                className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/doctors")
+                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
+                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  }`}
               >
                 Our Doctors
               </Link>
 
               <Link
                 href="/contact"
-                className={`px-4 py-2 rounded-full transition-all duration-200 ${
-                  isActive("/contact")
-                    ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                    : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
-                }`}
+                className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/contact")
+                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
+                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  }`}
               >
                 Contact
               </Link>
@@ -384,9 +383,8 @@ export default function Header() {
 
       {/* 3. Mobile Slide-Over Drawer */}
       <div
-        className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${
-          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+          }`}
       >
         {/* Backdrop */}
         <div
@@ -396,9 +394,8 @@ export default function Header() {
 
         {/* Drawer Container */}
         <div
-          className={`absolute top-0 right-0 h-full w-full max-w-[340px] bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col justify-between p-6 ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 h-full w-full max-w-[340px] bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col justify-between p-6 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="space-y-6 overflow-y-auto pr-1">
             {/* Drawer Header */}
@@ -425,11 +422,10 @@ export default function Header() {
               <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${
-                  isActive("/")
-                    ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
-                    : "text-gray-800 hover:bg-gray-50"
-                }`}
+                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/")
+                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  : "text-gray-800 hover:bg-gray-50"
+                  }`}
               >
                 <span>Home</span>
               </Link>
@@ -437,13 +433,12 @@ export default function Header() {
               <Link
                 href="/about"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${
-                  isActive("/about")
-                    ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
-                    : "text-gray-800 hover:bg-gray-50"
-                }`}
+                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/about")
+                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  : "text-gray-800 hover:bg-gray-50"
+                  }`}
               >
-                <span>About Grand Dental</span>
+                <span>About Grand Dental Clinic</span>
               </Link>
 
               {/* Mobile Services Accordion */}
@@ -451,17 +446,15 @@ export default function Header() {
                 <button
                   type="button"
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                  className={`w-full flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${
-                    isActive("/services")
-                      ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
-                      : "text-gray-800 hover:bg-gray-50"
-                  }`}
+                  className={`w-full flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/services")
+                    ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                    : "text-gray-800 hover:bg-gray-50"
+                    }`}
                 >
                   <span>Dental Treatments</span>
                   <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      isMobileServicesOpen ? "rotate-180 text-[#74267A]" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180 text-[#74267A]" : ""
+                      }`}
                   />
                 </button>
 
@@ -491,11 +484,10 @@ export default function Header() {
               <Link
                 href="/doctors"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${
-                  isActive("/doctors")
-                    ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
-                    : "text-gray-800 hover:bg-gray-50"
-                }`}
+                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/doctors")
+                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  : "text-gray-800 hover:bg-gray-50"
+                  }`}
               >
                 <span>Specialist Doctors</span>
               </Link>
@@ -503,11 +495,10 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${
-                  isActive("/contact")
-                    ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
-                    : "text-gray-800 hover:bg-gray-50"
-                }`}
+                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/contact")
+                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  : "text-gray-800 hover:bg-gray-50"
+                  }`}
               >
                 <span>Contact & Locations</span>
               </Link>

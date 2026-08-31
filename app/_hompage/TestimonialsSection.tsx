@@ -10,11 +10,10 @@ export default function TestimonialsSection() {
       id: "shrestha",
       patient: "Sunil Shrestha",
       location: "Swoyambhu, Kathmandu",
-      procedure: "Painless Root Canal & Zirconia Crown",
+      procedure: "Root Canal & Crown",
       doctor: "Dr. Aarati Joshi",
-      timeframe: "2 Visits",
       quote:
-        "I was genuinely terrified of having a root canal done. But the doctor made the entire procedure completely pain-free and comfortable. The crown looks natural, and I can eat normally with zero sensitivity.",
+        "I had put off getting my root canal for months out of fear. Dr. Aarati made the whole procedure surprisingly easy and painless. I was back to eating comfortably the next day.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop",
     },
@@ -22,11 +21,11 @@ export default function TestimonialsSection() {
       id: "adhikari",
       patient: "Pooja Adhikari",
       location: "Nagarjun, Kathmandu",
-      procedure: "Orthodontic Braces Alignment",
+      procedure: "Braces Alignment",
       doctor: "Dr. Sneha Rajbhandari",
-      timeframe: "14 Months Treatment",
+      timeframe: "14 Months",
       quote:
-        "Came to Grand Dental to fix my crooked front teeth. Dr. Sneha was extremely patient and attentive during every monthly checkup. My smile has transformed completely straight and I feel so confident now.",
+        "What stood out to me was the patience during every checkup. Dr. Sneha explained each adjustment clearly, and my teeth look completely aligned today. Truly happy with my smile.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop",
     },
@@ -34,26 +33,26 @@ export default function TestimonialsSection() {
       id: "tamang",
       patient: "Bikash Tamang",
       location: "Balaju, Kathmandu",
-      procedure: "Ultrasonic Scaling & Composite Restoration",
+      procedure: "Deep Cleaning & Filling",
       doctor: "Dr. Saurav Pradhan",
       timeframe: "Single Visit",
       quote:
-        "The cleanliness of the clinic and modern equipment put me at ease right away. The deep cleaning and tooth-colored cavity filling were done with great precision and care. Highly recommended!",
+        "Very clean setup and no unnecessary procedures recommended. The doctor took time to show me what needed fixing and finished the filling smoothly without any sensitivity.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop",
     },
   ];
 
   return (
-    <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-gray-100 space-y-8 sm:space-y-10">
-      {/* Clean 2-Column Section Header */}
-      <div className="grid grid-cols-1 gap-6 text-center md:grid-cols-2 md:items-start md:gap-12 md:text-left">
-        <div className="space-y-2">
+    <section className="max-w-[1400px] mx-auto px-6 lg:px-8 py-16 border-b border-gray-100 space-y-10">
+      {/* Responsive Section Header */}
+      <div className="grid grid-cols-1 md:grid-cols-12 items-start gap-6 lg:gap-12 text-left">
+        <div className="md:col-span-6 space-y-2">
           <span className="type-eyebrow">
-            Patient Experiences
+            Patient Stories
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-gray-900">
-            Real Smiles,{" "}
+          <h2 className="text-3xl lg:text-4xl font-medium leading-tight text-gray-900">
+            Hear directly from people{" "}
             <span
               className="font-medium text-transparent"
               style={{
@@ -62,21 +61,21 @@ export default function TestimonialsSection() {
                 WebkitBackgroundClip: "text",
               }}
             >
-              Honest Experiences
+              who trusted us with their care.
             </span>
           </h2>
         </div>
-        <p className="type-lead md:pt-4">
-          Patient trust and comfort are at the heart of everything we do. Read what patients across Kathmandu have to say about their treatment journey at Grand Dental.
+        <p className="md:col-span-6 type-lead text-gray-600 text-base lg:text-lg leading-relaxed md:pt-4">
+          From first-time checkups to complete dental treatments, see how our focus on comfort and honest advice makes every visit stress-free.
         </p>
       </div>
 
-      {/* 3 Rich Editorial Patient Review Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+      {/* 3 Editorial Patient Review Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {stories.map((story) => (
           <div
             key={story.id}
-            className="rounded-3xl border border-gray-200/80 bg-white p-6 sm:p-7 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between space-y-5"
+            className="rounded-3xl border border-gray-200/80 bg-white p-7 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between space-y-6"
           >
             {/* Top Rating & Quote */}
             <div className="space-y-3.5">
@@ -86,15 +85,15 @@ export default function TestimonialsSection() {
                 ))}
               </div>
 
-              <blockquote className="text-base sm:text-[17px] text-gray-800 leading-relaxed font-normal">
+              <blockquote className="text-[16px] text-gray-800 leading-relaxed font-normal">
                 &ldquo;{story.quote}&rdquo;
               </blockquote>
             </div>
 
-            {/* Procedure & Patient Attribution */}
+            {/* Procedure & Patient Details */}
             <div className="pt-4 border-t border-gray-100 space-y-3.5">
               <div className="flex items-center gap-3.5">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gray-200 shadow-2xs shrink-0">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden border border-gray-200 shadow-2xs shrink-0">
                   <Image
                     src={story.avatar}
                     alt={story.patient}
@@ -103,21 +102,13 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-gray-900">{story.patient}</h4>
-                  <p className="text-xs sm:text-sm text-gray-600 font-normal">{story.location}</p>
+                  <h4 className="text-base font-bold text-gray-900 leading-tight">{story.patient}</h4>
+                  <p className="text-xs text-gray-500 font-normal mt-0.5">{story.location}</p>
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-[#FCF5FE]/60 p-3.5 text-xs sm:text-sm space-y-1.5 border border-[#F3D5F9]/60">
-                <div className="flex items-center justify-between text-gray-900 font-semibold">
-                  <span>{story.procedure}</span>
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                </div>
-                <div className="text-gray-600 font-normal flex items-center justify-between">
-                  <span>Treated by {story.doctor}</span>
-                  <span className="text-xs text-gray-500 font-medium">{story.timeframe}</span>
-                </div>
-              </div>
+
+
             </div>
           </div>
         ))}

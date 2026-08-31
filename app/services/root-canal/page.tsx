@@ -151,7 +151,7 @@ export default function RootCanalPage() {
           <hr className="border-gray-200" />
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-gray-900">
-              Why Choose Grand Dental for{" "}
+              Why Choose Grand Dental Clinic for{" "}
               <span
                 style={{
                   background:
@@ -161,7 +161,7 @@ export default function RootCanalPage() {
                   color: "transparent",
                 }}
               >
-                Root Canal Care
+                Root Canal Treatment
               </span>
               ?
             </h2>

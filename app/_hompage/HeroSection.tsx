@@ -8,9 +8,9 @@ import hero from "../../assets/hero.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-2 sm:mt-4 mb-0 sm:mb-2">
+    <section className="relative w-full max-w-[1400px] mx-auto px-6 lg:px-8 mt-4 mb-2">
       {/* Cinematic Editorial Canvas */}
-      <div className="relative h-[80vh] min-h-[520px] max-h-[700px] w-full rounded-3xl overflow-hidden bg-[#101828] shadow-sm border border-black/5 flex flex-col justify-between p-8 sm:p-12 lg:p-16">
+      <div className="relative h-[80vh] min-h-[560px] max-h-[720px] w-full rounded-3xl overflow-hidden bg-[#101828] shadow-sm border border-black/5 flex flex-col justify-between p-12 lg:p-16">
         {/* Editorial Photograph with Natural Light & Clean Negative Space */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -27,53 +27,54 @@ export default function HeroSection() {
         </div>
 
         {/* Top Location Bar */}
-        <div className="relative z-10 flex items-center justify-between text-xs sm:text-sm text-white/90">
-
+        <div className="relative z-10 flex items-center justify-between text-sm text-white/90">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#ED91FB] text-xs font-semibold uppercase tracking-wider shadow-sm">
+            GRAND DENTAL CLINIC &middot; KATHMANDU
+          </span>
         </div>
 
         {/* Center Editorial Typography */}
         <div className="relative z-10 max-w-2xl space-y-6 my-auto">
           <div className="space-y-2">
-
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white tracking-tight leading-[1.08]">
-              Modern Dentistry.
+            <h1 className="text-6xl lg:text-7xl font-light text-white tracking-tight leading-[1.08]">
+              Smile without{" "}
               <br />
               <span className="font-normal text-white">
-                Made Gently Human.
+                thinking twice.
               </span>
             </h1>
           </div>
 
-          <p className="text-lg sm:text-xl text-white/95 leading-relaxed font-normal max-w-xl">
-            From routine ultrasonic cleaning to painless root canals and orthodontic braces, experience unhurried dental care by NMC-certified specialists in Swoyambhu.
+          <p className="text-xl text-white/95 leading-relaxed font-normal max-w-xl">
+            Your smile is part of how you eat, speak, laugh, and connect. Grand Dental Clinic brings thoughtful, comprehensive dental care together with a calm, personal approach—so you can feel good about your oral health and your smile.
           </p>
 
           {/* Focused Action Pair */}
-          <div className="pt-2 flex flex-wrap items-center gap-4">
+          <div className="pt-2 flex items-center gap-5">
             <Link
               href="/appointment"
               className="inline-flex items-center gap-3 bg-[#5C205E] hover:bg-[#74267A] text-white px-8 py-4 rounded-full text-base font-semibold shadow-md transition-all duration-300 hover:scale-[1.02] group cursor-pointer"
             >
-              <span>Book Consultation</span>
+              <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
             <Link
-              href="/about"
+              href="/services"
               className="text-base font-medium text-white/90 hover:text-white underline underline-offset-8 transition-colors"
             >
-              Explore Our Approach
+              Explore Treatments
             </Link>
           </div>
         </div>
 
         {/* Understated Minimalist Footer Note */}
-        <div className="relative z-10 flex flex-wrap items-center justify-between text-xs sm:text-sm text-white/85 pt-4 border-t border-white/15 gap-2 font-normal">
+        <div className="relative z-10 flex items-center justify-between text-sm text-white/85 pt-4 border-t border-white/15 gap-4 font-normal">
           <span>
-            NMC Certified Doctors &middot; Autoclave Sterilized Facility
+            General Dentistry &middot; Implants &middot; Orthodontics &middot; Cosmetic Dentistry &middot; Pediatric Care
           </span>
           <span>
-            Telephone: 01-4950352 &middot; Sun &ndash; Fri: 8 AM &ndash; 6 PM
+            Swoyambhu, Kathmandu &middot; Sun &ndash; Fri: 8 AM &ndash; 6 PM
           </span>
         </div>
       </div>

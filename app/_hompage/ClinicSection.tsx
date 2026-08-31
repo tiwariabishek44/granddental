@@ -3,10 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
 import ImageReveal from "./ImageReveal";
 
-import holograph from "../../assets/Holographic_dental_model.jpeg"
-import fontview from "../../assets/front view.jpeg"
+import holograph from "../../assets/Holographic_dental_model.jpeg";
+import fontview from "../../assets/front view.jpeg";
 
 export interface ClinicSectionProps {
   id?: string;
@@ -18,68 +19,85 @@ export default function ClinicSection({
   className = "",
 }: ClinicSectionProps) {
   return (
-    <section id={id} className={`py-12 sm:py-16 border-b border-gray-100 ${className}`}>
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 space-y-10">
-        {/* Harmonized 2-Column Section Header */}
-        <div className="grid grid-cols-1 gap-6 text-center md:grid-cols-2 md:items-start md:gap-12 md:text-left">
-          <div className="space-y-2">
+    <section
+      id={id}
+      className={`py-16 border-b border-gray-100 ${className}`}
+    >
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-8 space-y-10">
+        {/* Section Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-8 lg:gap-12 text-left">
+          <div className="space-y-3">
             <span className="type-eyebrow">
-              Clinic Environment
+              The Grand Dental Clinic Environment
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight text-gray-900">
-              A space where{" "}
+
+            <h2 className="text-3xl lg:text-4xl font-medium leading-[1.15] tracking-tight text-gray-900 max-w-xl">
+              Thoughtful care begins with the{" "}
               <span
                 className="font-medium text-transparent"
                 style={{
-                  background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                  background:
+                    "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                 }}
               >
-                modern care
-              </span>{" "}
-              meets genuine calm.
+                space around you.
+              </span>
             </h2>
           </div>
-          <p className="type-lead md:pt-4">
-            We designed our Swoyambhu clinic to eliminate dental anxiety. Ergonomic treatment chairs, natural daylight, and hospital-grade autoclave sterilization make every appointment feel safe and unhurried.
+
+          <p className="type-lead pt-1 lg:pt-4 max-w-2xl">
+            From the moment you walk in, every detail is designed to make
+            dental care feel considered and comfortable. Clean, contemporary
+            treatment spaces, modern clinical equipment, and attentive
+            chairside care create an environment where you can slow down, ask
+            questions, and feel confident about your care.
           </p>
         </div>
 
         {/* Asymmetric Image Grid */}
-        <div className="grid grid-cols-12 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* Main Clinic Image */}
           <ImageReveal
             src={fontview}
-            alt="Clean, sterilized dental operatory at Grand Dental Clinic"
-            className="col-span-12 h-[320px] rounded-3xl sm:col-span-8 sm:h-[500px]"
+            alt="Modern treatment room at Grand Dental Clinic"
+            className="lg:col-span-8 h-[380px] lg:h-[500px] rounded-3xl"
           />
 
-          <div className="col-span-12 flex flex-col gap-4 sm:col-span-4">
+          {/* Secondary Content Column */}
+          <div className="lg:col-span-4 flex flex-col gap-4">
+            {/* Secondary Image */}
             <ImageReveal
               src={holograph}
-              alt="Comfortable doctor consultation setup"
-              className="h-[250px] rounded-3xl sm:h-[280px]"
+              alt="Modern dental consultation and clinical environment"
+              className="h-[260px] lg:h-[280px] rounded-3xl"
             />
 
-            <div className="flex flex-1 flex-col justify-between rounded-3xl bg-[#F9EBFC] p-7 sm:p-8 border border-[#F0CEF6]">
+            {/* Experience Card */}
+            <div className="flex flex-1 flex-col justify-between rounded-3xl bg-[#F9EBFC] p-7 lg:p-8 border border-[#F0CEF6]">
               <div>
-                <span className="text-sm sm:text-base text-[#74267A] font-semibold">
-                  डेन्टल क्लिनिक भनेपछि अब डराउनु पर्दैन
-                </span>
 
-                <p className="mt-3 text-lg sm:text-xl font-medium leading-relaxed text-gray-900">
-                  Unhurried chairside attention and transparent guidance make every visit reassuring and fear-free.
+
+                <p className="mt-3 text-lg lg:text-xl font-medium leading-relaxed text-gray-900">
+                  A calm environment, attentive care, and clear guidance —
+                  because feeling comfortable is part of good dental care.
                 </p>
               </div>
 
+              {/* About / Clinic Link */}
               <Link
                 href="/about"
-                className="mt-6 flex items-center justify-between border-t border-[#74267A]/15 pt-4 transition-opacity hover:opacity-80 group cursor-pointer"
+                className="mt-8 flex items-center justify-between border-t border-[#74267A]/15 pt-4 transition-opacity hover:opacity-80 group"
               >
-                <span className="text-sm sm:text-base font-semibold text-[#5C205E]">
-                  Learn More About Our Clinic
+                <span className="text-sm lg:text-base font-semibold text-[#5C205E]">
+                  Explore Our Clinic
                 </span>
-                <ArrowRight className="h-4 w-4 text-[#74267A] transition-transform group-hover:translate-x-1" />
+
+                <ArrowRight
+                  className="h-4 w-4 text-[#74267A] transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
               </Link>
             </div>
           </div>

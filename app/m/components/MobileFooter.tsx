@@ -7,28 +7,31 @@ import { Phone, Mail, MapPin, Clock, ShieldCheck, Heart } from "lucide-react";
 
 export default function MobileFooter() {
   const quickLinks = [
-    { name: "About Clinic", href: "/about" },
-    { name: "Our Specialists", href: "/doctors" },
-    { name: "Book Appointment", href: "/appointment" },
-    { name: "Patient Reviews", href: "/#testimonials" },
-    { name: "Emergency Care", href: "/contact" },
+    { name: "About Our Clinic", href: "/about" },
+    { name: "Specialist Doctors", href: "/doctors" },
+    { name: "Dental Treatments", href: "/services" },
+    { name: "Book an Appointment", href: "/appointment" },
+    { name: "Contact & Directions", href: "/contact" },
   ];
 
   const serviceLinks = [
-    { name: "3D Dental Implants", href: "/services/dental-implants" },
-    { name: "Clear Aligners", href: "/services/clear-aligners" },
-    { name: "Smile Makeover", href: "/services/smile-makeover" },
-    { name: "Laser Whitening", href: "/services/teeth-whitening" },
-    { name: "Painless Root Canal", href: "/services/root-canal" },
-    { name: "Ultrasonic Scaling", href: "/services/scaling-polishing" },
+    { name: "Teeth Cleaning & Polishing", href: "/services/scaling-polishing" },
+    { name: "Painless Root Canal (RCT)", href: "/services/root-canal" },
+    { name: "Permanent Dental Implants", href: "/services/dental-implants" },
+    { name: "Clear Invisible Aligners", href: "/services/clear-aligners" },
+    { name: "Tooth-Colored Fillings", href: "/services/composite-fillings" },
+    { name: "Professional Teeth Whitening", href: "/services/teeth-whitening" },
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-gray-200/80 bg-white text-gray-700 px-4 pt-10 pb-12 sm:hidden space-y-6">
-      {/* Background Radial Glow */}
+    <footer
+      aria-label="Mobile Site Footer"
+      className="relative overflow-hidden border-t border-gray-100 bg-white text-gray-700 px-4 pt-8 pb-28 sm:hidden"
+    >
+      {/* Background Radial Ambient Glow */}
       <div className="pointer-events-none absolute inset-0">
         <div
-          className="absolute bottom-0 left-1/2 h-[450px] w-[450px] -translate-x-1/2 translate-y-1/3 rounded-full opacity-15"
+          className="absolute bottom-0 left-1/2 h-[350px] w-[350px] -translate-x-1/2 translate-y-1/2 rounded-full opacity-10"
           style={{
             background:
               "radial-gradient(ellipse closest-side, #CE59DC 0%, #B43ABF 30%, rgba(180, 58, 191, 0.4) 70%, transparent 100%)",
@@ -37,34 +40,40 @@ export default function MobileFooter() {
       </div>
 
       <div className="relative z-10 space-y-6">
-        {/* 1. Brand Logo, Mission & Trust Badge */}
+        {/* 1. Brand Logo & Mission */}
         <div className="space-y-3.5">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="relative h-9 w-9 flex items-center justify-center shrink-0">
+          <Link href="/" className="inline-flex items-center gap-2.5 select-none">
+            <div className="relative h-10 w-10 rounded-full border border-[#F3D5F9] bg-white p-0.5 shadow-2xs flex items-center justify-center shrink-0">
               <Image
                 src="/logo.png"
                 alt="Grand Dental Clinic"
-                width={36}
-                height={36}
-                className="object-contain max-h-9 w-auto"
+                width={40}
+                height={40}
+                className="object-contain w-full h-full"
                 priority
               />
             </div>
             <div className="flex flex-col justify-center">
-              <span className="font-extrabold text-base text-gray-900 tracking-tight leading-none">
-                GRAND DENTAL
-              </span>
-              <span className="type-eyebrow leading-tight mt-0.5">
-                Clinic &middot; Swoyambhu
-              </span>
+              <div className="flex items-baseline gap-1 leading-none">
+                <span className="font-brand text-[22px] font-semibold tracking-[-0.01em] text-gray-950">
+                  Grand
+                </span>
+                <span className="font-brand text-[22px] font-normal italic text-[#74267A]">
+                  Dental
+                </span>
+              </div>
+              <div className="flex items-center gap-1 mt-0.5">
+                <span className="h-[1px] w-2 bg-[#ED91FB]" />
+                <span className="text-[8.5px] font-bold tracking-[0.26em] uppercase text-gray-500 font-sans">
+                  CLINIC &bull; KATHMANDU
+                </span>
+              </div>
             </div>
           </Link>
 
-          <p className="type-body font-normal">
-            Precision dentistry, modern autoclave sterilization, and anxiety-free gentle care &mdash; empowering confident, lifelong smiles in Kathmandu.
+          <p className="type-body font-normal text-sm leading-relaxed">
+            Thoughtful, comprehensive dental care delivered with a gentle, personal approach. Helping you smile with confidence in Swoyambhu, Kathmandu.
           </p>
-
-
 
           {/* Social Media Links (Min 44x44px Touch Targets) */}
           <div className="flex items-center gap-2 pt-1">
@@ -122,13 +131,13 @@ export default function MobileFooter() {
             </a>
 
             <a
-              href="mailto:contact@granddental.com.np"
+              href="mailto:grand.dentalclinic2079@gmail.com"
               className="flex items-center gap-2.5 text-gray-800 font-medium active:text-[#74267A]"
             >
               <div className="w-8 h-8 rounded-lg bg-white border border-[#F3D5F9] flex items-center justify-center text-[#74267A] shrink-0">
                 <Mail className="w-4 h-4" />
               </div>
-              <span className="text-sm sm:text-base">contact@granddental.com.np</span>
+              <span className="text-sm sm:text-base">grand.dentalclinic2079@gmail.com</span>
             </a>
 
             <div className="flex items-start gap-2.5 text-gray-700">
@@ -157,7 +166,7 @@ export default function MobileFooter() {
           {/* Explore Links */}
           <div className="space-y-2.5">
             <h3 className="type-eyebrow block">
-              Explore
+              Quick Links
             </h3>
             <ul className="space-y-2.5 type-ui-control text-gray-700 font-medium">
               {quickLinks.map((link) => (
@@ -176,7 +185,7 @@ export default function MobileFooter() {
           {/* Specialized Treatments */}
           <div className="space-y-2.5">
             <h3 className="type-eyebrow block">
-              Specialized Care
+              Treatments
             </h3>
             <ul className="space-y-2.5 type-ui-control text-gray-700 font-medium">
               {serviceLinks.map((svc) => (
@@ -193,30 +202,20 @@ export default function MobileFooter() {
           </div>
         </div>
 
-        {/* 4. Legal & Bottom Bar Safety Spacing */}
+        {/* 4. Legal & Bottom Bar */}
         <div className="pt-4 border-t border-gray-100 text-center space-y-2 type-meta text-gray-600 font-normal">
           <div>
-            &copy; {new Date().getFullYear()} Grand Dental Clinic. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Grand Dental Clinic. All rights reserved.
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
-            <Link href="/contact" className="active:text-[#74267A]">
+            <Link href="/privacy" className="active:text-[#74267A]">
               Privacy Policy
             </Link>
             <span>&bull;</span>
-            <Link href="/contact" className="active:text-[#74267A]">
-              Terms
+            <Link href="/terms" className="active:text-[#74267A]">
+              Terms &amp; Conditions
             </Link>
-            <span>&bull;</span>
-            <Link href="/design-system" className="text-[#74267A] font-semibold">
-              Design Guide
-            </Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-1.5 text-gray-500 pt-1">
-            <span>Crafted with</span>
-            <Heart className="w-3.5 h-3.5 text-red-500 fill-current" />
-            <span>for patient comfort in Nepal</span>
           </div>
         </div>
       </div>

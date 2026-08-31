@@ -7,22 +7,34 @@
    ============================================================ */
 :root {
   /* Brand Plum Spectrum */
-  --c-primary-900: #5c205e;   /* Brand Dark Plum (Primary buttons, hero dark) */
-  --c-primary-800: #74267a;   /* Deep Plum (Hover, gradient end) */
-  --c-primary-700: #922f9c;   /* Medium Plum */
-  --c-primary-600: #b43abf;   /* Vibrant Magenta (Gradient start) */
-  --c-primary-500: #ce59dc;   /* Bright Orchid */
-  --c-primary-400: #d886e2;   /* Light Orchid */
-  --c-primary-100: #f7e6fa;   /* Pale Lavender */
-  --c-primary-50:  #fcf5fe;   /* Whisper Tint */
+  --c-primary-900: #5c205e;
+  /* Brand Dark Plum (Primary buttons, hero dark) */
+  --c-primary-800: #74267a;
+  /* Deep Plum (Hover, gradient end) */
+  --c-primary-700: #922f9c;
+  /* Medium Plum */
+  --c-primary-600: #b43abf;
+  /* Vibrant Magenta (Gradient start) */
+  --c-primary-500: #ce59dc;
+  /* Bright Orchid */
+  --c-primary-400: #d886e2;
+  /* Light Orchid */
+  --c-primary-100: #f7e6fa;
+  /* Pale Lavender */
+  --c-primary-50: #fcf5fe;
+  /* Whisper Tint */
 
   /* Neutral & Dark Surface Tokens */
-  --c-dark-surface: #101828;  /* High-tech dark section */
-  --c-text-primary: #111827;  /* Heading text */
-  --c-text-body:    #4b5563;  /* Paragraph body */
-  --c-text-muted:   #6b7280;  /* Subtitles & footers */
+  --c-dark-surface: #101828;
+  /* High-tech dark section */
+  --c-text-primary: #111827;
+  /* Heading text */
+  --c-text-body: #4b5563;
+  /* Paragraph body */
+  --c-text-muted: #6b7280;
+  /* Subtitles & footers */
   --c-border-light: #e5e7eb;
-  --c-white:        #ffffff;
+  --c-white: #ffffff;
 
   /* Typography Variables */
   --font-sans: var(--font-outfit), "Outfit", "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -32,7 +44,9 @@
 /* ============================================================
    Base Resets & Global Typography (Outfit Everywhere by Default)
    ============================================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -55,7 +69,12 @@ body {
 }
 
 /* All headings automatically use the Outfit sans font */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   color: var(--c-text-primary);
   font-family: var(--font-sans);
@@ -79,7 +98,10 @@ img {
   display: block;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: var(--font-sans);
   letter-spacing: inherit;
 }
@@ -121,6 +143,7 @@ button {
    Unified Global Typography Scale Classes (@layer components)
    ============================================================ */
 @layer components {
+
   /* 1. Display / Hero H1 (32px mobile -> 60px desktop - PRESERVED) */
   .type-display {
     @apply text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] text-gray-900;
@@ -207,6 +230,8 @@ button {
 
 .no-scrollbar,
 .scrollbar-hide {
-  -ms-overflow-style: none !important; /* IE and Edge */
-  scrollbar-width: none !important;    /* Firefox */
+  -ms-overflow-style: none !important;
+  /* IE and Edge */
+  scrollbar-width: none !important;
+  /* Firefox */
 }

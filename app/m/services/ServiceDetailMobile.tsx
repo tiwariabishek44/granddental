@@ -51,7 +51,7 @@ export default function ServiceDetailMobile({ service }: { service: Service }) {
                 backgroundClip: "text",
               }}
             >
-              at Grand Dental
+              at Grand Dental Clinic
             </span>
           </h1>
           <p className="type-body font-normal text-gray-700">
@@ -63,18 +63,18 @@ export default function ServiceDetailMobile({ service }: { service: Service }) {
         <div className="flex flex-col gap-2.5 pt-1">
           <Link
             href="/appointment"
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-semibold shadow-md transition-colors min-h-[48px]"
           >
             <Calendar className="w-4 h-4" />
             <span>Book Treatment Consultation</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
           <a
-            href="tel:01-4950352"
-            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white border border-gray-200 text-gray-800 type-ui-control text-xs sm:text-sm font-semibold active:bg-gray-50 transition-colors min-h-[44px]"
+            href="tel:014950352"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white border border-gray-200 text-gray-800 type-ui-control text-xs sm:text-sm font-semibold active:bg-gray-50 transition-colors min-h-[44px]"
           >
             <Phone className="w-4 h-4 text-[#74267A]" />
-            <span>Call Helpline: 01-4950352</span>
+            <span>Call 01-4950352</span>
           </a>
         </div>
       </section>
@@ -144,7 +144,7 @@ export default function ServiceDetailMobile({ service }: { service: Service }) {
       {/* 5. KEY BENEFITS */}
       <section className="px-4">
         <div className="bg-[#FCF5FE] rounded-3xl p-5 border border-[#F3D5F9] space-y-3">
-          <h3 className="type-card-title text-[#5C205E]">Why Choose Grand Dental?</h3>
+          <h3 className="type-card-title text-[#5C205E]">Why Choose Grand Dental Clinic?</h3>
           <ul className="space-y-2.5">
             {service.benefits.map((benefit, i) => (
               <li key={i} className="flex items-start gap-2.5 type-body text-gray-800 font-normal">

@@ -50,9 +50,8 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-      } ${className}`}
+      className={`transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        } ${className}`}
     >
       {children}
     </div>
@@ -65,11 +64,11 @@ export default function OurClinicMobile() {
       {/* Streamlined Header Matching Desktop Version */}
       <div className="space-y-3">
         <span className="type-eyebrow">
-          Hygiene &amp; Safety Protocol
+          Modern Clinical Care
         </span>
 
         <h2 className="type-section-title">
-          Hospital-Grade Autoclave Sterilization.{" "}
+          World-class dental facilities, right here in the city.{" "}
           <span
             className="font-medium text-transparent"
             style={{
@@ -78,7 +77,7 @@ export default function OurClinicMobile() {
               WebkitBackgroundClip: "text",
             }}
           >
-            Zero Compromise.
+            Designed for your complete comfort.
           </span>
         </h2>
 
@@ -86,7 +85,7 @@ export default function OurClinicMobile() {
           href="/about"
           className="inline-flex items-center gap-2 type-ui-control font-semibold text-[#5C205E] active:text-[#74267A] group cursor-pointer pt-0.5"
         >
-          <span>Learn About Sterilization Standards</span>
+          <span>Tour our clinic</span>
           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
@@ -96,8 +95,8 @@ export default function OurClinicMobile() {
         <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200/60 bg-gray-900">
           <Image
             src={ourclinicimage}
-            alt="Sterilized operatory at Grand Dental Clinic"
-            className="w-full h-[280px] object-cover"
+            alt="Modern operatory chair and precision instruments at our dental clinic"
+            className="w-full h-[380px] object-cover"
           />
         </div>
       </Reveal>

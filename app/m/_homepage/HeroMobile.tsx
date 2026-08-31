@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, ShieldCheck, Star } from "lucide-react";
-import heroImg from "@/assets/hero.png";
+import heroImg from "@/assets/image copy.png";
 
 export default function HeroMobile() {
   return (
@@ -26,22 +26,23 @@ export default function HeroMobile() {
 
         {/* Top Status & Location Badge */}
         <div className="relative z-10 flex items-center justify-between text-xs sm:text-sm text-white/95">
-
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20  text-[11px] font-semibold uppercase tracking-wider">
+            GRAND DENTAL CLINIC &middot; KATHMANDU
+          </span>
         </div>
 
         {/* Bottom Hero Anchor: Flagship Typography & Direct Booking */}
-        <div className="relative z-10 space-y-4 pt-16">
+        <div className="relative z-10 space-y-4 pt-10">
           {/* Core Headlines */}
           <div className="space-y-2">
-
-            <h1 className="text-3xl sm:text-4xl font-light text-white tracking-tight leading-[1.12]">
-              Modern Dentistry.{" "}
-              <span className="font-semibold text-white block">
-                Made Gently Human.
+            <h1 className="text-5xl sm:text-4xl font-light text-white tracking-tight leading-[1.12]">
+              Smile without{" "}
+              <span className="font-normal text-white block">
+                thinking twice.
               </span>
             </h1>
-            <p className="type-lead text-white/95 max-w-xs">
-              Painless root canals, ultrasonic cleaning, and clear aligners by NMC-certified specialists.
+            <p className="type-lead text-white/90 text-md leading-relaxed max-w-sm font-normal">
+              Your smile is part of how you eat, speak, laugh, and connect. Grand Dental Clinic brings thoughtful, comprehensive dental care together with a calm, personal approach.
             </p>
           </div>
 
@@ -49,29 +50,23 @@ export default function HeroMobile() {
           <div className="pt-2 flex flex-col gap-2.5">
             <Link
               href="/appointment"
-              className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-4 px-6 rounded-2xl type-ui-control font-bold shadow-lg transition-all group min-h-[50px]"
+              className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-3.5 px-6 rounded-full type-ui-control font-semibold shadow-lg transition-all group min-h-[48px]"
             >
-              <span>Book Dental Consultation</span>
+              <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
 
-            <a
-              href="tel:01-4950352"
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/15 active:bg-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold border border-white/20 backdrop-blur-xs transition-colors min-h-[44px]"
+            <Link
+              href="/services"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white/15 active:bg-white/25 text-white type-ui-control text-xs sm:text-sm font-medium border border-white/20 backdrop-blur-xs transition-colors min-h-[44px]"
             >
-              <Phone className="w-4 h-4 text-[#ED91FB]" />
-              <span>Call Helpline: </span>
-              <span className="font-clinical font-bold">01-4950352</span>
-            </a>
+              <span>Explore Treatments</span>
+            </Link>
           </div>
 
           {/* Minimal Trust Strip */}
-          <div className="pt-2 border-t border-white/15 flex items-center justify-between type-meta text-white/90 font-medium">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#ED91FB]" />
-              <span>100% Autoclave Sterilized</span>
-            </span>
-            <span>NMC Certified</span>
+          <div className="pt-2.5 border-t border-white/15 text-center text-xs text-white/80 font-normal">
+            <span>General Dentistry &middot; Implants &middot; Orthodontics &middot; Cosmetic &middot; Pediatric</span>
           </div>
         </div>
       </div>

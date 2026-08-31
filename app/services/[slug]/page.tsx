@@ -83,7 +83,7 @@ export default async function ServiceDetailPage({
                     WebkitBackgroundClip: "text",
                   }}
                 >
-                  at Grand Dental.
+                  at Grand Dental Clinic.
                 </span>
               </h1>
 

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, MessageCircle, Clock, Navigation, Calendar, ArrowRight } from "lucide-react";
+import { Phone, MessageCircle, Calendar, ArrowRight, Check } from "lucide-react";
 import MobileSectionHeader from "../components/MobileSectionHeader";
 
 export default function LocationBookingMobile() {
@@ -10,45 +10,41 @@ export default function LocationBookingMobile() {
     <section className="px-4 py-8 sm:hidden space-y-5">
       {/* Header */}
       <MobileSectionHeader
-        eyebrow="Find Us & Book"
-        title="Visit Grand Dental in"
-        gradientWord="Swoyambhu"
-        subtitle="Conveniently located along Ring Road with dedicated patient parking and wheelchair accessibility."
+        eyebrow="Book Your Visit"
+        title="Ready to fix your smile?"
+        gradientWord="Let’s get started."
+        subtitle="Whether you need a routine checkup, relief from sudden tooth pain, or specialized smile alignment, our team provides gentle, honest care every step of the way."
       />
 
-      {/* Location Details Bento Card */}
-      <div className="rounded-3xl bg-[#FCF5FE] border border-[#F3D5F9] p-5 space-y-4 shadow-2xs">
+      {/* Value Points Bento Card */}
+      <div className="rounded-3xl bg-[#FCF5FE] border border-[#F3D5F9] p-5 space-y-3.5 shadow-2xs">
         <div className="space-y-3">
-          <div className="flex items-start gap-2.5 type-ui-control text-gray-900 font-semibold">
-            <MapPin className="w-4 h-4 text-[#74267A] shrink-0 mt-0.5" />
-            <span>Nagarjun-3, Pachadhara, Swoyambhu, Kathmandu (Near Stupa Gate)</span>
+          <div className="flex items-center gap-2.5">
+            <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
+              <Check className="w-3 h-3 text-[#ED91FB]" />
+            </div>
+            <p className="text-gray-900 text-xs sm:text-sm font-medium">
+              Same-day consultations &amp; urgent pain relief
+            </p>
           </div>
 
-          <div className="flex items-center gap-2.5 type-meta text-gray-700 font-normal">
-            <Clock className="w-4 h-4 text-[#74267A] shrink-0" />
-            <span>Sun – Fri: 8:00 AM – 6:00 PM (Saturday Closed)</span>
+          <div className="flex items-center gap-2.5">
+            <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
+              <Check className="w-3 h-3 text-[#ED91FB]" />
+            </div>
+            <p className="text-gray-900 text-xs sm:text-sm font-medium">
+              Transparent treatment plans with zero pressure
+            </p>
           </div>
-        </div>
 
-        {/* Action Buttons: Google Maps & Phone */}
-        <div className="grid grid-cols-2 gap-2.5 pt-2 border-t border-[#F3D5F9]">
-          <a
-            href="https://maps.google.com/?q=Swoyambhu+Kathmandu+Nepal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-2xl bg-white border border-[#F3D5F9] text-[#74267A] type-ui-control font-bold shadow-2xs active:bg-gray-50"
-          >
-            <Navigation className="w-3.5 h-3.5" />
-            <span>Google Maps</span>
-          </a>
-
-          <a
-            href="tel:01-4950352"
-            className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-2xl bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-2xs"
-          >
-            <Phone className="w-3.5 h-3.5" />
-            <span>01-4950352</span>
-          </a>
+          <div className="flex items-center gap-2.5">
+            <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
+              <Check className="w-3 h-3 text-[#ED91FB]" />
+            </div>
+            <p className="text-gray-900 text-xs sm:text-sm font-medium">
+              Gentle, step-by-step care designed to keep you at ease
+            </p>
+          </div>
         </div>
       </div>
 
@@ -61,9 +57,9 @@ export default function LocationBookingMobile() {
             Direct Consultation
           </span>
           <h3 className="type-card-title text-white text-xl font-bold leading-tight">
-            Book Your Dental Consultation
+            Book an Appointment
           </h3>
-          <p className="type-body text-white/95 font-normal leading-relaxed">
+          <p className="type-body text-white/95 font-normal leading-relaxed text-sm">
             Walk in or reserve your slot with our specialist team for a gentle, zero-fear checkup.
           </p>
         </div>
@@ -71,22 +67,32 @@ export default function LocationBookingMobile() {
         <div className="relative z-10 pt-1 flex flex-col gap-2.5">
           <Link
             href="/appointment"
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-2xl bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors"
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors"
           >
             <Calendar className="w-4 h-4" />
             <span>Book Online Appointment</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
 
-          <a
-            href="https://wa.me/9779841322789"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors"
-          >
-            <MessageCircle className="w-4 h-4 text-emerald-300" />
-            <span>Chat Directly on WhatsApp</span>
-          </a>
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href="tel:014950352"
+              className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#ED91FB]" />
+              <span>Call Us</span>
+            </a>
+
+            <a
+              href="https://wa.me/9779841322789?text=Namaste%20Grand%20Dental,%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-emerald-600/30 border border-emerald-400/40 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-emerald-600/40 transition-colors"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-emerald-300" />
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

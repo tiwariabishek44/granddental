@@ -60,16 +60,16 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
 
 export default function OurClinicSection() {
   return (
-    <section id="clinic-reveal" className="py-12 sm:py-16 border-b border-gray-100 bg-white">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
-        {/* Streamlined Horizontal Flow Header */}
+    <section id="clinic-reveal" className="py-16 border-b border-gray-100 bg-white">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-8 space-y-8">
+        {/* Streamlined Responsive Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="space-y-1.5">
             <span className="type-eyebrow">
-              Hygiene &amp; Safety Protocol
+              Modern Clinical Care
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-gray-900 leading-tight">
-              Hospital-Grade Autoclave Sterilization.{" "}
+            <h2 className="text-3xl lg:text-4xl font-medium text-gray-900 leading-tight">
+              World-class dental facilities, right here in the city.{" "}
               <span
                 className="font-medium text-transparent"
                 style={{
@@ -78,16 +78,16 @@ export default function OurClinicSection() {
                   WebkitBackgroundClip: "text",
                 }}
               >
-                Zero Compromise.
+                Designed for your complete comfort.
               </span>
             </h2>
           </div>
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-[#5C205E] hover:text-[#74267A] shrink-0 self-start sm:self-auto group cursor-pointer"
+            className="inline-flex items-center gap-2 text-base font-semibold text-[#5C205E] hover:text-[#74267A] shrink-0 group cursor-pointer"
           >
-            <span>Learn About Sterilization Standards</span>
+            <span>Tour our clinic</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
@@ -97,8 +97,8 @@ export default function OurClinicSection() {
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200/60">
             <Image
               src={ourclinicimage}
-              alt="Sterilized operatory at Grand Dental Clinic"
-              className="w-full h-[320px] md:h-[480px] object-cover"
+              alt="Modern operatory chair and precision instruments at our dental clinic"
+              className="w-full h-[480px] object-cover"
             />
           </div>
         </Reveal>

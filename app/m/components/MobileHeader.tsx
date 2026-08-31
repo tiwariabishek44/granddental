@@ -17,24 +17,32 @@ export default function MobileHeader() {
       >
         <div className="flex items-center justify-between h-12">
           {/* Logo Mark + Clinic Name */}
-          <Link href="/" className="flex items-center gap-2.5 group py-1">
-            <div className="relative h-9 w-9 flex items-center justify-center shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 group py-1 select-none">
+            <div className="relative h-9 w-9 rounded-full border border-[#F3D5F9] bg-white p-0.5 shadow-2xs flex items-center justify-center shrink-0">
               <Image
                 src="/logo.png"
                 alt="Grand Dental Clinic Logo"
                 width={36}
                 height={36}
-                className="object-contain max-h-9 w-auto"
+                className="object-contain w-full h-full"
                 priority
               />
             </div>
             <div className="flex flex-col justify-center">
-              <span className="font-extrabold text-sm text-gray-900 tracking-tight leading-none">
-                GRAND DENTAL
-              </span>
-              <span className="text-xs font-semibold text-[#74267A] uppercase tracking-wider leading-tight mt-0.5">
-                Clinic &middot; Swoyambhu
-              </span>
+              <div className="flex items-baseline gap-1 leading-none">
+                <span className="font-brand text-[20px] font-semibold tracking-[-0.01em] text-gray-950">
+                  Grand
+                </span>
+                <span className="font-brand text-[20px] font-normal italic text-[#74267A]">
+                  Dental
+                </span>
+              </div>
+              <div className="flex items-center gap-1 mt-0.5">
+                <span className="h-[1px] w-1.5 bg-[#ED91FB]" />
+                <span className="text-[8px] font-bold tracking-[0.24em] uppercase text-gray-500 font-sans">
+                  CLINIC &bull; KATHMANDU
+                </span>
+              </div>
             </div>
           </Link>
 

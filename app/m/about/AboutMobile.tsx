@@ -74,38 +74,38 @@ export default function AboutMobile() {
   > = {
     painless: {
       id: "painless",
-      tabTitle: "1. Painless Care",
-      subtitle: "Comfort-First Dental Treatment",
+      tabTitle: "1. Painless & Gentle Care",
+      subtitle: "Comfort First",
       image: chairImg,
-      desc: "We understand that dental anxiety is real. Our treatments are designed around gentle local anesthesia techniques, modern ultrasonic scaling, and unhurried appointments so you feel completely at ease.",
+      desc: "Dental fear is real, and we take it seriously. Every procedure is handled with careful, gentle numbing techniques and unhurried patience so you remain comfortable from start to finish.",
       points: [
-        "Gentle localized anesthesia for pain-free procedures",
-        "Ultrasonic scaling that is gentle on teeth and gums",
-        "Clear step-by-step explanations with zero surprises",
+        "Gentle localized numbing for stress-free treatments",
+        "Ultrasonic teeth cleaning that is smooth on sensitive gums",
+        "Clear step-by-step guidance so you always know what to expect",
       ],
     },
     hygiene: {
       id: "hygiene",
-      tabTitle: "2. Sterilization",
-      subtitle: "Uncompromising Patient Safety",
+      tabTitle: "2. Hospital-Grade Cleanliness",
+      subtitle: "Patient Safety",
       image: dentalToolsImg,
-      desc: "Patient safety is our highest priority. Every instrument undergoes rigorous autoclave sterilization, and all treatment surfaces are disinfected between patients to maintain medical-grade hygiene.",
+      desc: "We treat clinic cleanliness as an absolute priority. Every instrument undergoes medical-grade autoclave sterilization, and operatories are thoroughly sanitized between every single patient.",
       points: [
-        "100% autoclave sterilized instruments for every patient",
-        "Disposable barriers and single-use protective equipment",
-        "Clean, well-ventilated operatories with natural daylight",
+        "100% autoclave sterilized instruments for each appointment",
+        "Disposable barriers and single-use safety materials",
+        "Fresh, well-ventilated treatment suites with natural light",
       ],
     },
     transparency: {
       id: "transparency",
-      tabTitle: "3. Honest Advice",
-      subtitle: "Natural Tooth Preservation",
+      tabTitle: "3. Honest & Ethical Advice",
+      subtitle: "Tooth Preservation",
       image: frontViewImg,
-      desc: "We focus on preserving your natural teeth whenever possible. Our specialists explain all options, timelines, and costs upfront so you can make confident, informed decisions without pressure.",
+      desc: "Our philosophy is simple: protect and preserve your natural teeth whenever possible. We explain your exact options, show you the reasons clearly, and never suggest treatments you do not need.",
       points: [
-        "Conservative treatment planning to save natural teeth",
-        "Transparent pricing with no hidden procedure fees",
-        "Digital imaging shown and explained before treatment",
+        "Focus on saving and repairing your natural teeth first",
+        "Transparent fee estimates upfront with zero hidden charges",
+        "Practical advice and tips for long-term home dental care",
       ],
     },
   };
@@ -118,88 +118,133 @@ export default function AboutMobile() {
       <section className="px-4 pt-4 space-y-5">
         <div className="space-y-3">
           <span className="type-eyebrow px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
-            About Grand Dental Clinic
+            About Our Practice &bull; Swoyambhu
           </span>
 
           <h1 className="text-3xl font-light text-gray-900 leading-tight tracking-tight">
-            Painless Care. Honest Advice.{" "}
+            Quality dental care delivered with{" "}
             <span
-              className="font-medium text-transparent block"
+              className="font-normal text-transparent block"
               style={{
                 background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
             >
-              Lifelong Confidence.
+              patience and honesty.
             </span>
           </h1>
 
           <p className="type-body font-normal">
-            Grand Dental Clinic was established in Swoyambhu, Kathmandu with a clear commitment: to provide clean, gentle, and reliable dental care where patients of all ages feel heard, respected, and completely at ease.
+            Grand Dental Clinic was established in Swoyambhu, Kathmandu with a clear goal: to make dental visits comfortable, transparent, and completely stress-free. Many people delay necessary treatment because of fear or uncertainty about costs. We built our practice to change that experience.
           </p>
 
           <p className="type-body font-normal text-gray-600">
-            By pairing modern clinical equipment with compassionate chairside care, our multidisciplinary team of NMC-certified specialists takes the time to listen, explain every step transparently, and prioritize your natural tooth preservation without rushed or unnecessary procedures.
+            From routine checkups and gentle cleanings to root canals, braces, and restorative care, our specialists focus on preserving your natural teeth. We take the time to discuss your diagnosis clearly, answer your questions, and provide thoughtful care in a spotless, welcoming environment.
           </p>
         </div>
 
+        {/* 4 Feature Badges */}
+        <div className="grid grid-cols-2 gap-2.5 pt-1">
+          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span>Gentle Care</span>
+            </div>
+            <p className="text-gray-600 text-[11px] font-normal leading-snug">Pain-free approach &amp; relaxed visits</p>
+          </div>
+
+          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span>Strict Hygiene</span>
+            </div>
+            <p className="text-gray-600 text-[11px] font-normal leading-snug">Autoclave sterilization on all tools</p>
+          </div>
+
+          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span>Modern Setup</span>
+            </div>
+            <p className="text-gray-600 text-[11px] font-normal leading-snug">Digital imaging &amp; precision tools</p>
+          </div>
+
+          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span>Honest Advice</span>
+            </div>
+            <p className="text-gray-600 text-[11px] font-normal leading-snug">Clear pricing &amp; no unneeded treatments</p>
+          </div>
+        </div>
+
         {/* Action Buttons */}
-        <div className="flex flex-col gap-2.5">
+        <div className="flex flex-col gap-2.5 pt-1">
           <Link
             href="/appointment"
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-semibold shadow-md transition-colors min-h-[48px]"
           >
-            <span>Book Consultation</span>
+            <span>Book an Appointment</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
 
           <a
-            href="tel:01-4950352"
-            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#FCF5FE] border border-[#F3D5F9] text-[#74267A] type-ui-control font-bold min-h-[44px]"
+            href="tel:014950352"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] text-[#74267A] type-ui-control font-semibold min-h-[44px]"
           >
             <Phone className="w-4 h-4" />
             <span>Call 01-4950352</span>
           </a>
         </div>
 
-        {/* Quick Trust Bar */}
+        {/* Quick Summary Bar */}
         <div className="grid grid-cols-2 gap-2 pt-2">
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-sm sm:text-base text-[#5C205E]">NMC Certified</div>
-            <div className="type-meta text-gray-800 font-semibold">Experienced Specialists</div>
+          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#5C205E]">10,000+</div>
+            <div className="text-xs font-semibold text-gray-800">Patients Welcomed</div>
+            <div className="text-[10.5px] text-gray-500 font-normal">Kathmandu Valley</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-sm sm:text-base text-[#5C205E]">100% Sterilized</div>
-            <div className="type-meta text-gray-800 font-semibold">Hospital Autoclave</div>
+          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#5C205E]">100%</div>
+            <div className="text-xs font-semibold text-gray-800">Sterilized Equipment</div>
+            <div className="text-[10.5px] text-gray-500 font-normal">Hospital Autoclave</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-sm sm:text-base text-[#5C205E]">Painless Focus</div>
-            <div className="type-meta text-gray-800 font-semibold">Gentle Anesthesia</div>
+          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#5C205E]">Experienced</div>
+            <div className="text-xs font-semibold text-gray-800">Dental Specialists</div>
+            <div className="text-[10.5px] text-gray-500 font-normal">Focus on Natural Teeth</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-sm sm:text-base text-[#5C205E]">Open 6 Days</div>
-            <div className="type-meta text-gray-800 font-semibold">Sun &ndash; Fri (8 AM - 6 PM)</div>
+          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#5C205E]">Swoyambhu</div>
+            <div className="text-xs font-semibold text-gray-800">Convenient Location</div>
+            <div className="text-[10.5px] text-gray-500 font-normal">Dedicated Parking</div>
           </div>
         </div>
 
-        {/* Hero Photo Tapestry */}
+        {/* Visual Photo Highlights */}
         <div className="space-y-3 pt-2">
-          <div className="relative h-80 w-full rounded-3xl overflow-hidden shadow-md border border-gray-200 bg-gray-900">
+          <div className="relative h-72 w-full rounded-3xl overflow-hidden shadow-md border border-gray-200 bg-gray-900">
             <Image
               src={receptionImg}
-              alt="Grand Dental Clinic Reception Lounge in Swoyambhu"
+              alt="Reception lounge at Grand Dental Clinic Swoyambhu"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 type-meta text-white font-semibold">
-              Welcoming Reception Lounge &middot; Swoyambhu
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 text-white space-y-1">
+              <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#5C205E] text-white uppercase tracking-wider">
+                Patient Experience
+              </span>
+              <h3 className="text-base font-bold text-white">Calm, Unrushed Consultations</h3>
+              <p className="text-xs text-white/90 font-normal">
+                We listen attentively to your concerns and review examination findings clearly before starting treatment.
+              </p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
-            <div className="relative h-56 rounded-2xl overflow-hidden shadow-xs border border-gray-200 bg-gray-900">
+            <div className="relative h-48 rounded-2xl overflow-hidden shadow-xs border border-gray-200 bg-gray-900">
               <Image
                 src={frontViewImg}
                 alt="Grand Dental Clinic Building Exterior"
@@ -207,7 +252,7 @@ export default function AboutMobile() {
                 className="object-cover"
               />
             </div>
-            <div className="relative h-56 rounded-2xl overflow-hidden shadow-xs border border-gray-200 bg-gray-900">
+            <div className="relative h-48 rounded-2xl overflow-hidden shadow-xs border border-gray-200 bg-gray-900">
               <Image
                 src={chairImg}
                 alt="Modern Sterilized Dental Operatory Chair"
@@ -223,10 +268,10 @@ export default function AboutMobile() {
       <section className="px-4 py-6 border-t border-gray-100 bg-[#FCF5FE]/30 space-y-5">
         <div className="space-y-2">
           <span className="type-eyebrow block">
-            Our Care Philosophy
+            Our Core Philosophy
           </span>
           <h2 className="type-section-title">
-            Three Pillars of Our{" "}
+            The Three Pillars of{" "}
             <span
               className="font-medium text-transparent"
               style={{
@@ -235,7 +280,7 @@ export default function AboutMobile() {
                 WebkitBackgroundClip: "text",
               }}
             >
-              Clinical Practice
+              Our Dental Care
             </span>
           </h2>
         </div>
@@ -247,40 +292,36 @@ export default function AboutMobile() {
               key={key}
               type="button"
               onClick={() => setActivePillar(key)}
-              className={`py-2.5 px-2 rounded-xl type-ui-control font-bold transition-all text-center ${activePillar === key
+              className={`py-2 px-1.5 rounded-xl text-xs font-bold transition-all text-center ${activePillar === key
                 ? "bg-[#5C205E] text-white shadow-sm"
                 : "text-gray-600 hover:text-gray-900"
                 }`}
             >
-              {key === "painless" ? "Painless" : key === "hygiene" ? "Sterilization" : "Honesty"}
+              {key === "painless" ? "1. Painless" : key === "hygiene" ? "2. Cleanliness" : "3. Honesty"}
             </button>
           ))}
         </div>
 
         {/* Active Pillar Card */}
         <div className="rounded-3xl bg-white border border-gray-200/80 overflow-hidden shadow-sm space-y-4 p-5">
-          <div className="relative h-72 w-full rounded-2xl overflow-hidden shadow-xs bg-gray-900">
-            <Image
-              src={currentPillar.image}
-              alt={currentPillar.subtitle}
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white type-sub-title text-white">
-              {currentPillar.subtitle}
-            </div>
+          <div className="relative h-70 w-full rounded-2xl overflow-hidden shadow-xs bg-gray-900">
+
+
           </div>
 
           <div className="space-y-3">
-            <p className="type-body font-normal text-gray-700">
+            <h3 className="type-card-title">
+              {currentPillar.tabTitle.replace(/^\d+\.\s*/, "")}
+            </h3>
+
+            <p className="type-body font-normal text-gray-700 text-sm">
               {currentPillar.desc}
             </p>
 
-            <ul className="space-y-2 pt-1 border-t border-gray-100">
+            <ul className="space-y-2 pt-2 border-t border-gray-100">
               {currentPillar.points.map((pt, i) => (
-                <li key={i} className="flex items-start gap-2 type-body font-normal text-gray-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-1" />
+                <li key={i} className="flex items-start gap-2 type-body font-normal text-gray-800 text-xs sm:text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span>{pt}</span>
                 </li>
               ))}
@@ -293,10 +334,10 @@ export default function AboutMobile() {
       <section className="px-4 py-6 border-t border-gray-100 space-y-4">
         <div className="space-y-2">
           <span className="type-eyebrow block">
-            Clinic Atmosphere &amp; Safety
+            Clinic Tour
           </span>
           <h2 className="type-section-title">
-            Step Inside Our{" "}
+            Take a look inside{" "}
             <span
               className="font-medium text-transparent"
               style={{
@@ -305,16 +346,20 @@ export default function AboutMobile() {
                 WebkitBackgroundClip: "text",
               }}
             >
-              Swoyambhu Clinic
+              Grand Dental
             </span>
           </h2>
+          <p className="type-body font-normal text-sm">
+            Explore our reception area, modern treatment rooms, and clean setup located in Swoyambhu, Kathmandu.
+          </p>
         </div>
 
         {/* Video Player Card */}
-        <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-gray-950 min-h-[300px] h-[330px] w-full flex items-center justify-center">
+        <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-gray-950 min-h-[300px] h-[530px] w-full flex items-center justify-center">
           <video
             ref={videoRef}
             src="/video.mp4"
+            poster={receptionImg.src}
             muted={isMuted}
             playsInline
             loop
@@ -325,7 +370,7 @@ export default function AboutMobile() {
           <div className="absolute inset-0 bg-black/25 flex flex-col justify-between p-4 pointer-events-none">
             <div className="flex items-center justify-between pointer-events-auto">
               <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white type-meta font-semibold">
-                Clinic Tour Video
+                Clinic Walkthrough
               </span>
               <button
                 type="button"
@@ -359,10 +404,10 @@ export default function AboutMobile() {
       <section className="px-4 py-6 border-t border-gray-100 bg-[#FCF5FE]/30 space-y-5">
         <div className="space-y-2">
           <span className="type-eyebrow block">
-            Clinical Disciplines
+            Our Services
           </span>
           <h2 className="type-section-title">
-            Advanced Treatments,{" "}
+            Comprehensive dental treatments,{" "}
             <span
               className="font-medium text-transparent"
               style={{
@@ -371,12 +416,15 @@ export default function AboutMobile() {
                 WebkitBackgroundClip: "text",
               }}
             >
-              Personalized Care
+              gentle care.
             </span>
           </h2>
+          <p className="type-body font-normal text-sm">
+            From routine cleanings and natural tooth fillings to root canals, braces, and replacements, explore how we care for your smile.
+          </p>
         </div>
 
-        {/* 3D Overlapping Card Stack for About Page */}
+        {/* 3D Overlapping Card Stack */}
         <div className="relative h-[380px] w-full flex items-center justify-center overflow-hidden select-none">
           {servicesData.map((srv, index) => {
             const total = servicesData.length;
@@ -513,8 +561,8 @@ export default function AboutMobile() {
         <div className="relative rounded-3xl overflow-hidden bg-gray-900 text-white p-6 shadow-xl space-y-4">
           <div className="absolute inset-0 z-0">
             <Image
-              src={receptionImg}
-              alt="Grand Dental Clinic Atmosphere"
+              src={frontViewImg}
+              alt="Grand Dental Clinic Swoyambhu Front View"
               fill
               className="object-cover opacity-35"
             />
@@ -522,33 +570,29 @@ export default function AboutMobile() {
           </div>
 
           <div className="relative z-10 space-y-2">
-            <span className="type-eyebrow text-[#ED91FB] block">
-              Gentle Family Dentistry
-            </span>
             <h3 className="type-card-title text-white text-xl font-bold leading-tight">
-              Ready for a Gentle, Anxiety-Free Dental Visit?
+              Visit us for gentle dental care in Kathmandu
             </h3>
-            <p className="type-body text-gray-200 font-normal leading-relaxed">
-              Visit our modern clinic in Swoyambhu, Kathmandu. Book an appointment or call us for transparent guidance.
+            <p className="type-body text-gray-200 font-normal leading-relaxed text-sm">
+              Open Sunday to Friday (8:00 AM – 6:00 PM). Walk in or schedule a consultation with our experienced dental team in Swoyambhu.
             </p>
           </div>
 
           <div className="relative z-10 pt-2 flex flex-col gap-2.5">
             <Link
               href="/appointment"
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
             >
-              <span>Book Consultation</span>
+              <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
             <a
-              href="https://wa.me/9779841322789?text=Hello%20Grand%20Dental,%20I%20would%20like%20to%20learn%20more%20about%20your%20clinic."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/15 active:bg-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold border border-white/25 backdrop-blur-xs min-h-[44px]"
+              href="tel:014950352"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white/15 active:bg-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold border border-white/25 backdrop-blur-xs min-h-[44px]"
             >
-              <span>Chat on WhatsApp</span>
+              <Phone className="w-4 h-4" />
+              <span>Call 01-4950352</span>
             </a>
           </div>
         </div>

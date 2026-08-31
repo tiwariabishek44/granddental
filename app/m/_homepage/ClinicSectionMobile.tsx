@@ -19,14 +19,14 @@ export default function ClinicSectionMobile({
   return (
     <section id={id} className={`py-10 px-4 border-b border-gray-100 sm:hidden ${className}`}>
       <div className="space-y-6">
-        {/* Section Header (Preserved Exactly from Desktop Version) */}
+        {/* Section Header */}
         <div className="space-y-2">
           <span className="type-eyebrow">
-            Clinic Environment
+            The Grand Dental Clinic Environment
           </span>
 
           <h2 className="type-section-title">
-            A space where{" "}
+            Thoughtful care begins with the{" "}
             <span
               className="font-medium text-transparent"
               style={{
@@ -35,41 +35,36 @@ export default function ClinicSectionMobile({
                 WebkitBackgroundClip: "text",
               }}
             >
-              modern care
-            </span>{" "}
-            meets genuine calm.
+              space around you.
+            </span>
           </h2>
 
           <p className="type-body font-normal">
-            We designed our Swoyambhu clinic to eliminate dental anxiety. Ergonomic treatment chairs, natural daylight, and hospital-grade autoclave sterilization make every appointment feel safe and unhurried.
+            From the moment you walk in, every detail is designed to make dental care feel considered and comfortable. Clean, contemporary treatment spaces, modern clinical equipment, and attentive chairside care create an environment where you can slow down, ask questions, and feel confident about your care.
           </p>
         </div>
 
-        {/* Asymmetric Image Flow (Direct Parity with Desktop Grid) */}
+        {/* Asymmetric Image Flow */}
         <div className="space-y-4">
           {/* Main Large Facility Photo with ImageReveal animation */}
           <ImageReveal
             src={fontview}
-            alt="Clean, sterilized dental operatory at Grand Dental Clinic"
+            alt="Modern treatment room at Grand Dental Clinic"
             className="w-full h-[280px] rounded-3xl shadow-sm border border-gray-200/80"
           />
 
           {/* Secondary 3D Consultation Model Setup */}
           <ImageReveal
             src={holograph}
-            alt="Comfortable doctor consultation setup"
+            alt="Modern dental consultation and clinical environment"
             className="w-full h-[210px] rounded-3xl shadow-sm border border-gray-200/80"
           />
 
-          {/* Purple Pastel Quote Bento Card */}
+          {/* Purple Pastel Experience Card */}
           <div className="rounded-3xl bg-[#F9EBFC] p-6 border border-[#F0CEF6] space-y-4 shadow-2xs">
-            <div className="space-y-2">
-              <span className="type-eyebrow text-[#74267A] block">
-                डेन्टल क्लिनिक भनेपछि अब डराउनु पर्दैन
-              </span>
-
-              <p className="type-card-title text-base sm:text-lg">
-                Unhurried chairside attention and transparent guidance make every visit reassuring and fear-free.
+            <div>
+              <p className="text-base sm:text-lg font-medium leading-relaxed text-gray-900">
+                A calm environment, attentive care, and clear guidance — because feeling comfortable is part of good dental care.
               </p>
             </div>
 
@@ -77,8 +72,8 @@ export default function ClinicSectionMobile({
               href="/about"
               className="flex items-center justify-between border-t border-[#74267A]/15 pt-3 transition-opacity active:opacity-75 group cursor-pointer"
             >
-              <span className="type-ui-control font-semibold text-[#5C205E]">
-                Learn More About Our Clinic
+              <span className="text-sm font-semibold text-[#5C205E]">
+                Explore Our Clinic
               </span>
               <ArrowRight className="h-4 w-4 text-[#74267A] transition-transform group-hover:translate-x-1" />
             </Link>

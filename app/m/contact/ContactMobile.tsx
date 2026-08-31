@@ -50,20 +50,20 @@ export default function ContactMobile() {
 
   const faqs = [
     {
-      q: "Do I need to book in advance, or are walk-ins accepted?",
-      a: "Walk-in patients are always welcome during clinic hours (8:00 AM – 6:00 PM). However, booking an appointment via phone or WhatsApp helps us reserve your preferred time slot and minimizes your waiting time.",
+      q: "Can I just walk in, or do I need an appointment first?",
+      a: "Walk-ins are always welcome from 8:00 AM to 6:00 PM (Sunday to Friday). However, calling or messaging on WhatsApp beforehand reserves your time and keeps your waiting time to a minimum.",
     },
     {
-      q: "Is parking available at the clinic?",
-      a: "Yes, dedicated on-site parking is available right in front of the clinic for both motorbikes/scooters and cars.",
+      q: "Is there easy parking available near the clinic?",
+      a: "Yes. We have dedicated on-site parking right outside the clinic for both motorbikes/scooters and cars.",
     },
     {
-      q: "Which treatments can be completed in a single visit?",
-      a: "Routine consultations, diagnostic X-rays, ultrasonic scaling and polishing, minor tooth-colored fillings, and urgent toothache relief are usually completed in a single visit.",
+      q: "Which treatments can be finished in a single visit?",
+      a: "Routine checkups, diagnostic X-rays, teeth cleaning (scaling & polishing), simple cavity fillings, and urgent toothache relief are usually completed during a single visit.",
     },
     {
-      q: "How can I reach the clinic from Swoyambhu Ring Road?",
-      a: "From the Swoyambhu Ring Road Buddha Park junction, take the road heading towards Pachadhara (approximately 150 meters, near the Pachadhara Khanepani Office). You will clearly see the Grand Dental Clinic signboard.",
+      q: "How do I find the clinic from Swoyambhu Ring Road?",
+      a: "From the Buddha Park junction on the Ring Road, head approximately 150 meters down the Pachadhara road. We are located right next to the Pachadhara Khanepani Office.",
     },
   ];
 
@@ -72,11 +72,11 @@ export default function ContactMobile() {
       {/* 1. HEADER SECTION */}
       <section className="px-4 pt-4 space-y-2.5">
         <span className="type-eyebrow px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
-          Reach Out &amp; Visit &middot; Swoyambhu
+          We’re Here to Help &middot; Swoyambhu, Kathmandu
         </span>
 
         <h1 className="text-3xl font-light text-gray-900 leading-tight tracking-tight">
-          Contact &amp;{" "}
+          Get in touch or{" "}
           <span
             className="font-medium text-transparent"
             style={{
@@ -85,12 +85,12 @@ export default function ContactMobile() {
               backgroundClip: "text",
             }}
           >
-            Clinic Location
+            visit our clinic.
           </span>
         </h1>
 
         <p className="type-body font-normal">
-          Have questions regarding your dental health or wish to schedule a consultation? Our team in Swoyambhu, Kathmandu is here to assist you.
+          Have a question about a treatment, sudden tooth pain, or need to schedule a consultation? Call us, message on WhatsApp, or send a quick message below.
         </p>
       </section>
 
@@ -103,14 +103,14 @@ export default function ContactMobile() {
               <Phone className="w-5 h-5" />
             </div>
             <span className="type-meta px-2.5 py-0.5 rounded-full font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
-              Direct Line &amp; WhatsApp
+              Quick Response
             </span>
           </div>
 
           <div>
-            <h3 className="type-card-title">Call or WhatsApp Us</h3>
+            <h3 className="type-card-title">Call or WhatsApp</h3>
             <p className="type-meta text-gray-600 mt-0.5">
-              Speak directly with our clinic reception for appointments or emergencies.
+              Speak directly with our front desk to ask questions or reserve an appointment time.
             </p>
           </div>
 
@@ -150,9 +150,9 @@ export default function ContactMobile() {
           </div>
 
           <div>
-            <h3 className="type-card-title">Clinic Location</h3>
+            <h3 className="type-card-title">Our Location</h3>
             <p className="type-body text-gray-700 font-normal mt-0.5 leading-relaxed">
-              Nagarjun-3, Pachadhara, Swoyambhu, Kathmandu. Near Pachadhara Khanepani Office (~150m from Ring Road Buddha Park).
+              Nagarjun-3, Pachadhara, Swoyambhu, Kathmandu. Conveniently located near the Pachadhara Khanepani Office, just 150m from Ring Road.
             </p>
           </div>
 
@@ -174,7 +174,7 @@ export default function ContactMobile() {
           </div>
 
           <div>
-            <h3 className="type-card-title">Hours of Operation</h3>
+            <h3 className="type-card-title">Clinic Hours</h3>
             <div className="space-y-1.5 type-meta text-gray-700 pt-1">
               <div className="flex justify-between">
                 <span className="font-semibold text-gray-900">Sun — Fri:</span>
@@ -182,7 +182,7 @@ export default function ContactMobile() {
               </div>
               <div className="flex justify-between">
                 <span className="font-semibold text-gray-900">Saturday:</span>
-                <span className="text-[#74267A] font-bold">By Prior Appointment</span>
+                <span className="text-[#74267A] font-bold">Open by Appointment</span>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function ContactMobile() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#74267A] shrink-0 mt-2" />
-                <span>Next to the Pachadhara Khanepani Office with parking out front.</span>
+                <span>Next to the Pachadhara Khanepani Office with dedicated on-site parking out front.</span>
               </li>
             </ul>
 
@@ -251,10 +251,10 @@ export default function ContactMobile() {
               Send a Message
             </span>
             <h2 className="type-section-title">
-              Request Consultation
+              Book a Consultation
             </h2>
             <p className="type-body font-normal text-gray-600">
-              Fill out the quick form and our reception will confirm your visit promptly.
+              Fill in your details below and our team will get back to you promptly to confirm your visit.
             </p>
           </div>
 
@@ -263,7 +263,7 @@ export default function ContactMobile() {
             <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-center gap-2.5 type-ui-control">
               <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
               <div>
-                <span className="font-semibold">Inquiry Received!</span> We will contact you via Phone / WhatsApp shortly.
+                <span className="font-semibold">Message Sent!</span> We will contact you via phone or WhatsApp shortly to confirm your visit.
               </div>
             </div>
           )}
@@ -323,7 +323,7 @@ export default function ContactMobile() {
 
             <div className="space-y-1">
               <label htmlFor="mobile-message" className="type-ui-control font-semibold text-gray-800 block">
-                Additional Details (Optional)
+                Note or Message (Optional)
               </label>
               <textarea
                 id="mobile-message"
@@ -340,7 +340,7 @@ export default function ContactMobile() {
               disabled={isSubmitting}
               className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
             >
-              <span>{isSubmitting ? "Sending..." : "Submit Inquiry"}</span>
+              <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>

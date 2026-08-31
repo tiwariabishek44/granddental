@@ -11,20 +11,20 @@ import {
 
 export default function Footer() {
   const quickLinks = [
-    { name: "About Clinic", href: "/about" },
-    { name: "Our Specialists", href: "/doctors" },
-    { name: "Book Appointment", href: "/appointment" },
-    { name: "Patient Reviews", href: "/#testimonials" },
-    { name: "Emergency Dental Care", href: "/contact" },
+    { name: "About Our Clinic", href: "/about" },
+    { name: "Specialist Doctors", href: "/doctors" },
+    { name: "Dental Treatments", href: "/services" },
+    { name: "Book an Appointment", href: "/appointment" },
+    { name: "Contact & Directions", href: "/contact" },
   ];
 
   const serviceLinks = [
-    { name: "3D Dental Implants", href: "/services/dental-implants" },
-    { name: "Invisalign & Clear Aligners", href: "/services/clear-aligners" },
-    { name: "Cosmetic Smile Makeover", href: "/services/smile-makeover" },
-    { name: "Laser Teeth Whitening", href: "/services/teeth-whitening" },
+    { name: "Teeth Cleaning & Polishing", href: "/services/scaling-polishing" },
     { name: "Painless Root Canal (RCT)", href: "/services/root-canal" },
-    { name: "Ultrasonic Scaling & Polish", href: "/services/scaling-polishing" },
+    { name: "Permanent Dental Implants", href: "/services/dental-implants" },
+    { name: "Clear Invisible Aligners", href: "/services/clear-aligners" },
+    { name: "Tooth-Colored Fillings", href: "/services/composite-fillings" },
+    { name: "Professional Teeth Whitening", href: "/services/teeth-whitening" },
   ];
 
   return (
@@ -44,24 +44,29 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-x-12">
           {/* Column 1: Brand & Bio (Span 2 on lg) */}
           <div className="sm:col-span-2 lg:col-span-2 space-y-6">
-            <Link href="/" className="inline-block">
-              <div className="relative h-12 w-44">
+            <Link href="/" className="inline-flex items-center gap-3.5 group">
+              <div className="relative h-12 w-12 shrink-0 flex items-center justify-center rounded-full border border-[#F3D5F9] bg-white p-0.5 shadow-2xs">
                 <Image
                   src="/logo.png"
                   alt="Grand Dental Clinic"
-                  width={176}
-                  height={56}
-                  className="object-contain max-h-12 w-auto"
+                  width={48}
+                  height={48}
+                  className="object-contain w-full h-full"
                 />
+              </div>
+              <div className="flex flex-col justify-center">
+                <span className="font-serif text-2xl sm:text-3xl font-normal tracking-tight text-gray-950 leading-none group-hover:text-[#5C205E] transition-colors">
+                  Grand Dental
+                </span>
+                <span className="text-[10px] font-bold tracking-[0.22em] uppercase text-[#74267A] mt-1 font-sans">
+                  Clinic &bull; Kathmandu
+                </span>
               </div>
             </Link>
 
             <p className="type-body max-w-sm">
-              Precision dentistry, modern autoclave sterilization, and anxiety-free gentle care &mdash; empowering confident, lifelong smiles in Kathmandu.
+              Thoughtful, comprehensive dental care delivered with a gentle, personal approach. Helping you smile with confidence in Swoyambhu, Kathmandu.
             </p>
-
-            {/* Trust badge */}
-
 
             {/* Social Media Links */}
             <div className="flex items-center space-x-3 pt-2">
@@ -104,7 +109,7 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div className="space-y-4">
             <h3 className="type-sub-title">
-              Explore
+              Quick Links
             </h3>
             <ul className="space-y-3 type-ui-control text-gray-600 font-normal">
               {quickLinks.map((link) => (
@@ -123,7 +128,7 @@ export default function Footer() {
           {/* Column 3: Dental Services */}
           <div className="space-y-4">
             <h3 className="type-sub-title">
-              Specialized Care
+              Treatments
             </h3>
             <ul className="space-y-3 type-ui-control text-gray-600 font-normal">
               {serviceLinks.map((svc) => (
@@ -160,10 +165,10 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#74267A] shrink-0" />
                 <a
-                  href="mailto:contact@granddental.com.np"
+                  href="mailto:grand.dentalclinic2079@gmail.com"
                   className="hover:text-[#74267A] transition-colors font-medium"
                 >
-                  contact@granddental.com.np
+                  grand.dentalclinic2079@gmail.com
                 </a>
               </div>
 
@@ -171,14 +176,14 @@ export default function Footer() {
                 <Clock className="w-4 h-4 text-[#74267A] shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-gray-800">Sun &ndash; Fri: 8:00 AM &ndash; 6:00 PM</p>
-                  <p className="type-meta text-gray-500">Saturday by Prior Appointment</p>
+                  <p className="type-meta text-gray-500">Saturday: By Prior Appointment</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Accreditations */}
+        {/* Bottom Bar: Copyright */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 sm:flex-row type-meta text-gray-500">
           <p>&copy; {new Date().getFullYear()} Grand Dental Clinic. All rights reserved.</p>
           <div className="flex items-center space-x-6">
@@ -188,10 +193,6 @@ export default function Footer() {
             <span>•</span>
             <Link href="/terms" className="hover:text-[#74267A] transition-colors">
               Terms &amp; Conditions
-            </Link>
-            <span>•</span>
-            <Link href="/design-system" className="text-[#74267A] hover:text-[#5C205E] font-semibold transition-colors">
-              Design System Guide
             </Link>
           </div>
         </div>

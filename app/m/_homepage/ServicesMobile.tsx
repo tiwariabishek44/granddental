@@ -45,11 +45,11 @@ export default function ServicesMobile() {
       {/* Centered Section Header */}
       <div className="px-4 text-center max-w-md mx-auto space-y-2.5">
         <span className="type-eyebrow">
-          Dental Treatments
+          Our Treatments
         </span>
 
         <h2 className="type-section-title">
-          Focused Care to Protect{" "}
+          Care for your teeth.{" "}
           <span
             className="font-medium text-transparent"
             style={{
@@ -58,12 +58,12 @@ export default function ServicesMobile() {
               WebkitBackgroundClip: "text",
             }}
           >
-            Your Natural Smile.
+            Care for your confidence.
           </span>
         </h2>
 
         <p className="type-body font-normal">
-          Preserving your natural teeth through gentle scaling, single-visit root canals, and tooth-colored composite restorations.
+          From everyday preventive care to restorative, cosmetic, and specialist treatments, we bring the expertise you need together under one roof—with thoughtful guidance from consultation to follow-up.
         </p>
       </div>
 
@@ -185,7 +185,7 @@ export default function ServicesMobile() {
                 </h3>
 
                 <div className="pt-1 flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-white">
-                  <span>Explore Treatment Details</span>
+                  <span>Explore Treatment</span>
                   <ArrowRight className="w-3.5 h-3.5 text-white transition-transform duration-200 group-hover:translate-x-1" />
                 </div>
               </div>

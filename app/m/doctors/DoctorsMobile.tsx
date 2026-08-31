@@ -11,7 +11,9 @@ export default function DoctorsMobile() {
     <div className="space-y-6 pb-12 sm:hidden font-sans">
       {/* 1. HERO HEADER SECTION */}
       <section className="px-4 pt-4 space-y-2.5">
-
+        <span className="type-eyebrow px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
+          Clinical Faculty
+        </span>
 
         <h1 className="text-3xl font-light text-gray-900 leading-tight tracking-tight">
           Meet Our{" "}
@@ -25,29 +27,28 @@ export default function DoctorsMobile() {
           >
             NMC-Certified
           </span>{" "}
-          Specialists
+          Dental Doctors.
         </h1>
 
         <p className="type-body font-normal">
-          A dedicated faculty of qualified dental surgeons, orthodontists, endodontists, and prosthodontists providing gentle, transparent care in Kathmandu.
+          A multidisciplinary team of qualified dental surgeons, orthodontists, endodontists, and prosthodontists dedicated to providing gentle, thorough, and transparent dental care in Swoyambhu, Kathmandu.
         </p>
 
         {/* Action Buttons */}
         <div className="pt-2 flex flex-col gap-2.5">
           <Link
             href="/appointment"
-            className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-3.5 px-5 rounded-2xl type-ui-control font-bold shadow-md transition-all min-h-[48px]"
+            className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-3.5 px-5 rounded-full type-ui-control font-semibold shadow-md transition-all min-h-[48px]"
           >
             <span>Book Consultation</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
-          <a
-            href="tel:01-4950352"
-            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white border border-gray-200 text-gray-800 type-ui-control text-xs sm:text-sm font-semibold active:bg-gray-50 transition-colors min-h-[44px]"
+          <Link
+            href="/contact"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white border border-gray-200 text-gray-800 type-ui-control text-xs sm:text-sm font-semibold active:bg-gray-50 transition-colors min-h-[44px]"
           >
-            <Phone className="w-4 h-4 text-[#74267A]" />
-            <span>Call Helpline: 01-4950352</span>
-          </a>
+            <span>Contact Clinic</span>
+          </Link>
         </div>
       </section>
 
@@ -55,20 +56,20 @@ export default function DoctorsMobile() {
       <section className="px-4">
         <div className="grid grid-cols-2 gap-2.5">
           <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-[#5C205E]">100%</div>
-            <div className="type-meta text-gray-800 font-semibold">NMC Registered</div>
+            <div className="text-lg font-bold text-[#5C205E]">100%</div>
+            <div className="text-xs font-semibold text-gray-800">NMC Registered Surgeons</div>
           </div>
           <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-[#5C205E]">BDS &amp; MDS</div>
-            <div className="type-meta text-gray-800 font-semibold">Clinical Faculty</div>
+            <div className="text-lg font-bold text-[#5C205E]">BDS &amp; MDS</div>
+            <div className="text-xs font-semibold text-gray-800">Specialized Clinical Faculty</div>
           </div>
           <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-[#5C205E]">Painless</div>
-            <div className="type-meta text-gray-800 font-semibold">Gentle Protocols</div>
+            <div className="text-lg font-bold text-[#5C205E]">Gentle Care</div>
+            <div className="text-xs font-semibold text-gray-800">Painless Treatment Focus</div>
           </div>
           <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="type-card-title text-[#5C205E]">6 Days</div>
-            <div className="type-meta text-gray-800 font-semibold">Open in Swoyambhu</div>
+            <div className="text-lg font-bold text-[#5C205E]">Swoyambhu</div>
+            <div className="text-xs font-semibold text-gray-800">Open 6 Days a Week</div>
           </div>
         </div>
       </section>
@@ -80,7 +81,7 @@ export default function DoctorsMobile() {
             Specialist Directory &middot; {doctorsData.length} Specialists
           </span>
           <h2 className="type-section-title">
-            Our Specialist Doctors
+            Our Dental Specialists &amp; Surgeons
           </h2>
         </div>
 
@@ -105,15 +106,13 @@ export default function DoctorsMobile() {
               {/* Doctor Details */}
               <div className="relative z-10 space-y-2.5">
                 <div>
-
                   <h3 className="type-card-title text-white text-lg sm:text-xl">
                     {doc.name}
                   </h3>
-
                 </div>
 
                 <div className="pt-2.5 border-t border-white/20 flex items-center justify-between type-ui-control font-semibold text-white">
-                  <span>View Full Profile</span>
+                  <span>View Profile</span>
                   <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs">
                     <ArrowRight className="w-4 h-4" />
                   </div>
@@ -136,15 +135,15 @@ export default function DoctorsMobile() {
             <h3 className="type-card-title text-white text-xl font-bold leading-tight">
               Consult with Our Specialists Today
             </h3>
-            <p className="type-body text-white/95 font-normal leading-relaxed">
-              Whether you need gentle scaling, braces consultation, or pain relief, our team is here for you.
+            <p className="type-body text-white/95 font-normal leading-relaxed text-sm">
+              Whether you need a gentle routine cleaning, braces consultation, or pain relief from toothache, our team is here to help you smile with confidence.
             </p>
           </div>
 
           <div className="relative z-10 pt-1 flex flex-col gap-2.5">
             <Link
               href="/appointment"
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-2xl bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px]"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px]"
             >
               <span>Book Appointment</span>
               <ArrowRight className="w-4 h-4" />
@@ -154,7 +153,7 @@ export default function DoctorsMobile() {
               href="https://wa.me/9779841322789"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors min-h-[44px]"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors min-h-[44px]"
             >
               <MessageCircle className="w-4 h-4 text-emerald-300" />
               <span>WhatsApp: 9841322789</span>

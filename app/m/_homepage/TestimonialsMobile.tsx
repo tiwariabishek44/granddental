@@ -10,11 +10,8 @@ export default function TestimonialsMobile() {
       id: "shrestha",
       patient: "Sunil Shrestha",
       location: "Swoyambhu, Kathmandu",
-      procedure: "Painless Root Canal & Zirconia Crown",
-      doctor: "Dr. Aarati Joshi",
-      timeframe: "2 Visits",
       quote:
-        "I was genuinely terrified of having a root canal done. But the doctor made the entire procedure completely pain-free and comfortable. The crown looks natural, and I can eat normally with zero sensitivity.",
+        "I had put off getting my root canal for months out of fear. Dr. Aarati made the whole procedure surprisingly easy and painless. I was back to eating comfortably the next day.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop",
     },
@@ -22,11 +19,8 @@ export default function TestimonialsMobile() {
       id: "adhikari",
       patient: "Pooja Adhikari",
       location: "Nagarjun, Kathmandu",
-      procedure: "Orthodontic Braces Alignment",
-      doctor: "Dr. Sneha Rajbhandari",
-      timeframe: "14 Months Treatment",
       quote:
-        "Came to Grand Dental to fix my crooked front teeth. Dr. Sneha was extremely patient and attentive during every monthly checkup. My smile has transformed completely straight and I feel so confident now.",
+        "What stood out to me was the patience during every checkup. Dr. Sneha explained each adjustment clearly, and my teeth look completely aligned today. Truly happy with my smile.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop",
     },
@@ -34,11 +28,8 @@ export default function TestimonialsMobile() {
       id: "tamang",
       patient: "Bikash Tamang",
       location: "Balaju, Kathmandu",
-      procedure: "Ultrasonic Scaling & Composite Restoration",
-      doctor: "Dr. Saurav Pradhan",
-      timeframe: "Single Visit",
       quote:
-        "The cleanliness of the clinic and modern equipment put me at ease right away. The deep cleaning and tooth-colored cavity filling were done with great precision and care. Highly recommended!",
+        "Very clean setup and no unnecessary procedures recommended. The doctor took time to show me what needed fixing and finished the filling smoothly without any sensitivity.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop",
     },
@@ -49,11 +40,11 @@ export default function TestimonialsMobile() {
       {/* Header Matching Desktop Version */}
       <div className="space-y-2">
         <span className="type-eyebrow">
-          Patient Experiences
+          Patient Stories
         </span>
 
         <h2 className="type-section-title">
-          Real Smiles,{" "}
+          Hear directly from people{" "}
           <span
             className="font-medium text-transparent"
             style={{
@@ -62,16 +53,16 @@ export default function TestimonialsMobile() {
               WebkitBackgroundClip: "text",
             }}
           >
-            Honest Experiences
+            who trusted us with their care.
           </span>
         </h2>
 
         <p className="type-body font-normal">
-          Patient trust and comfort are at the heart of everything we do. Read what patients across Kathmandu have to say about their treatment journey at Grand Dental.
+          From first-time checkups to complete dental treatments, see how our focus on comfort and honest advice makes every visit stress-free.
         </p>
       </div>
 
-      {/* 3 Rich Editorial Patient Review Cards (Horizontal Snap Flow) */}
+      {/* 3 Editorial Patient Review Cards (Horizontal Snap Flow) */}
       <div className="flex gap-4 overflow-x-auto pb-3 -mr-4 pr-4 no-scrollbar snap-x snap-mandatory">
         {stories.map((story) => (
           <div
@@ -86,13 +77,13 @@ export default function TestimonialsMobile() {
                 ))}
               </div>
 
-              <blockquote className="type-body text-gray-800 leading-relaxed font-normal">
+              <blockquote className="type-body text-gray-800 leading-relaxed font-normal text-sm sm:text-base">
                 &ldquo;{story.quote}&rdquo;
               </blockquote>
             </div>
 
-            {/* Procedure & Patient Attribution */}
-            <div className="pt-3 border-t border-gray-100 space-y-3">
+            {/* Patient Attribution */}
+            <div className="pt-3 border-t border-gray-100">
               <div className="flex items-center gap-3">
                 <div className="relative w-11 h-11 rounded-full overflow-hidden border border-gray-200 shadow-2xs shrink-0">
                   <Image
@@ -103,19 +94,8 @@ export default function TestimonialsMobile() {
                   />
                 </div>
                 <div>
-                  <h4 className="type-sub-title text-sm sm:text-base">{story.patient}</h4>
-                  <p className="type-meta">{story.location}</p>
-                </div>
-              </div>
-
-              <div className="rounded-2xl bg-[#FCF5FE] p-3 text-xs sm:text-sm space-y-1.5 border border-[#F3D5F9]">
-                <div className="flex items-center justify-between text-gray-900 font-semibold">
-                  <span className="line-clamp-1">{story.procedure}</span>
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 ml-1" />
-                </div>
-                <div className="type-meta flex items-center justify-between text-xs sm:text-sm pt-0.5">
-                  <span>Treated by {story.doctor}</span>
-                  <span className="text-gray-500 font-medium">{story.timeframe}</span>
+                  <h4 className="text-sm sm:text-base font-bold text-gray-900 leading-tight">{story.patient}</h4>
+                  <p className="text-xs text-gray-500 font-normal mt-0.5">{story.location}</p>
                 </div>
               </div>
             </div>
