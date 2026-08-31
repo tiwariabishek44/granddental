@@ -1,31 +1,49 @@
-import { Hero } from "@/components/Hero";
-import { InfoStrip } from "@/components/InfoStrip";
-import { About } from "@/components/About";
-import { Services } from "@/components/Services";
-import { Expertise } from "@/components/Expertise";
-import { WhyChoose } from "@/components/WhyChoose";
-import { HowItWorks } from "@/components/HowItWorks";
-import { Testimonials } from "@/components/Testimonials";
-import { Transformation } from "@/components/Transformation";
-import { Faq } from "@/components/Faq";
-import { Blog } from "@/components/Blog";
-import { Appointment } from "@/components/Appointment";
+"use client";
+
+import React from "react";
+import {
+  HeroSection,
+  ClinicSection,
+  ServicesSection,
+  OurClinicSection,
+  DoctorsSection,
+  TestimonialsSection,
+  LocationBookingSection,
+} from "./_hompage";
+import {
+  HeroMobile,
+  ClinicSectionMobile,
+  ServicesMobile,
+  OurClinicMobile,
+  DoctorsMobile,
+  TestimonialsMobile,
+  LocationBookingMobile,
+} from "./m/_homepage";
 
 export default function HomePage() {
   return (
-    <main>
-      <Hero />
-      <InfoStrip />
-      <About />
-      <Services />
-      <Expertise />
-      <WhyChoose />
-      <HowItWorks />
-      <Testimonials />
-      <Transformation />
-      <Faq />
-      <Blog />
-      <Appointment />
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+      {/* DESKTOP / TABLET EXPERIENCE (sm:block) */}
+      <div className="hidden sm:block">
+        <HeroSection />
+        <ClinicSection />
+        <ServicesSection />
+        <OurClinicSection />
+        <DoctorsSection />
+        <TestimonialsSection />
+        <LocationBookingSection />
+      </div>
+
+      {/* DEDICATED MOBILE HOMEPAGE EXPERIENCE (sm:hidden) */}
+      <div className="block sm:hidden space-y-6 pb-6">
+        <HeroMobile />
+        <ClinicSectionMobile />
+        <ServicesMobile />
+        <OurClinicMobile />
+        <DoctorsMobile />
+        <TestimonialsMobile />
+        <LocationBookingMobile />
+      </div>
     </main>
   );
 }

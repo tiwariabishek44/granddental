@@ -1,0 +1,9 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as ClinicSection } from "./ClinicSection";
+export { default as ServicesSection } from "./ServicesSection";
+export { default as OurClinicSection } from "./OurClinicSection";
+export { default as DoctorsSection } from "./DoctorsSection";
+export { default as TestimonialsSection } from "./TestimonialsSection";
+export { default as LocationBookingSection } from "./LocationBookingSection";
+export { default as SectionHeader } from "./SectionHeader";
+export { default as ImageReveal } from "./ImageReveal";
