@@ -21,9 +21,11 @@ import {
   Layers,
   HeartPulse,
 } from "lucide-react";
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function Header() {
   const pathname = usePathname();
+  const { openAppointmentModal } = useAppointmentModal();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -202,115 +204,15 @@ export default function Header() {
                 About
               </Link>
 
-              {/* Treatments Mega-Menu Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+              <Link
+                href="/services"
+                className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/services")
+                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
+                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  }`}
               >
-                <button
-                  type="button"
-                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer ${isServicesOpen || pathname.startsWith("/services")
-                    ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                    : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
-                    }`}
-                  aria-expanded={isServicesOpen}
-                >
-                  <span>Services</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180 text-[#74267A]" : "text-gray-400"
-                      }`}
-                  />
-                </button>
-
-                {/* Mega-Menu Dropdown Card */}
-                <div
-                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[780px] transition-all duration-200 z-50 ${isServicesOpen
-                    ? "opacity-100 translate-y-0 pointer-events-auto visible"
-                    : "opacity-0 translate-y-2 pointer-events-none invisible"
-                    }`}
-                >
-                  <div className="rounded-3xl bg-white p-6 shadow-xl border border-gray-100 grid grid-cols-12 gap-6">
-                    {/* Left: Featured Clinical Services Grid (8 Cols) */}
-                    <div className="col-span-8 space-y-4">
-                      <div className="flex items-center justify-between pb-2 border-b border-gray-100">
-                        <span className="type-eyebrow">
-                          Treatments &amp; Procedures
-                        </span>
-                        <Link
-                          href="/services"
-                          onClick={() => setIsServicesOpen(false)}
-                          className="type-ui-control text-xs sm:text-sm font-semibold text-[#74267A] hover:text-[#5C205E] flex items-center gap-1"
-                        >
-                          <span>View all treatments</span>
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </Link>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2.5">
-                        {featuredServices.map((svc) => {
-                          const IconComp = svc.icon;
-                          return (
-                            <Link
-                              key={svc.name}
-                              href={svc.href}
-                              onClick={() => setIsServicesOpen(false)}
-                              className="group flex items-start gap-3 p-2.5 rounded-2xl transition-all duration-200 hover:bg-[#FCF5FE] border border-transparent hover:border-[#F7E6FA]"
-                            >
-                              <div
-                                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-2xs transition-transform duration-200 group-hover:scale-105"
-                                style={{ backgroundColor: svc.tint }}
-                              >
-                                <IconComp className="w-4 h-4" style={{ color: svc.iconColor }} />
-                              </div>
-                              <div className="min-w-0 flex-1">
-                                <div className="flex items-center gap-1.5">
-                                  <span className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-[#74267A] transition-colors truncate">
-                                    {svc.name}
-                                  </span>
-                                  {svc.tag && (
-                                    <span className="type-eyebrow text-xs px-2 py-0.5 rounded-full bg-[#F7E6FA] text-[#74267A]">
-                                      {svc.tag}
-                                    </span>
-                                  )}
-                                </div>
-                                <p className="type-meta line-clamp-1 mt-0.5">
-                                  {svc.desc}
-                                </p>
-                              </div>
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Right: Featured Diagnostic Spotlight Card (4 Cols) */}
-                    <div className="col-span-4 rounded-2xl bg-gradient-to-br from-[#FCF5FE] via-[#F9EBFC] to-[#F7E6FA] p-5 flex flex-col justify-between border border-[#EECFF4]/70">
-                      <div>
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 text-[#74267A] type-eyebrow shadow-2xs mb-3">
-                          <Sparkles className="w-3.5 h-3.5 text-[#922F9C]" />
-                          <span>SWOYAMBHU CLINIC</span>
-                        </div>
-                        <h4 className="type-sub-title mb-1.5">
-                          Personalized Consultation
-                        </h4>
-                        <p className="type-meta text-gray-700 leading-relaxed mb-4">
-                          Schedule a direct evaluation with our experienced dental specialists. Digital 3D scans & zero-waiting care.
-                        </p>
-                      </div>
-
-                      <Link
-                        href="/appointment"
-                        onClick={() => setIsServicesOpen(false)}
-                        className="inline-flex items-center justify-center gap-1.5 w-full py-2.5 px-3 rounded-xl bg-[#5C205E] text-white type-ui-control text-xs sm:text-sm font-semibold hover:bg-[#74267A] transition-colors shadow-2xs group cursor-pointer"
-                      >
-                        <span>Book Appointment</span>
-                        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                Services
+              </Link>
 
               <Link
                 href="/doctors"
@@ -347,34 +249,36 @@ export default function Header() {
               </a>
 
               {/* Signature Primary CTA Pill Button (Tier 1) */}
-              <Link
-                href="/appointment"
+              <button
+                type="button"
+                onClick={() => openAppointmentModal()}
                 className="group inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#5C205E] text-white hover:bg-[#74267A] h-11 sm:h-12 px-6 text-sm sm:text-base gap-2.5 shadow-sm cursor-pointer hover:shadow-md"
               >
                 <span>Book Appointment</span>
                 <span className="flex items-center justify-center rounded-full bg-white p-1.5 shadow-2xs transition-transform duration-200 group-hover:translate-x-1">
                   <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
                 </span>
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Hamburger Menu Button */}
             <div className="flex items-center gap-2 lg:hidden">
-              <Link
-                href="/appointment"
-                className="inline-flex items-center justify-center rounded-full bg-[#5C205E] text-white text-xs font-medium px-3.5 py-1.5 gap-1.5 shadow-2xs"
+              <button
+                type="button"
+                onClick={() => openAppointmentModal()}
+                className="inline-flex items-center justify-center rounded-full bg-[#5C205E] text-white text-xs font-medium px-3.5 py-1.5 gap-1.5 shadow-2xs cursor-pointer"
               >
                 <Calendar className="w-3.5 h-3.5 text-white/90" />
                 <span>Book</span>
-              </Link>
+              </button>
 
               <button
                 type="button"
                 aria-label="Toggle navigation menu"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-xl text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer"
+                className="p-2.5 rounded-2xl bg-gray-100 text-gray-700 hover:text-gray-900 hover:bg-gray-200/70 transition-colors cursor-pointer"
               >
-                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -383,7 +287,7 @@ export default function Header() {
 
       {/* 3. Mobile Slide-Over Drawer */}
       <div
-        className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+        className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${isMobileMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
           }`}
       >
         {/* Backdrop */}
@@ -441,45 +345,16 @@ export default function Header() {
                 <span>About Grand Dental Clinic</span>
               </Link>
 
-              {/* Mobile Services Accordion */}
-              <div>
-                <button
-                  type="button"
-                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                  className={`w-full flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/services")
-                    ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
-                    : "text-gray-800 hover:bg-gray-50"
-                    }`}
-                >
-                  <span>Dental Treatments</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180 text-[#74267A]" : ""
-                      }`}
-                  />
-                </button>
-
-                {isMobileServicesOpen && (
-                  <div className="pl-3 pr-2 py-2 space-y-1 bg-[#FCF5FE]/60 rounded-2xl mt-1.5 border border-[#F7E6FA]">
-                    <Link
-                      href="/services"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block py-2 px-2 text-xs font-bold text-[#74267A] hover:underline"
-                    >
-                      View All Services Overview →
-                    </Link>
-                    {featuredServices.map((svc) => (
-                      <Link
-                        key={svc.name}
-                        href={svc.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-2 px-2 text-xs font-medium text-gray-700 hover:text-[#74267A] hover:bg-white rounded-lg transition-colors"
-                      >
-                        {svc.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <Link
+                href="/services"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/services")
+                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  : "text-gray-800 hover:bg-gray-50"
+                  }`}
+              >
+                <span>Services</span>
+              </Link>
 
               <Link
                 href="/doctors"
@@ -525,16 +400,19 @@ export default function Header() {
               <span className="font-clinical text-xs font-semibold">01-4950352</span>
             </a>
 
-            <Link
-              href="/appointment"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="group inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#5C205E] text-white hover:bg-[#74267A] h-11 px-5 text-sm gap-2 shadow-sm w-full"
+            <button
+              type="button"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openAppointmentModal();
+              }}
+              className="group inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#5C205E] text-white hover:bg-[#74267A] h-11 px-5 text-sm gap-2 shadow-sm w-full cursor-pointer"
             >
               <span>Book Appointment Now</span>
               <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
                 <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
               </span>
-            </Link>
+            </button>
           </div>
         </div>
       </div>

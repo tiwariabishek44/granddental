@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ShieldCheck, Award, GraduationCap, Clock, Phone, MessageCircle } from "lucide-react";
 import { doctorsData } from "@/data/doctors";
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function DoctorsMobile() {
+  const { openAppointmentModal } = useAppointmentModal();
   return (
     <div className="space-y-6 pb-12 sm:hidden font-sans">
       {/* 1. HERO HEADER SECTION */}
@@ -87,10 +89,9 @@ export default function DoctorsMobile() {
 
         <div className="space-y-4">
           {doctorsData.map((doc) => (
-            <Link
+            <div
               key={doc.id}
-              href={`/doctors/${doc.id}`}
-              className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[400px] p-5 shadow-md active:scale-[0.99] transition-transform cursor-pointer block"
+              className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[400px] p-5 shadow-md select-none block"
             >
               {/* Photo Background */}
               <div className="absolute inset-0">
@@ -104,21 +105,16 @@ export default function DoctorsMobile() {
               </div>
 
               {/* Doctor Details */}
-              <div className="relative z-10 space-y-2.5">
-                <div>
-                  <h3 className="type-card-title text-white text-lg sm:text-xl">
-                    {doc.name}
-                  </h3>
-                </div>
+              <div className="relative z-10 space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#ED91FB]">
+                  {doc.role}
+                </span>
+                <h3 className="type-card-title text-white text-lg sm:text-xl">
+                  {doc.name}
+                </h3>
 
-                <div className="pt-2.5 border-t border-white/20 flex items-center justify-between type-ui-control font-semibold text-white">
-                  <span>View Profile</span>
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -141,13 +137,14 @@ export default function DoctorsMobile() {
           </div>
 
           <div className="relative z-10 pt-1 flex flex-col gap-2.5">
-            <Link
-              href="/appointment"
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px]"
+            <button
+              type="button"
+              onClick={() => openAppointmentModal()}
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px] cursor-pointer"
             >
               <span>Book Appointment</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </button>
 
             <a
               href="https://wa.me/9779841322789"

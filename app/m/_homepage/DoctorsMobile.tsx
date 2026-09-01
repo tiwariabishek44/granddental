@@ -75,10 +75,9 @@ export default function DoctorsMobile() {
       {/* 4 Portrait Cards (Horizontal Snap Carousel) */}
       <div className="flex gap-4 overflow-x-auto pb-3 -mr-4 pr-4 no-scrollbar snap-x snap-mandatory">
         {featuredDoctors.map((doc) => (
-          <Link
+          <div
             key={doc.id}
-            href={`/doctors/${doc.id}`}
-            className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[380px] w-[270px] shrink-0 snap-start p-5 shadow-md active:scale-[0.99] transition-transform cursor-pointer"
+            className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[380px] w-[270px] shrink-0 snap-start p-5 shadow-md select-none"
           >
             {/* Background Photographic Canvas */}
             <div className="absolute inset-0">
@@ -92,26 +91,14 @@ export default function DoctorsMobile() {
             </div>
 
             {/* Bottom Profile Details */}
-            <div className="relative z-10 space-y-2.5">
-              <div>
-                <h3 className="type-card-title text-white">
-                  {doc.name}
-                </h3>
-                <p className="type-meta text-gray-200 mt-0.5 line-clamp-1">
-                  {doc.experience}
-                </p>
-              </div>
-
-              <div className="pt-2.5 border-t border-white/20 flex items-center justify-between text-xs sm:text-sm font-semibold text-white">
-                <span>View Profile</span>
-                <div className="flex items-center justify-center w-7 h-7 rounded-full bg-white/20 backdrop-blur-xs">
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </div>
+            <div className="relative z-10 space-y-1">
+              <h3 className="type-card-title text-white">
+                {doc.name}
+              </h3>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
-    </section>
+    </section >
   );
 }

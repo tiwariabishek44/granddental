@@ -133,12 +133,9 @@ export default function Footer() {
             <ul className="space-y-3 type-ui-control text-gray-600 font-normal">
               {serviceLinks.map((svc) => (
                 <li key={svc.name}>
-                  <Link
-                    href={svc.href}
-                    className="hover:text-[#74267A] transition-colors inline-block"
-                  >
+                  <span className="text-gray-600 inline-block">
                     {svc.name}
-                  </Link>
+                  </span>
                 </li>
               ))}
             </ul>

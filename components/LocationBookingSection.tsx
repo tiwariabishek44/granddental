@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, MessageCircle, ArrowRight, Check } from "lucide-react";
 import clinicBg from "../assets/front view.jpeg";
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function LocationBookingSection() {
+  const { openAppointmentModal } = useAppointmentModal();
   return (
     <section className="relative w-full min-h-[600px] lg:h-[580px] overflow-hidden flex items-center">
       {/* Background Image */}
@@ -81,13 +83,14 @@ export default function LocationBookingSection() {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/appointment"
+              <button
+                type="button"
+                onClick={() => openAppointmentModal()}
                 className="group flex-1 bg-[#5C205E] hover:bg-[#74267A] text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-[#B43ABF]/30 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Book an Appointment</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </button>
 
               <div className="flex gap-2.5">
                 <a

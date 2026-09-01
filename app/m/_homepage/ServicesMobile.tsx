@@ -139,18 +139,18 @@ export default function ServicesMobile() {
           }
 
           return (
-            <Link
+            <div
               key={srv.id}
-              href={`/services/${srv.slug || srv.id}`}
-              onClick={(e) => {
+              onClick={() => {
                 if (!isCenter) {
-                  e.preventDefault();
                   setActiveIndex(index);
                 }
               }}
               aria-hidden={!isCenter}
               tabIndex={isCenter ? 0 : -1}
-              className="group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer"
+              className={`group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] select-none ${
+                !isCenter ? "cursor-pointer" : ""
+              }`}
               style={{
                 width: "280px",
                 height: "360px",
@@ -172,10 +172,10 @@ export default function ServicesMobile() {
               />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent transition-colors duration-300 group-hover:bg-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
 
               {/* Card Bottom Typography */}
-              <div className="absolute inset-x-0 bottom-0 p-5 text-white space-y-2">
+              <div className="absolute inset-x-0 bottom-0 p-5 text-white space-y-1.5">
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#ED91FB]">
                   {srv.categoryLabel}
                 </span>
@@ -183,13 +183,8 @@ export default function ServicesMobile() {
                 <h3 className="whitespace-pre-line text-lg font-medium leading-snug tracking-tight text-white line-clamp-2">
                   {srv.title}
                 </h3>
-
-                <div className="pt-1 flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-white">
-                  <span>Explore Treatment</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-white transition-transform duration-200 group-hover:translate-x-1" />
-                </div>
               </div>
-            </Link>
+            </div>
           );
         })}
       </div>

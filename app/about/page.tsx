@@ -23,8 +23,10 @@ import receptionImg from "@/assets/reception.jpeg";
 import frontViewImg from "@/assets/front view.jpeg";
 import dentalToolsImg from "@/assets/Dental_tools_on_tray.jpeg";
 import { AboutMobile } from "@/app/m/about";
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function AboutPage() {
+  const { openAppointmentModal } = useAppointmentModal();
   // 3 Core Pillars Active Tab State
   const [activePillar, setActivePillar] = useState<"painless" | "hygiene" | "transparency">("painless");
 
@@ -603,12 +605,18 @@ export default function AboutPage() {
               }
 
               return (
-                <Link
+                <div
                   key={srv.id}
-                  href="/services"
                   aria-hidden={!isCenter}
                   tabIndex={isCenter ? 0 : -1}
-                  className="group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer"
+                  onClick={() => {
+                    if (!isCenter) {
+                      setActiveServiceIndex(index);
+                    }
+                  }}
+                  className={`group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] select-none ${
+                    !isCenter ? "cursor-pointer" : ""
+                  }`}
                   style={{
                     width: "320px",
                     height: "380px",
@@ -624,20 +632,19 @@ export default function AboutPage() {
                     src={srv.image}
                     alt={srv.title}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/40 transition-colors duration-300 group-hover:bg-black/50" />
+                  <div className="absolute inset-0 bg-black/40" />
 
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white space-y-1.5">
+                    <span className="type-eyebrow text-[#ED91FB] block">
+                      {srv.categoryLabel}
+                    </span>
                     <h3 className="type-card-title text-white leading-tight">
                       {srv.title}
                     </h3>
-                    <div className="mt-2 flex items-center gap-1.5 text-base font-semibold text-white">
-                      <span>View Treatment</span>
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </div>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
@@ -682,13 +689,17 @@ export default function AboutPage() {
                   Open Sunday to Friday (8:00 AM – 6:00 PM). Walk in or schedule a consultation with our experienced dental team in Swoyambhu.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
-                  <Link href="/appointment" className="btn-pill-primary">
+                  <button
+                    type="button"
+                    onClick={() => openAppointmentModal()}
+                    className="btn-pill-primary cursor-pointer"
+                  >
                     <span>Book an Appointment</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link href="/contact" className="btn-pill-outline bg-white/15 hover:bg-white/25 text-white border-white/30 backdrop-blur-md">
+                  </button>
+                  <a href="tel:014950352" className="btn-pill-outline bg-white/15 hover:bg-white/25 text-white border-white/30 backdrop-blur-md">
                     <span>Call 01-4950352</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

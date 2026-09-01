@@ -116,12 +116,18 @@ export default function ServicesSection() {
             }
 
             return (
-              <Link
+              <div
                 key={srv.id}
-                href="/services"
                 aria-hidden={!isCenter}
                 tabIndex={isCenter ? 0 : -1}
-                className="group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer"
+                onClick={() => {
+                  if (!isCenter) {
+                    setActiveIndex(index);
+                  }
+                }}
+                className={`group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] select-none ${
+                  !isCenter ? "cursor-pointer" : ""
+                }`}
                 style={{
                   width: "360px",
                   height: "430px",
@@ -138,25 +144,23 @@ export default function ServicesSection() {
                   alt={srv.title}
                   fill
                   sizes="360px"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
                 {/* Image Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent transition-colors duration-300 group-hover:bg-black/50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
 
                 {/* Card Content */}
-                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-3">
+                <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
+                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#ED91FB]">
+                    {srv.categoryLabel}
+                  </span>
+
                   <h3 className="whitespace-pre-line text-2xl font-medium leading-snug tracking-tight text-white">
                     {srv.title}
                   </h3>
-
-                  <div className="pt-1 flex items-center gap-2 text-base font-semibold text-white">
-                    <span>Explore Treatment</span>
-
-                    <ArrowRight className="w-4 h-4 text-white transition-transform duration-200 group-hover:translate-x-1" />
-                  </div>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>

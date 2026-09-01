@@ -11,8 +11,10 @@ import {
 } from "lucide-react";
 import { doctorsData } from "@/data/doctors";
 import { DoctorsMobile } from "@/app/m/doctors";
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function DoctorsPage() {
+  const { openAppointmentModal } = useAppointmentModal();
   return (
     <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
       {/* MOBILE DOCTORS VIEW (sm:hidden) */}
@@ -103,12 +105,11 @@ export default function DoctorsPage() {
           {/* Doctors Grid (3 Columns) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
             {doctorsData.map((doc) => (
-              <Link
+              <div
                 key={doc.id}
-                href={`/doctors/${doc.id}`}
-                className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[440px] sm:min-h-[460px] p-6 shadow-md transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl cursor-pointer"
+                className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[440px] sm:min-h-[460px] p-6 shadow-md select-none"
               >
-                {/* Background Photographic Canvas with Smooth Zoom */}
+                {/* Background Photographic Canvas */}
                 <div className="absolute inset-0">
                   <Image
                     src={doc.image}
@@ -120,23 +121,16 @@ export default function DoctorsPage() {
                 </div>
 
                 {/* Bottom Profile Details */}
-                <div className="relative z-10 space-y-3">
-                  <div>
+                <div className="relative z-10 space-y-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#ED91FB]">
+                    {doc.role}
+                  </span>
+                  <h3 className="text-xl font-medium text-white leading-snug">
+                    {doc.name}
+                  </h3>
 
-                    <h3 className="text-xl font-medium text-white transition-colors group-hover:text-[#ED91FB] leading-snug">
-                      {doc.name}
-                    </h3>
-
-                  </div>
-
-                  <div className="pt-3 border-t border-white/20 flex items-center justify-between text-sm font-semibold text-white">
-                    <span>View Profile</span>
-                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs transition-all duration-300 group-hover:bg-[#5C205E] group-hover:text-white">
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-                    </div>
-                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </section>
@@ -158,12 +152,13 @@ export default function DoctorsPage() {
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end justify-center">
-                <Link
-                  href="/appointment"
+                <button
+                  type="button"
+                  onClick={() => openAppointmentModal()}
                   className="w-full sm:w-auto text-center justify-center bg-white text-gray-900 hover:bg-gray-100 px-7 py-4 rounded-full text-base font-semibold shadow-md transition-colors cursor-pointer"
                 >
                   Book Appointment
-                </Link>
+                </button>
                 <a
                   href="https://wa.me/9779841322789"
                   target="_blank"

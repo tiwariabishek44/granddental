@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { Phone, MessageCircle, Calendar, ArrowRight, Check } from "lucide-react";
 import MobileSectionHeader from "../components/MobileSectionHeader";
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function LocationBookingMobile() {
+  const { openAppointmentModal } = useAppointmentModal();
+
   return (
     <section className="px-4 py-8 sm:hidden space-y-5">
       {/* Header */}
@@ -18,33 +20,31 @@ export default function LocationBookingMobile() {
 
       {/* Value Points Bento Card */}
       <div className="rounded-3xl bg-[#FCF5FE] border border-[#F3D5F9] p-5 space-y-3.5 shadow-2xs">
-        <div className="space-y-3">
-          <div className="flex items-center gap-2.5">
-            <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-              <Check className="w-3 h-3 text-[#ED91FB]" />
-            </div>
-            <p className="text-gray-900 text-xs sm:text-sm font-medium">
-              Same-day consultations &amp; urgent pain relief
-            </p>
+        <div className="flex items-center gap-3">
+          <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
+            <Check className="w-3 h-3 text-[#ED91FB]" />
           </div>
+          <p className="type-meta text-gray-900 font-semibold">
+            Same-day consultations &amp; urgent pain relief
+          </p>
+        </div>
 
-          <div className="flex items-center gap-2.5">
-            <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-              <Check className="w-3 h-3 text-[#ED91FB]" />
-            </div>
-            <p className="text-gray-900 text-xs sm:text-sm font-medium">
-              Transparent treatment plans with zero pressure
-            </p>
+        <div className="flex items-center gap-3">
+          <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
+            <Check className="w-3 h-3 text-[#ED91FB]" />
           </div>
+          <p className="type-meta text-gray-900 font-semibold">
+            Transparent treatment plans with zero pressure
+          </p>
+        </div>
 
-          <div className="flex items-center gap-2.5">
-            <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-              <Check className="w-3 h-3 text-[#ED91FB]" />
-            </div>
-            <p className="text-gray-900 text-xs sm:text-sm font-medium">
-              Gentle, step-by-step care designed to keep you at ease
-            </p>
+        <div className="flex items-center gap-3">
+          <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
+            <Check className="w-3 h-3 text-[#ED91FB]" />
           </div>
+          <p className="type-meta text-gray-900 font-semibold">
+            Gentle, step-by-step care designed to keep you at ease
+          </p>
         </div>
       </div>
 
@@ -65,14 +65,15 @@ export default function LocationBookingMobile() {
         </div>
 
         <div className="relative z-10 pt-1 flex flex-col gap-2.5">
-          <Link
-            href="/appointment"
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors"
+          <button
+            type="button"
+            onClick={() => openAppointmentModal()}
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors cursor-pointer"
           >
             <Calendar className="w-4 h-4" />
             <span>Book Online Appointment</span>
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </button>
 
           <div className="grid grid-cols-2 gap-2">
             <a

@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, ShieldCheck, Star } from "lucide-react";
 import heroImg from "@/assets/image copy.png";
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function HeroMobile() {
+  const { openAppointmentModal } = useAppointmentModal();
   return (
     <section className="w-full sm:hidden">
       {/* Full-Width Edge-to-Edge Flagship Hero Canvas with Fixed Stable Height (No Scroll Resize) */}
@@ -48,13 +50,14 @@ export default function HeroMobile() {
 
           {/* Primary Action Stack */}
           <div className="pt-2 flex flex-col gap-2.5">
-            <Link
-              href="/appointment"
-              className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-3.5 px-6 rounded-full type-ui-control font-semibold shadow-lg transition-all group min-h-[48px]"
+            <button
+              type="button"
+              onClick={() => openAppointmentModal()}
+              className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-3.5 px-6 rounded-full type-ui-control font-semibold shadow-lg transition-all group min-h-[48px] cursor-pointer"
             >
               <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </button>
 
             <Link
               href="/services"

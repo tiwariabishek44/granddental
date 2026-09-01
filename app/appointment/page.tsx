@@ -1,13 +1,12 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, Phone, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
-
-export const metadata = {
-  title: "Book an Appointment — Grand Dental Clinic",
-  description: "Schedule your dental checkup, consultation, or 3D scan online with Grand Dental Clinic in Swoyambhu, Kathmandu.",
-};
+import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function AppointmentPage() {
+  const { openAppointmentModal } = useAppointmentModal();
   return (
     <main className="min-h-[70vh] bg-white text-gray-900 font-sans pb-24">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-10">
@@ -53,7 +52,28 @@ export default function AppointmentPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Option 1: Direct Phone */}
+            {/* Option 1: WhatsApp Online Booking Modal */}
+            <div className="bg-white p-6 rounded-2xl border-2 border-[#5C205E] shadow-md space-y-4 flex flex-col justify-between relative overflow-hidden">
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-[#5C205E] text-white flex items-center justify-center">
+                  <Calendar className="w-5 h-5" />
+                </div>
+                <h3 className="type-card-title text-gray-900">Instant Online Request</h3>
+                <p className="type-body text-xs sm:text-sm">
+                  Select your doctor, preferred treatment, date &amp; time to send instantly via WhatsApp.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => openAppointmentModal()}
+                className="btn-pill-primary w-full text-center cursor-pointer"
+              >
+                <span>Open Booking Form</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+
+            {/* Option 2: Direct Phone */}
             <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-4 flex flex-col justify-between">
               <div className="space-y-2">
                 <div className="w-10 h-10 rounded-xl bg-[#FCF5FE] text-[#74267A] flex items-center justify-center border border-[#EECFF4]">
@@ -66,30 +86,9 @@ export default function AppointmentPage() {
               </div>
               <a
                 href="tel:014950352"
-                className="btn-pill-primary w-full text-center"
+                className="btn-pill-outline w-full text-center"
               >
                 <span>Call 01-4950352</span>
-              </a>
-            </div>
-
-            {/* Option 2: WhatsApp Chat */}
-            <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-4 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-200">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-                <h3 className="type-card-title">WhatsApp Message</h3>
-                <p className="type-body text-xs sm:text-sm">
-                  Send your preferred time, symptoms, or photo for quick appointment confirmation.
-                </p>
-              </div>
-              <a
-                href="https://wa.me/9779841322789?text=Namaste%20Grand%20Dental,%20I%20would%20like%20to%20book%20an%20appointment."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-emerald-700 text-white hover:bg-emerald-800 h-11 px-5 text-sm gap-2 shadow-sm"
-              >
-                <span>WhatsApp: 9841322789</span>
               </a>
             </div>
 

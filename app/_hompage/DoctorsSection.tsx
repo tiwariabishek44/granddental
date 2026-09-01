@@ -78,10 +78,9 @@ export default function DoctorsSection() {
       {/* 4 Portrait Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {featuredDoctors.map((doc) => (
-          <Link
+          <div
             key={doc.id}
-            href={`/doctors/${doc.id}`}
-            className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[440px] p-6 shadow-md transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl cursor-pointer"
+            className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[440px] p-6 shadow-md select-none"
           >
             {/* Photographic Canvas */}
             <div className="absolute inset-0">
@@ -95,25 +94,13 @@ export default function DoctorsSection() {
             </div>
 
             {/* Bottom Profile Details */}
-            <div className="relative z-10 space-y-3">
-              <div>
+            <div className="relative z-10 space-y-1.5">
+              <h3 className="text-xl font-medium text-white leading-snug">
+                {doc.name}
+              </h3>
 
-                <h3 className="text-xl font-medium text-white transition-colors group-hover:text-[#ED91FB] leading-snug">
-                  {doc.name}
-                </h3>
-                <p className="text-sm text-gray-300 font-normal mt-0.5 line-clamp-1">
-                  {doc.experience}
-                </p>
-              </div>
-
-              <div className="pt-2.5 border-t border-white/20 flex items-center justify-between text-sm font-semibold text-white">
-                <span>View Profile</span>
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs transition-all duration-300 group-hover:bg-[#5C205E] group-hover:text-white">
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-                </div>
-              </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </section>

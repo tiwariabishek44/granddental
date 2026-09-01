@@ -4,6 +4,8 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { MobileHeader, MobileFooter } from "@/app/m/components";
+import { AppointmentModalProvider } from "@/context/AppointmentModalContext";
+import AppointmentModal from "@/components/AppointmentModal";
 
 // Primary Geometric Sans: Outfit (as used in ViScan)
 const outfit = Outfit({
@@ -59,28 +61,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${outfit.variable} ${urbanist.variable} ${syne.variable} ${instrumentSerif.variable} ${spaceGrotesk.variable}`}
     >
       <body className="min-h-screen flex flex-col justify-between antialiased">
-        <a className="skip-link" href="#main-content">Skip to content</a>
+        <AppointmentModalProvider>
+          <a className="skip-link" href="#main-content">Skip to content</a>
 
-        {/* 1. HEADER: Strictly segregated between desktop and mobile */}
-        <div className="hidden sm:block">
-          <Header />
-        </div>
-        <div className="block sm:hidden">
-          <MobileHeader />
-        </div>
+          {/* 1. HEADER: Strictly segregated between desktop and mobile */}
+          <div className="hidden sm:block">
+            <Header />
+          </div>
+          <div className="block sm:hidden">
+            <MobileHeader />
+          </div>
 
-        {/* 2. MAIN CONTENT AREA */}
-        <div id="main-content" className="flex-1">
-          {children}
-        </div>
+          {/* 2. MAIN CONTENT AREA */}
+          <div id="main-content" className="flex-1">
+            {children}
+          </div>
 
-        {/* 3. FOOTER: Strictly segregated between desktop and mobile */}
-        <div className="hidden sm:block">
-          <Footer />
-        </div>
-        <div className="block sm:hidden">
-          <MobileFooter />
-        </div>
+          {/* 3. FOOTER: Strictly segregated between desktop and mobile */}
+          <div className="hidden sm:block">
+            <Footer />
+          </div>
+          <div className="block sm:hidden">
+            <MobileFooter />
+          </div>
+
+          {/* 4. GLOBAL APPOINTMENT POPUP MODAL */}
+          <AppointmentModal />
+        </AppointmentModalProvider>
       </body>
     </html>
   );

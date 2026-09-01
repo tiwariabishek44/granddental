@@ -29,20 +29,12 @@ export default function MobileHeader() {
               />
             </div>
             <div className="flex flex-col justify-center">
-              <div className="flex items-baseline gap-1 leading-none">
-                <span className="font-brand text-[20px] font-semibold tracking-[-0.01em] text-gray-950">
-                  Grand
-                </span>
-                <span className="font-brand text-[20px] font-normal italic text-[#74267A]">
-                  Dental
-                </span>
-              </div>
-              <div className="flex items-center gap-1 mt-0.5">
-                <span className="h-[1px] w-1.5 bg-[#ED91FB]" />
-                <span className="text-[8px] font-bold tracking-[0.24em] uppercase text-gray-500 font-sans">
-                  CLINIC &bull; KATHMANDU
-                </span>
-              </div>
+              <span className="font-serif text-2xl font-normal tracking-tight text-gray-950 leading-none group-hover:text-[#5C205E] transition-colors">
+                Grand Dental
+              </span>
+              <span className="text-[9.5px] font-bold tracking-[0.22em] uppercase text-[#74267A] mt-1 font-sans">
+                Clinic &bull; Kathmandu
+              </span>
             </div>
           </Link>
 
