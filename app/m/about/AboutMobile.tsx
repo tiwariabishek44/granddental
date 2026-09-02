@@ -331,8 +331,9 @@ export default function AboutMobile() {
         </div>
       </section>
 
-      {/* 3. SECTION 03: INTERACTIVE CLINIC VIDEO TOUR */}
-      <section className="px-4 py-6 border-t border-gray-100 space-y-4">
+      {/* 3. SECTION 03: INTERACTIVE CLINIC VIDEO TOUR — temporarily disabled; retain for later re-enable. */}
+      {false && (
+        <section className="px-4 py-6 border-t border-gray-100 space-y-4">
         <div className="space-y-2">
           <span className="type-eyebrow block">
             Clinic Tour
@@ -399,7 +400,8 @@ export default function AboutMobile() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      )}
 
       {/* 4. SECTION 04: SIGNATURE CLINICAL PROCEDURES */}
       <section className="px-4 py-6 border-t border-gray-100 bg-[#FCF5FE]/30 space-y-5">

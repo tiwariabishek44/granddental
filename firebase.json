@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "grand-dental-website",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true
+  }
+}

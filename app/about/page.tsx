@@ -400,8 +400,9 @@ export default function AboutPage() {
           })()}
         </section>
 
-        {/* 3. Visual Clinic Walkthrough Video */}
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 mb-16 space-y-6">
+        {/* 3. Visual Clinic Walkthrough Video — temporarily disabled; retain for later re-enable. */}
+        {false && (
+          <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 mb-16 space-y-6">
           <div className="grid grid-cols-1 gap-6 text-center md:grid-cols-2 md:items-start md:gap-12 md:text-left">
             <div className="space-y-2">
               <span className="type-eyebrow">
@@ -499,7 +500,8 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+          </section>
+        )}
 
         {/* 4. Services Carousel Section */}
         <section className="max-w-[1400px] mx-auto px-6 lg:px-8 py-10 mb-16 space-y-6">
