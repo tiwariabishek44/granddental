@@ -23,10 +23,8 @@ import receptionImg from "@/assets/reception.jpeg";
 import frontViewImg from "@/assets/front view.jpeg";
 import dentalToolsImg from "@/assets/Dental_tools_on_tray.jpeg";
 import { AboutMobile } from "@/app/m/about";
-import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function AboutPage() {
-  const { openAppointmentModal } = useAppointmentModal();
   // 3 Core Pillars Active Tab State
   const [activePillar, setActivePillar] = useState<"painless" | "hygiene" | "transparency">("painless");
 
@@ -211,12 +209,13 @@ export default function AboutPage() {
                     </p>
                   </div>
 
+                  {/* About-page hero appointment button intentionally hidden.
                   <Link href="/appointment" className="group btn-pill-primary w-full text-center justify-between">
                     <span>Book Appointment</span>
                     <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
                       <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
                     </span>
-                  </Link>
+                  </Link> */}
 
                   <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between text-xs sm:text-sm text-gray-700">
                     <span className="font-medium">Direct Line:</span>
@@ -296,7 +295,7 @@ export default function AboutPage() {
             {/* Quick Summary Bar */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-gray-200/80">
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">10,000+</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">1,000+</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Patients Welcomed</div>
                 <div className="text-xs sm:text-sm text-gray-500 font-normal">Kathmandu Valley &amp; Beyond</div>
               </div>
@@ -605,18 +604,28 @@ export default function AboutPage() {
               }
 
               return (
+                /* Treatment-detail navigation is intentionally disabled in the About page carousel.
+                <Link
+                  key={srv.id}
+                  href="/services"
+                  aria-hidden={!isCenter}
+                  tabIndex={isCenter ? 0 : -1}
+                  className="group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer"
+                  style={{
+                    width: "320px",
+                    height: "380px",
+                    transform: `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${scale})`,
+                    left: "50%",
+                    top: "50%",
+                    zIndex,
+                    opacity,
+                    pointerEvents,
+                  }}
+                > */
                 <div
                   key={srv.id}
                   aria-hidden={!isCenter}
-                  tabIndex={isCenter ? 0 : -1}
-                  onClick={() => {
-                    if (!isCenter) {
-                      setActiveServiceIndex(index);
-                    }
-                  }}
-                  className={`group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] select-none ${
-                    !isCenter ? "cursor-pointer" : ""
-                  }`}
+                  className="group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-lg transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
                   style={{
                     width: "320px",
                     height: "380px",
@@ -632,19 +641,22 @@ export default function AboutPage() {
                     src={srv.image}
                     alt={srv.title}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/40" />
+                  <div className="absolute inset-0 bg-black/40 transition-colors duration-300 group-hover:bg-black/50" />
 
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white space-y-1.5">
-                    <span className="type-eyebrow text-[#ED91FB] block">
-                      {srv.categoryLabel}
-                    </span>
                     <h3 className="type-card-title text-white leading-tight">
                       {srv.title}
                     </h3>
+                    {/* Treatment-detail CTA intentionally hidden.
+                    <div className="mt-2 flex items-center gap-1.5 text-base font-semibold text-white">
+                      <span>View Treatment</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </div> */}
                   </div>
                 </div>
+                /* </Link> */
               );
             })}
           </div>
@@ -689,17 +701,13 @@ export default function AboutPage() {
                   Open Sunday to Friday (8:00 AM – 6:00 PM). Walk in or schedule a consultation with our experienced dental team in Swoyambhu.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() => openAppointmentModal()}
-                    className="btn-pill-primary cursor-pointer"
-                  >
+                  <Link href="/appointment" className="btn-pill-primary">
                     <span>Book an Appointment</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </button>
-                  <a href="tel:014950352" className="btn-pill-outline bg-white/15 hover:bg-white/25 text-white border-white/30 backdrop-blur-md">
+                  </Link>
+                  <Link href="/contact" className="btn-pill-outline bg-white/15 hover:bg-white/25 text-white border-white/30 backdrop-blur-md">
                     <span>Call 01-4950352</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

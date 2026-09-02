@@ -36,7 +36,8 @@ export default function DoctorsMobile() {
           A multidisciplinary team of qualified dental surgeons, orthodontists, endodontists, and prosthodontists dedicated to providing gentle, thorough, and transparent dental care in Swoyambhu, Kathmandu.
         </p>
 
-        {/* Action Buttons */}
+        {/* Doctors-page hero actions intentionally hidden.
+        Action Buttons
         <div className="pt-2 flex flex-col gap-2.5">
           <Link
             href="/appointment"
@@ -51,7 +52,7 @@ export default function DoctorsMobile() {
           >
             <span>Contact Clinic</span>
           </Link>
-        </div>
+        </div> */}
       </section>
 
       {/* 2. PEDIGREE & CREDENTIALS MATRIX */}

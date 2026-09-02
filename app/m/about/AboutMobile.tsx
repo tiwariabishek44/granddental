@@ -23,10 +23,8 @@ import chairImg from "@/assets/chair.jpeg";
 import receptionImg from "@/assets/reception.jpeg";
 import frontViewImg from "@/assets/front view.jpeg";
 import dentalToolsImg from "@/assets/Dental_tools_on_tray.jpeg";
-import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function AboutMobile() {
-  const { openAppointmentModal } = useAppointmentModal();
   // 3 Core Pillars Active Tab State
   const [activePillar, setActivePillar] = useState<"painless" | "hygiene" | "transparency">("painless");
 
@@ -183,13 +181,14 @@ export default function AboutMobile() {
 
         {/* Action Buttons */}
         <div className="flex flex-col gap-2.5 pt-1">
+          {/* About-page hero appointment button intentionally hidden.
           <Link
             href="/appointment"
             className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-semibold shadow-md transition-colors min-h-[48px]"
           >
             <span>Book an Appointment</span>
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </Link> */}
 
           <a
             href="tel:014950352"
@@ -203,7 +202,7 @@ export default function AboutMobile() {
         {/* Quick Summary Bar */}
         <div className="grid grid-cols-2 gap-2 pt-2">
           <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
-            <div className="text-lg font-bold text-[#5C205E]">10,000+</div>
+            <div className="text-lg font-bold text-[#5C205E]">1,000+</div>
             <div className="text-xs font-semibold text-gray-800">Patients Welcomed</div>
             <div className="text-[10.5px] text-gray-500 font-normal">Kathmandu Valley</div>
           </div>
@@ -486,16 +485,33 @@ export default function AboutMobile() {
             }
 
             return (
-              <div
+              /* Treatment-detail navigation is intentionally disabled in the About page carousel.
+              <Link
                 key={srv.id}
-                onClick={() => {
+                href={`/services/${srv.slug || srv.id}`}
+                onClick={(e) => {
                   if (!isCenter) {
+                    e.preventDefault();
                     setActiveServiceIndex(index);
                   }
                 }}
-                className={`group absolute overflow-hidden rounded-3xl bg-gray-900 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] select-none ${
-                  !isCenter ? "cursor-pointer" : ""
-                }`}
+                className="group absolute overflow-hidden rounded-3xl bg-gray-900 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer"
+                style={{
+                  width: "270px",
+                  height: "340px",
+                  transform: `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${scale})`,
+                  left: "50%",
+                  top: "50%",
+                  zIndex,
+                  opacity,
+                  pointerEvents,
+                }}
+              > */
+              <div
+                key={srv.id}
+                onClick={() => !isCenter && setActiveServiceIndex(index)}
+                aria-hidden={!isCenter}
+                className="group absolute overflow-hidden rounded-3xl bg-gray-900 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer"
                 style={{
                   width: "270px",
                   height: "340px",
@@ -521,8 +537,14 @@ export default function AboutMobile() {
                   <h3 className="type-card-title text-white line-clamp-2">
                     {srv.title}
                   </h3>
+                  {/* Treatment-detail CTA intentionally hidden.
+                  <div className="pt-1 flex items-center gap-1.5 type-ui-control font-semibold text-white">
+                    <span>Explore Treatment</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div> */}
                 </div>
               </div>
+              /* </Link> */
             );
           })}
         </div>
@@ -577,14 +599,13 @@ export default function AboutMobile() {
           </div>
 
           <div className="relative z-10 pt-2 flex flex-col gap-2.5">
-            <button
-              type="button"
-              onClick={() => openAppointmentModal()}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px] cursor-pointer"
+            <Link
+              href="/appointment"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
             >
               <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
 
             <a
               href="tel:014950352"

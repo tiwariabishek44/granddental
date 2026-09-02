@@ -5,10 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Clock, ShieldCheck, Phone, Calendar, MessageCircle } from "lucide-react";
 import { servicesData } from "@/data/services";
-import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
 export default function ServicesMobilePage() {
-  const { openAppointmentModal } = useAppointmentModal();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const categories = [
@@ -51,7 +49,8 @@ export default function ServicesMobilePage() {
           From routine cleanings and natural tooth fillings to pain-free root canals, braces, and permanent dental implants—our experienced specialists provide gentle care designed to protect your natural teeth.
         </p>
 
-        {/* Action Buttons */}
+        {/* Services-page hero actions intentionally hidden.
+        Action Buttons
         <div className="pt-2 flex flex-col gap-2.5">
           <Link
             href="/appointment"
@@ -66,7 +65,7 @@ export default function ServicesMobilePage() {
           >
             <span>Call 01-4950352</span>
           </Link>
-        </div>
+        </div> */}
       </section>
 
       {/* 2. PEDIGREE & CREDENTIALS MATRIX */}
@@ -107,9 +106,15 @@ export default function ServicesMobilePage() {
 
         <div className="space-y-4">
           {filteredServices.map((srv) => (
+            /* Service-detail navigation is intentionally disabled on the services page.
+            <Link
+              key={srv.id}
+              href={`/services/${srv.slug || srv.id}`}
+              className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[320px] p-5 shadow-md active:scale-[0.99] transition-transform cursor-pointer block"
+            > */
             <div
               key={srv.id}
-              className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[320px] p-5 shadow-md select-none block"
+              className="group relative flex flex-col justify-end overflow-hidden rounded-3xl bg-gray-900 text-white min-h-[320px] p-5 shadow-md transition-transform"
             >
               {/* Photo Background */}
               <Image
@@ -121,16 +126,23 @@ export default function ServicesMobilePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent" />
 
               {/* Bottom Details */}
-              <div className="relative z-10 space-y-1.5">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#ED91FB]">
-                  {srv.categoryLabel}
-                </span>
+              <div className="relative z-10 space-y-2">
+
 
                 <h3 className="type-card-title text-white text-lg sm:text-xl">
                   {srv.title}
                 </h3>
+
+                {/* Service-detail CTA intentionally hidden.
+                <div className="pt-2 border-t border-white/20 flex items-center justify-between type-meta text-white/90 font-medium">
+                  <div className="flex items-center gap-1 type-ui-control font-semibold text-white">
+                    <span>Learn about this treatment</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </div> */}
               </div>
             </div>
+            /* </Link> */
           ))}
         </div>
       </section>
@@ -153,15 +165,14 @@ export default function ServicesMobilePage() {
           </div>
 
           <div className="relative z-10 pt-1 flex flex-col gap-2.5">
-            <button
-              type="button"
-              onClick={() => openAppointmentModal()}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px] cursor-pointer"
+            <Link
+              href="/appointment"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px]"
             >
               <Calendar className="w-4 h-4" />
               <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
 
             <a
               href="https://wa.me/9779841322789"

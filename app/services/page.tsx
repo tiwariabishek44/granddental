@@ -78,6 +78,7 @@ export default function ServicesPage() {
                 </p>
               </div>
 
+              {/* Services-page hero actions intentionally hidden.
               <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center lg:items-end">
                 <Link href="/appointment" className="group btn-pill-primary w-full sm:w-auto text-center justify-center">
                   <span>Book Appointment</span>
@@ -88,7 +89,7 @@ export default function ServicesPage() {
                 <Link href="/contact" className="btn-pill-outline w-full sm:w-auto text-center justify-center">
                   <span>Call 01-4950352</span>
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Reassurance Bar */}
@@ -207,18 +208,28 @@ export default function ServicesPage() {
               }
 
               return (
+                /* Service-detail navigation is intentionally disabled on the services page.
+                <Link
+                  key={srv.id}
+                  href={`/services/${srv.slug || srv.id}`}
+                  aria-hidden={!isCenter}
+                  tabIndex={isCenter ? 0 : -1}
+                  className="group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer"
+                  style={{
+                    width: "320px",
+                    height: "380px",
+                    transform: `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${scale})`,
+                    left: "50%",
+                    top: "50%",
+                    zIndex,
+                    opacity,
+                    pointerEvents,
+                  }}
+                > */
                 <div
                   key={srv.id}
                   aria-hidden={!isCenter}
-                  tabIndex={isCenter ? 0 : -1}
-                  onClick={() => {
-                    if (!isCenter) {
-                      setActiveCarouselIndex(index);
-                    }
-                  }}
-                  className={`group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] select-none ${
-                    !isCenter ? "cursor-pointer" : ""
-                  }`}
+                  className="group absolute overflow-hidden rounded-3xl bg-gray-100 shadow-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
                   style={{
                     width: "320px",
                     height: "380px",
@@ -236,18 +247,21 @@ export default function ServicesPage() {
                     fill
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent transition-colors duration-300 group-hover:bg-black/50" />
 
                   {/* Card Content Overlay */}
-                  <div className="absolute inset-x-0 bottom-0 p-6 text-white space-y-1.5">
-                    <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#ED91FB]">
-                      {srv.categoryLabel}
-                    </span>
+                  <div className="absolute inset-x-0 bottom-0 p-6 text-white space-y-2">
                     <h3 className="type-card-title text-white">
                       {srv.title}
                     </h3>
+                    {/* Service-detail CTA intentionally hidden.
+                    <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#ED91FB]">
+                      <span>Learn about this treatment</span>
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </div> */}
                   </div>
                 </div>
+                /* </Link> */
               );
             })}
           </div>
