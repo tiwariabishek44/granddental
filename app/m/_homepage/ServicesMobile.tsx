@@ -41,7 +41,7 @@ export default function ServicesMobile() {
   };
 
   return (
-    <section className="py-10 border-b border-gray-100 bg-[#FCF5FE]/30 sm:hidden space-y-6 overflow-hidden">
+    <section className="py-10 border-b border-gray-100 bg-[#F0F7FF]/50 sm:hidden space-y-6 overflow-hidden">
       {/* Centered Section Header */}
       <div className="px-4 text-center max-w-md mx-auto space-y-2.5">
         <span className="type-eyebrow">
@@ -53,7 +53,7 @@ export default function ServicesMobile() {
           <span
             className="font-medium text-transparent"
             style={{
-              background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+              background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
             }}
@@ -176,7 +176,7 @@ export default function ServicesMobile() {
 
               {/* Card Bottom Typography */}
               <div className="absolute inset-x-0 bottom-0 p-5 text-white space-y-1.5">
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#ED91FB]">
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#60A5FA]">
                   {srv.categoryLabel}
                 </span>
 
@@ -202,10 +202,10 @@ export default function ServicesMobile() {
 
         <Link
           href="/services"
-          className="px-5 py-2.5 rounded-full bg-white border border-[#F3D5F9] text-xs sm:text-sm font-bold text-[#5C205E] active:bg-[#FCF5FE] transition-colors shadow-2xs text-center flex items-center gap-1.5 min-h-[44px]"
+          className="px-5 py-2.5 rounded-full bg-white border border-[#DBEAFE] text-xs sm:text-sm font-bold text-[#0B3B8B] active:bg-[#F0F7FF] transition-colors shadow-2xs text-center flex items-center gap-1.5 min-h-[44px]"
         >
           <span>All Treatments ({activeIndex + 1}/{servicesData.length})</span>
-          <ArrowRight className="w-3.5 h-3.5 text-[#74267A]" />
+          <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
         </Link>
 
         <button

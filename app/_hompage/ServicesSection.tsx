@@ -21,7 +21,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="py-16 border-b border-gray-100 bg-[#FCF5FE]/30">
+    <section className="py-16 border-b border-gray-100 bg-[#F0F7FF]/50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8 space-y-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3">
@@ -33,7 +33,7 @@ export default function ServicesSection() {
               className="font-medium text-transparent"
               style={{
                 background:
-                  "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                  "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
@@ -152,7 +152,7 @@ export default function ServicesSection() {
 
                 {/* Card Content */}
                 <div className="absolute inset-x-0 bottom-0 p-8 text-white space-y-2">
-                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#ED91FB]">
+                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#60A5FA]">
                     {srv.categoryLabel}
                   </span>
 
@@ -190,7 +190,7 @@ export default function ServicesSection() {
         <div className="flex justify-center pt-2">
           <Link
             href="/services"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-[#74267A] hover:text-[#5C205E] transition-colors"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-[#0B3B8B] hover:text-[#134FB0] transition-colors"
           >
             View All Treatments
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

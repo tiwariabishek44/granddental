@@ -27,37 +27,35 @@ import { ServiceDetailMobile } from "@/app/m/services";
 export default function DentalImplantsPage() {
   const service = servicesData.find((s) => s.id === "dental-implants")!;
 
-
-
   const whyUsCards = [
     {
       title: "Clinic-Friendly 3D Workflow",
       desc: "Sub-millimeter surgical guide precision prevents nerve damage and maximizes jawbone preservation.",
-      tint: "#F8EFF8",
+      tint: "#EBF3FE",
       icon: "🔬",
     },
     {
       title: "Painless Anesthesia Protocol",
       desc: "Electronic computerized local numbing guarantees 100% painless osteotomy.",
-      tint: "#F3D5F9",
+      tint: "#F0F7FF",
       icon: "⚡",
     },
     {
       title: "Same-Day Teeth Capability",
       desc: "Immediate-load temporary restorations allowing you to leave the clinic smiling on day one.",
-      tint: "#EEEEFF",
+      tint: "#E0F2FE",
       icon: "✨",
     },
     {
       title: "Lifetime Titanium Warranty",
       desc: "Grade-5 medical titanium fixtures backed by lifetime structural craftsmanship guarantees.",
-      tint: "#FDF0F2",
+      tint: "#DBEAFE",
       icon: "🛡️",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* MOBILE SERVICE DETAIL VIEW (sm:hidden) */}
       <div className="block sm:hidden">
         <ServiceDetailMobile service={service} />
@@ -70,7 +68,7 @@ export default function DentalImplantsPage() {
         <div
           className="rounded-3xl border border-gray-200/80 p-6 sm:p-10 lg:p-12 shadow-sm space-y-6"
           style={{
-            background: "radial-gradient(100% 286.18% at 100% 100%, #FCF5FE 0%, #F5F3F6 100%)",
+            background: "radial-gradient(100% 286.18% at 100% 100%, #F0F7FF 0%, #F8FAFC 100%)",
           }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
@@ -85,7 +83,7 @@ export default function DentalImplantsPage() {
                 <span
                   className="font-normal text-transparent"
                   style={{
-                    background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                    background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                     backgroundClip: "text",
                     WebkitBackgroundClip: "text",
                   }}
@@ -102,12 +100,12 @@ export default function DentalImplantsPage() {
                 <Link href="/appointment" className="group btn-pill-primary">
                   <span>Book Consultation</span>
                   <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                    <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   </span>
                 </Link>
 
                 <a href="tel:014950352" className="btn-pill-outline">
-                  <Phone className="w-3.5 h-3.5 text-[#74267A]" />
+                  <Phone className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   <span>Call Helpline</span>
                 </a>
               </div>
@@ -119,7 +117,7 @@ export default function DentalImplantsPage() {
                   <span>Grade-5 Medical Titanium</span>
                 </span>
                 <span className="flex items-center gap-1.5 font-medium">
-                  <Clock className="w-4 h-4 text-[#74267A]" />
+                  <Clock className="w-4 h-4 text-[#0B3B8B]" />
                   <span>{service.duration}</span>
                 </span>
               </div>
@@ -139,8 +137,6 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-
-
       {/* 3. SECTION 02: "WHY CHOOSE US?" PASTEL BENTO GRID */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-16 space-y-10">
         <div className="space-y-4">
@@ -157,7 +153,7 @@ export default function DentalImplantsPage() {
               <span
                 style={{
                   background:
-                    "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                    "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                   WebkitBackgroundClip: "text",
                   backgroundClip: "text",
                   color: "transparent",
@@ -208,15 +204,15 @@ export default function DentalImplantsPage() {
             </div>
 
             {/* Assigned Specialist Card */}
-            <div className="p-6 rounded-3xl bg-[#F9EBFC] border border-[#EECFF4] flex items-center justify-between gap-4">
+            <div className="p-6 rounded-3xl bg-[#EBF3FE] border border-[#DBEAFE] flex items-center justify-between gap-4">
               <div className="flex items-center gap-3.5">
-                <div className="w-12 h-12 rounded-2xl bg-[#5C205E] text-white flex items-center justify-center font-bold text-lg shadow-2xs">
+                <div className="w-12 h-12 rounded-2xl bg-[#0B3B8B] text-white flex items-center justify-center font-bold text-lg shadow-2xs">
                   GD
                 </div>
                 <div>
                   <div className="text-xs sm:text-sm text-gray-500 font-medium">Lead Surgeon</div>
                   <div className="text-base font-bold text-gray-900">{service.leadDoctorName}</div>
-                  <span className="text-xs sm:text-sm font-semibold text-[#74267A]">{service.leadDoctorRole}</span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B3B8B]">{service.leadDoctorRole}</span>
                 </div>
               </div>
               <Link
@@ -238,7 +234,7 @@ export default function DentalImplantsPage() {
             <div className="space-y-3.5 bg-gray-50/70 p-6 sm:p-8 rounded-3xl border border-gray-200">
               {service.procedureSteps.map((step, idx) => (
                 <div key={step.title} className="flex items-start gap-4 p-4 sm:p-5 bg-white rounded-2xl border border-gray-100 shadow-2xs">
-                  <div className="w-8 h-8 rounded-full bg-[#5C205E] text-white font-bold text-xs flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-[#0B3B8B] text-white font-bold text-xs flex items-center justify-center shrink-0">
                     0{idx + 1}
                   </div>
                   <div className="space-y-1">

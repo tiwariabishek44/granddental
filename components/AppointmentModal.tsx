@@ -26,7 +26,7 @@ export default function AppointmentModal() {
   const [treatment, setTreatment] = useState("");
   const [preferredDoctor, setPreferredDoctor] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
-  const [preferredSlot, setPreferredSlot] = useState("Morning (8:00 AM – 12:00 PM)");
+  const [preferredSlot, setPreferredSlot] = useState("Morning (8 AM – 12 PM)");
   const [notes, setNotes] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -132,9 +132,9 @@ _Sent via granddentalclinic.com_`;
       {/* Modal Container */}
       <div className="relative z-10 w-full sm:max-w-xl max-h-[92vh] bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-300 border border-gray-100 font-sans">
         {/* Modal Header */}
-        <div className="px-5 sm:px-6 py-4 bg-gradient-to-r from-[#FCF5FE] to-[#F7E6FA] border-b border-[#F3D5F9] flex items-center justify-between">
+        <div className="px-5 sm:px-6 py-4 bg-gradient-to-r from-[#F0F7FF] to-[#DBEAFE] border-b border-[#BFDBFE] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 rounded-full border border-[#F3D5F9] bg-white p-0.5 shadow-2xs flex items-center justify-center shrink-0">
+            <div className="relative h-10 w-10 rounded-full border border-[#DBEAFE] bg-white p-0.5 shadow-2xs flex items-center justify-center shrink-0">
               <Image
                 src="/logo.png"
                 alt="Grand Dental Clinic"
@@ -146,7 +146,7 @@ _Sent via granddentalclinic.com_`;
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="type-eyebrow text-[#74267A]">
+                <span className="type-eyebrow text-[#0B3B8B]">
                   Grand Dental Clinic
                 </span>
               </div>
@@ -181,7 +181,7 @@ _Sent via granddentalclinic.com_`;
             {/* Full Name */}
             <div className="space-y-1">
               <label className="type-meta font-semibold text-gray-700 flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5 text-[#74267A]" />
+                <User className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 <span>Full Name *</span>
               </label>
               <input
@@ -190,14 +190,14 @@ _Sent via granddentalclinic.com_`;
                 placeholder="e.g. Pooja Sharma"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#74267A] focus:ring-2 focus:ring-[#F7E6FA] text-sm text-gray-900 bg-white outline-hidden transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] text-sm text-gray-900 bg-white outline-hidden transition-all"
               />
             </div>
 
             {/* Phone Number */}
             <div className="space-y-1">
               <label className="type-meta font-semibold text-gray-700 flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-[#74267A]" />
+                <Phone className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 <span>Phone Number *</span>
               </label>
               <input
@@ -206,7 +206,7 @@ _Sent via granddentalclinic.com_`;
                 placeholder="e.g. 9841XXXXXX"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#74267A] focus:ring-2 focus:ring-[#F7E6FA] text-sm text-gray-900 bg-white outline-hidden transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] text-sm text-gray-900 bg-white outline-hidden transition-all"
               />
             </div>
           </div>
@@ -214,13 +214,13 @@ _Sent via granddentalclinic.com_`;
           {/* Treatment Selection Dropdown */}
           <div className="space-y-1">
             <label className="type-meta font-semibold text-gray-700 flex items-center gap-1.5">
-              <Stethoscope className="w-3.5 h-3.5 text-[#74267A]" />
+              <Stethoscope className="w-3.5 h-3.5 text-[#0B3B8B]" />
               <span>Select Treatment / Concern</span>
             </label>
             <select
               value={treatment}
               onChange={(e) => setTreatment(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#74267A] focus:ring-2 focus:ring-[#F7E6FA] text-sm text-gray-900 bg-white outline-hidden transition-all cursor-pointer"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] text-sm text-gray-900 bg-white outline-hidden transition-all cursor-pointer"
             >
               <option value="General Dental Checkup & Consultation">General Dental Checkup &amp; Consultation</option>
               <option value="Teeth Cleaning & Ultrasonic Scaling">Teeth Cleaning &amp; Ultrasonic Scaling</option>
@@ -245,13 +245,13 @@ _Sent via granddentalclinic.com_`;
             {/* Preferred Doctor */}
             <div className="space-y-1">
               <label className="type-meta font-semibold text-gray-700 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#74267A]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 <span>Preferred Doctor (Optional)</span>
               </label>
               <select
                 value={preferredDoctor}
                 onChange={(e) => setPreferredDoctor(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#74267A] focus:ring-2 focus:ring-[#F7E6FA] text-sm text-gray-900 bg-white outline-hidden transition-all cursor-pointer"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] text-sm text-gray-900 bg-white outline-hidden transition-all cursor-pointer"
               >
                 <option value="Any Available Specialist">Any Available Specialist</option>
                 {doctorsData.map((doc) => (
@@ -265,14 +265,14 @@ _Sent via granddentalclinic.com_`;
             {/* Preferred Date */}
             <div className="space-y-1">
               <label className="type-meta font-semibold text-gray-700 flex items-center gap-1.5">
-                <CalendarIcon className="w-3.5 h-3.5 text-[#74267A]" />
+                <CalendarIcon className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 <span>Preferred Date</span>
               </label>
               <input
                 type="date"
                 value={preferredDate}
                 onChange={(e) => setPreferredDate(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#74267A] focus:ring-2 focus:ring-[#F7E6FA] text-sm text-gray-900 bg-white outline-hidden transition-all"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] text-sm text-gray-900 bg-white outline-hidden transition-all"
               />
             </div>
           </div>
@@ -280,7 +280,7 @@ _Sent via granddentalclinic.com_`;
           {/* Preferred Time Slot */}
           <div className="space-y-1">
             <label className="type-meta font-semibold text-gray-700 flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#74267A]" />
+              <Clock className="w-3.5 h-3.5 text-[#0B3B8B]" />
               <span>Preferred Time Slot</span>
             </label>
             <div className="grid grid-cols-3 gap-2">
@@ -295,7 +295,7 @@ _Sent via granddentalclinic.com_`;
                   onClick={() => setPreferredSlot(slot)}
                   className={`py-2 px-2 rounded-xl text-xs font-semibold text-center transition-all border ${
                     preferredSlot === slot
-                      ? "bg-[#5C205E] text-white border-[#5C205E] shadow-2xs"
+                      ? "bg-[#0B3B8B] text-white border-[#0B3B8B] shadow-2xs"
                       : "bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100"
                   }`}
                 >
@@ -311,7 +311,7 @@ _Sent via granddentalclinic.com_`;
           {/* Additional Notes */}
           <div className="space-y-1">
             <label className="type-meta font-semibold text-gray-700 flex items-center gap-1.5">
-              <MessageSquare className="w-3.5 h-3.5 text-[#74267A]" />
+              <MessageSquare className="w-3.5 h-3.5 text-[#0B3B8B]" />
               <span>Message / Chief Complaint (Optional)</span>
             </label>
             <textarea
@@ -319,7 +319,7 @@ _Sent via granddentalclinic.com_`;
               placeholder="e.g. Mild pain in back tooth, looking for a consult on braces..."
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              className="w-full px-3.5 py-2 rounded-xl border border-gray-200 focus:border-[#74267A] focus:ring-2 focus:ring-[#F7E6FA] text-sm text-gray-900 bg-white outline-hidden transition-all resize-none"
+              className="w-full px-3.5 py-2 rounded-xl border border-gray-200 focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] text-sm text-gray-900 bg-white outline-hidden transition-all resize-none"
             />
           </div>
 
@@ -340,9 +340,9 @@ _Sent via granddentalclinic.com_`;
               <span>Or call reception directly:</span>
               <a
                 href="tel:014950352"
-                className="font-bold text-[#5C205E] hover:underline flex items-center gap-1"
+                className="font-bold text-[#0B3B8B] hover:underline flex items-center gap-1"
               >
-                <Phone className="w-3 h-3 text-[#74267A]" />
+                <Phone className="w-3 h-3 text-[#0B3B8B]" />
                 <span>01-4950352</span>
               </a>
             </div>

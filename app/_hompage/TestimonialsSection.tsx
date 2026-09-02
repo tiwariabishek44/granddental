@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
             <span
               className="font-medium text-transparent"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}

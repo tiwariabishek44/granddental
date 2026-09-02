@@ -24,19 +24,19 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
       {/* 1. BREADCRUMBS & TOP PROFILE HEADER */}
       <section className="px-4 pt-4 space-y-3">
         <nav className="flex items-center gap-1.5 type-meta">
-          <Link href="/" className="hover:text-[#74267A] transition-colors">
+          <Link href="/" className="hover:text-[#0B3B8B] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/doctors" className="hover:text-[#74267A] transition-colors">
+          <Link href="/doctors" className="hover:text-[#0B3B8B] transition-colors">
             Doctors
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#74267A] font-bold truncate max-w-[140px]">{doctor.name}</span>
+          <span className="text-[#0B3B8B] font-bold truncate max-w-[140px]">{doctor.name}</span>
         </nav>
 
         <div className="space-y-2">
-          <span className="type-eyebrow px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
+          <span className="type-eyebrow px-3 py-1 rounded-full bg-[#F0F7FF] border border-[#DBEAFE] inline-block text-[#0B3B8B]">
             {doctor.role}
           </span>
           <h1 className="text-3xl font-light text-gray-900 leading-tight tracking-tight">
@@ -44,7 +44,7 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
             <span
               className="font-medium text-transparent"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
               }}
@@ -84,9 +84,9 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
           </div>
 
           {/* Schedule Info */}
-          <div className="p-4 rounded-2xl bg-[#FCF5FE] border border-[#EECFF4] space-y-1.5">
-            <div className="type-eyebrow flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-[#74267A]" />
+          <div className="p-4 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] space-y-1.5">
+            <div className="type-eyebrow flex items-center gap-1.5 text-[#0B3B8B]">
+              <Clock className="w-4 h-4 text-[#0B3B8B]" />
               <span>Clinical Schedule</span>
             </div>
             <div className="type-card-title text-base">{doctor.schedule}</div>
@@ -98,7 +98,7 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
         <div className="flex flex-col gap-2.5">
           <Link
             href={`/appointment?doctor=${doctor.id}`}
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-2xl bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-2xl bg-[#0B3B8B] active:bg-[#134FB0] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
           >
             <Calendar className="w-4 h-4" />
             <span>Book Visit with {doctor.name.split(" ")[1]}</span>
@@ -108,7 +108,7 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
             href="tel:01-4950352"
             className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white border border-gray-200 text-gray-800 type-ui-control text-xs sm:text-sm font-semibold active:bg-gray-50 transition-colors min-h-[44px]"
           >
-            <Phone className="w-4 h-4 text-[#74267A]" />
+            <Phone className="w-4 h-4 text-[#0B3B8B]" />
             <span>Direct Reception: 01-4950352</span>
           </a>
         </div>
@@ -125,8 +125,8 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
       {/* 4. EDUCATION & BOARD ACCREDITATIONS */}
       <section className="px-4">
         <div className="bg-white rounded-3xl p-5 border border-gray-200 shadow-2xs space-y-3.5">
-          <div className="type-eyebrow flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-[#74267A]" />
+          <div className="type-eyebrow flex items-center gap-2 text-[#0B3B8B]">
+            <GraduationCap className="w-4 h-4 text-[#0B3B8B]" />
             <span>Education &amp; Fellowships</span>
           </div>
           <div className="type-card-title text-base">
@@ -170,7 +170,7 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
           {doctor.specialties.map((spec) => (
             <span
               key={spec}
-              className="px-3 py-1.5 rounded-xl type-eyebrow bg-[#FCF5FE] border border-[#EECFF4] text-[#74267A]"
+              className="px-3 py-1.5 rounded-xl type-eyebrow bg-[#F0F7FF] border border-[#DBEAFE] text-[#0B3B8B]"
             >
               {spec}
             </span>
@@ -180,17 +180,17 @@ export default function DoctorDetailMobile({ doctor }: { doctor: Doctor }) {
 
       {/* 7. RETURN TO DIRECTORY LINK */}
       <section className="px-4">
-        <div className="rounded-3xl border border-gray-200 bg-[#FCF5FE] p-5 space-y-3">
+        <div className="rounded-3xl border border-gray-200 bg-[#F0F7FF] p-5 space-y-3">
           <div>
             <h4 className="type-card-title text-base">Looking for other specialists?</h4>
             <p className="type-meta text-gray-600 mt-0.5">Explore our entire NMC-certified multidisciplinary team.</p>
           </div>
           <Link
             href="/doctors"
-            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white border border-[#F3D5F9] text-[#74267A] type-ui-control font-bold shadow-2xs active:bg-gray-50 min-h-[44px]"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white border border-[#DBEAFE] text-[#0B3B8B] type-ui-control font-bold shadow-2xs active:bg-gray-50 min-h-[44px]"
           >
             <span>View All Doctors</span>
-            <ArrowRight className="w-4 h-4 text-[#74267A]" />
+            <ArrowRight className="w-4 h-4 text-[#0B3B8B]" />
           </Link>
         </div>
       </section>

@@ -119,7 +119,7 @@ export default function AboutMobile() {
       {/* 1. HERO SECTION */}
       <section className="px-4 pt-4 space-y-5">
         <div className="space-y-3">
-          <span className="type-eyebrow px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
+          <span className="type-eyebrow px-3 py-1 rounded-full bg-[#F0F7FF] border border-[#DBEAFE] inline-block text-[#0B3B8B]">
             About Our Practice &bull; Swoyambhu
           </span>
 
@@ -128,7 +128,7 @@ export default function AboutMobile() {
             <span
               className="font-normal text-transparent block"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
@@ -148,32 +148,32 @@ export default function AboutMobile() {
 
         {/* 4 Feature Badges */}
         <div className="grid grid-cols-2 gap-2.5 pt-1">
-          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
-            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+          <div className="p-3 rounded-2xl bg-white border border-[#DBEAFE] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#0B3B8B] flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
               <span>Gentle Care</span>
             </div>
             <p className="text-gray-600 text-[11px] font-normal leading-snug">Pain-free approach &amp; relaxed visits</p>
           </div>
 
-          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
-            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+          <div className="p-3 rounded-2xl bg-white border border-[#DBEAFE] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#0B3B8B] flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
               <span>Strict Hygiene</span>
             </div>
             <p className="text-gray-600 text-[11px] font-normal leading-snug">Autoclave sterilization on all tools</p>
           </div>
 
-          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
-            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+          <div className="p-3 rounded-2xl bg-white border border-[#DBEAFE] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#0B3B8B] flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
               <span>Modern Setup</span>
             </div>
             <p className="text-gray-600 text-[11px] font-normal leading-snug">Digital imaging &amp; precision tools</p>
           </div>
 
-          <div className="p-3 rounded-2xl bg-white border border-[#F7E6FA] space-y-1 shadow-2xs">
-            <div className="font-semibold text-xs sm:text-sm text-[#5C205E] flex items-center gap-1.5">
+          <div className="p-3 rounded-2xl bg-white border border-[#DBEAFE] space-y-1 shadow-2xs">
+            <div className="font-semibold text-xs sm:text-sm text-[#0B3B8B] flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
               <span>Honest Advice</span>
             </div>
@@ -185,7 +185,7 @@ export default function AboutMobile() {
         <div className="flex flex-col gap-2.5 pt-1">
           <Link
             href="/appointment"
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-semibold shadow-md transition-colors min-h-[48px]"
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#0B3B8B] active:bg-[#134FB0] text-white type-ui-control font-semibold shadow-md transition-colors min-h-[48px]"
           >
             <span>Book an Appointment</span>
             <ArrowRight className="w-4 h-4" />
@@ -193,7 +193,7 @@ export default function AboutMobile() {
 
           <a
             href="tel:014950352"
-            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] text-[#74267A] type-ui-control font-semibold min-h-[44px]"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-[#F0F7FF] border border-[#DBEAFE] text-[#0B3B8B] type-ui-control font-semibold min-h-[44px]"
           >
             <Phone className="w-4 h-4" />
             <span>Call 01-4950352</span>
@@ -202,23 +202,23 @@ export default function AboutMobile() {
 
         {/* Quick Summary Bar */}
         <div className="grid grid-cols-2 gap-2 pt-2">
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
-            <div className="text-lg font-bold text-[#5C205E]">10,000+</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#0B3B8B]">10,000+</div>
             <div className="text-xs font-semibold text-gray-800">Patients Welcomed</div>
             <div className="text-[10.5px] text-gray-500 font-normal">Kathmandu Valley</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
-            <div className="text-lg font-bold text-[#5C205E]">100%</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#0B3B8B]">100%</div>
             <div className="text-xs font-semibold text-gray-800">Sterilized Equipment</div>
             <div className="text-[10.5px] text-gray-500 font-normal">Hospital Autoclave</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
-            <div className="text-lg font-bold text-[#5C205E]">Experienced</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#0B3B8B]">Experienced</div>
             <div className="text-xs font-semibold text-gray-800">Dental Specialists</div>
             <div className="text-[10.5px] text-gray-500 font-normal">Focus on Natural Teeth</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-0.5">
-            <div className="text-lg font-bold text-[#5C205E]">Swoyambhu</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-0.5">
+            <div className="text-lg font-bold text-[#0B3B8B]">Swoyambhu</div>
             <div className="text-xs font-semibold text-gray-800">Convenient Location</div>
             <div className="text-[10.5px] text-gray-500 font-normal">Dedicated Parking</div>
           </div>
@@ -235,7 +235,7 @@ export default function AboutMobile() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 text-white space-y-1">
-              <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#5C205E] text-white uppercase tracking-wider">
+              <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#0B3B8B] text-white uppercase tracking-wider">
                 Patient Experience
               </span>
               <h3 className="text-base font-bold text-white">Calm, Unrushed Consultations</h3>
@@ -267,9 +267,9 @@ export default function AboutMobile() {
       </section>
 
       {/* 2. SECTION 02: 3 CORE PHILOSOPHY PILLARS */}
-      <section className="px-4 py-6 border-t border-gray-100 bg-[#FCF5FE]/30 space-y-5">
+      <section className="px-4 py-6 border-t border-gray-100 bg-[#F0F7FF]/30 space-y-5">
         <div className="space-y-2">
-          <span className="type-eyebrow block">
+          <span className="type-eyebrow block text-[#0B3B8B]">
             Our Core Philosophy
           </span>
           <h2 className="type-section-title">
@@ -277,7 +277,7 @@ export default function AboutMobile() {
             <span
               className="font-medium text-transparent"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
@@ -295,7 +295,7 @@ export default function AboutMobile() {
               type="button"
               onClick={() => setActivePillar(key)}
               className={`py-2 px-1.5 rounded-xl text-xs font-bold transition-all text-center ${activePillar === key
-                ? "bg-[#5C205E] text-white shadow-sm"
+                ? "bg-[#0B3B8B] text-white shadow-sm"
                 : "text-gray-600 hover:text-gray-900"
                 }`}
             >
@@ -306,13 +306,8 @@ export default function AboutMobile() {
 
         {/* Active Pillar Card */}
         <div className="rounded-3xl bg-white border border-gray-200/80 overflow-hidden shadow-sm space-y-4 p-5">
-          <div className="relative h-70 w-full rounded-2xl overflow-hidden shadow-xs bg-gray-900">
-
-
-          </div>
-
           <div className="space-y-3">
-            <h3 className="type-card-title">
+            <h3 className="type-card-title text-gray-900">
               {currentPillar.tabTitle.replace(/^\d+\.\s*/, "")}
             </h3>
 
@@ -335,7 +330,7 @@ export default function AboutMobile() {
       {/* 3. SECTION 03: INTERACTIVE CLINIC VIDEO TOUR */}
       <section className="px-4 py-6 border-t border-gray-100 space-y-4">
         <div className="space-y-2">
-          <span className="type-eyebrow block">
+          <span className="type-eyebrow block text-[#0B3B8B]">
             Clinic Tour
           </span>
           <h2 className="type-section-title">
@@ -343,7 +338,7 @@ export default function AboutMobile() {
             <span
               className="font-medium text-transparent"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
@@ -357,7 +352,7 @@ export default function AboutMobile() {
         </div>
 
         {/* Video Player Card */}
-        <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-gray-950 min-h-[300px] h-[530px] w-full flex items-center justify-center">
+        <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-[#0B192C] min-h-[300px] h-[530px] w-full flex items-center justify-center">
           <video
             ref={videoRef}
             src="/video.mp4"
@@ -388,7 +383,7 @@ export default function AboutMobile() {
               <button
                 type="button"
                 onClick={handleTogglePlay}
-                className="w-14 h-14 rounded-full bg-[#5C205E]/90 text-white flex items-center justify-center shadow-xl active:scale-95 transition-transform"
+                className="w-14 h-14 rounded-full bg-[#0B3B8B]/90 text-white flex items-center justify-center shadow-xl active:scale-95 transition-transform"
                 aria-label={isPlaying ? "Pause video" : "Play video"}
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5" />}
@@ -403,9 +398,9 @@ export default function AboutMobile() {
       </section>
 
       {/* 4. SECTION 04: SIGNATURE CLINICAL PROCEDURES */}
-      <section className="px-4 py-6 border-t border-gray-100 bg-[#FCF5FE]/30 space-y-5">
+      <section className="px-4 py-6 border-t border-gray-100 bg-[#F0F7FF]/30 space-y-5">
         <div className="space-y-2">
-          <span className="type-eyebrow block">
+          <span className="type-eyebrow block text-[#0B3B8B]">
             Our Services
           </span>
           <h2 className="type-section-title">
@@ -413,7 +408,7 @@ export default function AboutMobile() {
             <span
               className="font-medium text-transparent"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
@@ -515,7 +510,7 @@ export default function AboutMobile() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white space-y-1.5">
-                  <span className="type-eyebrow text-[#ED91FB] block">
+                  <span className="type-eyebrow text-[#60A5FA] block">
                     {srv.categoryLabel}
                   </span>
                   <h3 className="type-card-title text-white line-clamp-2">
@@ -539,7 +534,7 @@ export default function AboutMobile() {
           </button>
           <Link
             href="/services"
-            className="px-5 py-2.5 rounded-full bg-white border border-[#F3D5F9] type-ui-control font-bold text-[#5C205E] active:bg-[#FCF5FE] transition-colors shadow-2xs min-h-[44px] flex items-center"
+            className="px-5 py-2.5 rounded-full bg-white border border-[#DBEAFE] type-ui-control font-bold text-[#0B3B8B] active:bg-[#F0F7FF] transition-colors shadow-2xs min-h-[44px] flex items-center"
           >
             <span>All Treatments ({activeServiceIndex + 1}/{servicesData.length})</span>
           </Link>
@@ -580,7 +575,7 @@ export default function AboutMobile() {
             <button
               type="button"
               onClick={() => openAppointmentModal()}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-full bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px] cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-full bg-[#0B3B8B] active:bg-[#134FB0] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px] cursor-pointer"
             >
               <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4" />

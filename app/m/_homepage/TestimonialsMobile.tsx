@@ -36,7 +36,7 @@ export default function TestimonialsMobile() {
   ];
 
   return (
-    <section className="py-10 px-4 border-b border-gray-100 bg-[#FCF5FE]/30 sm:hidden space-y-6">
+    <section className="py-10 px-4 border-b border-gray-100 bg-[#F0F7FF]/50 sm:hidden space-y-6">
       {/* Header Matching Desktop Version */}
       <div className="space-y-2">
         <span className="type-eyebrow">
@@ -48,7 +48,7 @@ export default function TestimonialsMobile() {
           <span
             className="font-medium text-transparent"
             style={{
-              background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+              background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
             }}

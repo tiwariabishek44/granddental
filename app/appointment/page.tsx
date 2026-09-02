@@ -8,7 +8,7 @@ import { useAppointmentModal } from "@/context/AppointmentModalContext";
 export default function AppointmentPage() {
   const { openAppointmentModal } = useAppointmentModal();
   return (
-    <main className="min-h-[70vh] bg-white text-gray-900 font-sans pb-24">
+    <main className="min-h-[70vh] bg-white text-gray-900 font-sans pb-24 selection:bg-[#DBEAFE] selection:text-[#0B3B8B]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 space-y-10">
         {/* Section Header */}
         <div className="space-y-3">
@@ -21,7 +21,7 @@ export default function AppointmentPage() {
               <span
                 className="font-normal text-transparent"
                 style={{
-                  background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                  background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                   WebkitBackgroundClip: "text",
                   backgroundClip: "text",
                 }}
@@ -36,9 +36,9 @@ export default function AppointmentPage() {
         </div>
 
         {/* Welcome Content Card */}
-        <div className="rounded-3xl border border-[#EECFF4] bg-[#FCF5FE] p-6 sm:p-10 lg:p-12 space-y-8 shadow-sm">
+        <div className="rounded-3xl border border-[#DBEAFE] bg-[#F0F7FF] p-6 sm:p-10 lg:p-12 space-y-8 shadow-sm">
           <div className="space-y-3">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#EECFF4] text-xs font-semibold text-[#74267A]">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#DBEAFE] text-xs font-semibold text-[#0B3B8B]">
               <Calendar className="w-4 h-4" />
               <span>Direct Scheduling &middot; Open 6 Days a Week</span>
             </span>
@@ -53,9 +53,9 @@ export default function AppointmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Option 1: WhatsApp Online Booking Modal */}
-            <div className="bg-white p-6 rounded-2xl border-2 border-[#5C205E] shadow-md space-y-4 flex flex-col justify-between relative overflow-hidden">
+            <div className="bg-white p-6 rounded-2xl border-2 border-[#0B3B8B] shadow-md space-y-4 flex flex-col justify-between relative overflow-hidden">
               <div className="space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-[#5C205E] text-white flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#0B3B8B] text-white flex items-center justify-center">
                   <Calendar className="w-5 h-5" />
                 </div>
                 <h3 className="type-card-title text-gray-900">Instant Online Request</h3>
@@ -76,7 +76,7 @@ export default function AppointmentPage() {
             {/* Option 2: Direct Phone */}
             <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-4 flex flex-col justify-between">
               <div className="space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-[#FCF5FE] text-[#74267A] flex items-center justify-center border border-[#EECFF4]">
+                <div className="w-10 h-10 rounded-xl bg-[#F0F7FF] text-[#0B3B8B] flex items-center justify-center border border-[#DBEAFE]">
                   <Phone className="w-5 h-5" />
                 </div>
                 <h3 className="type-card-title">Phone Call</h3>
@@ -95,7 +95,7 @@ export default function AppointmentPage() {
             {/* Option 3: Walk-In Visit */}
             <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-2xs space-y-4 flex flex-col justify-between">
               <div className="space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-[#FCF5FE] text-[#74267A] flex items-center justify-center border border-[#EECFF4]">
+                <div className="w-10 h-10 rounded-xl bg-[#F0F7FF] text-[#0B3B8B] flex items-center justify-center border border-[#DBEAFE]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <h3 className="type-card-title">Walk-In Visit</h3>

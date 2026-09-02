@@ -65,7 +65,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* Mobile Contact View */}
       <div className="block sm:hidden">
         <ContactMobile />
@@ -85,7 +85,7 @@ export default function ContactPage() {
                 <span
                   className="font-normal text-transparent"
                   style={{
-                    background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                    background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                     WebkitBackgroundClip: "text",
                     backgroundClip: "text",
                   }}
@@ -104,10 +104,10 @@ export default function ContactPage() {
         <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1: Direct Line & WhatsApp */}
-            <div className="rounded-3xl border border-black/5 bg-[#F9EBFC] p-8 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all duration-300">
+            <div className="rounded-3xl border border-black/5 bg-[#EBF3FE] p-8 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all duration-300">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#74267A] shadow-2xs border border-[#EECFF4]">
+                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#0B3B8B] shadow-2xs border border-[#DBEAFE]">
                     <Phone className="w-6 h-6" />
                   </div>
                   <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -122,7 +122,7 @@ export default function ContactPage() {
               <div className="pt-6 border-t border-black/5 space-y-2.5">
                 <a
                   href="tel:014950352"
-                  className="group flex items-center justify-between text-base font-bold text-[#5C205E] hover:text-[#74267A]"
+                  className="group flex items-center justify-between text-base font-bold text-[#0B3B8B] hover:text-[#134FB0]"
                 >
                   <span>Landline: 01-4950352</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -131,7 +131,7 @@ export default function ContactPage() {
                   href="https://wa.me/9779841322789"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm sm:text-base font-semibold text-gray-800 hover:text-[#5C205E]"
+                  className="flex items-center gap-2 text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0B3B8B]"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-600" />
                   <span>WhatsApp: 9841322789</span>
@@ -140,13 +140,13 @@ export default function ContactPage() {
             </div>
 
             {/* Card 2: Clinic Location */}
-            <div className="rounded-3xl border border-black/5 bg-[#EEEEFF] p-8 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all duration-300">
+            <div className="rounded-3xl border border-black/5 bg-[#F0F7FF] p-8 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all duration-300">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-indigo-700 shadow-2xs border border-indigo-100">
+                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#0B3B8B] shadow-2xs border border-[#DBEAFE]">
                     <MapPin className="w-6 h-6" />
                   </div>
-                  <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-indigo-800 border border-indigo-100">
+                  <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-[#0B3B8B] border border-[#DBEAFE]">
                     Swoyambhu, Kathmandu
                   </span>
                 </div>
@@ -157,16 +157,16 @@ export default function ContactPage() {
               </div>
               <div className="pt-6 border-t border-black/5 flex items-center justify-between text-xs sm:text-sm font-semibold text-gray-700">
                 <span className="flex items-center gap-1.5">
-                  <Car className="w-4 h-4 text-indigo-700" /> On-site parking for bikes and cars
+                  <Car className="w-4 h-4 text-[#0B3B8B]" /> On-site parking for bikes and cars
                 </span>
               </div>
             </div>
 
             {/* Card 3: Opening Hours */}
-            <div className="rounded-3xl border border-black/5 bg-[#FCF5FE] p-8 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all duration-300">
+            <div className="rounded-3xl border border-black/5 bg-[#EBF3FE] p-8 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all duration-300">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#74267A] shadow-2xs border border-[#EECFF4]">
+                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#0B3B8B] shadow-2xs border border-[#DBEAFE]">
                     <Clock className="w-6 h-6" />
                   </div>
                   <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -181,16 +181,16 @@ export default function ContactPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="font-semibold text-gray-900">Saturday:</span>
-                    <span className="text-[#74267A] font-semibold">By Prior Appointment</span>
+                    <span className="text-[#0B3B8B] font-semibold">By Prior Appointment</span>
                   </div>
                 </div>
               </div>
               <div className="pt-6 border-t border-black/5">
                 <a
                   href="mailto:grand.dentalclinic2079@gmail.com"
-                  className="text-sm sm:text-base font-semibold text-gray-800 hover:text-[#74267A] transition-colors flex items-center gap-2"
+                  className="text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0B3B8B] transition-colors flex items-center gap-2"
                 >
-                  <Mail className="w-4 h-4 text-[#74267A]" />
+                  <Mail className="w-4 h-4 text-[#0B3B8B]" />
                   <span>grand.dentalclinic2079@gmail.com</span>
                 </a>
               </div>
@@ -240,7 +240,7 @@ export default function ContactPage() {
                       placeholder="e.g. Ramesh Shrestha"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#74267A] focus:ring-2 focus:ring-[#EECFF4] transition-all outline-none"
+                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] transition-all outline-none"
                     />
                   </div>
 
@@ -256,7 +256,7 @@ export default function ContactPage() {
                       placeholder="e.g. 9841XXXXXX"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#74267A] focus:ring-2 focus:ring-[#EECFF4] transition-all outline-none"
+                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] transition-all outline-none"
                     />
                   </div>
                 </div>
@@ -273,7 +273,7 @@ export default function ContactPage() {
                       placeholder="e.g. ramesh@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#74267A] focus:ring-2 focus:ring-[#EECFF4] transition-all outline-none"
+                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] transition-all outline-none"
                     />
                   </div>
 
@@ -286,7 +286,7 @@ export default function ContactPage() {
                       id="service"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#74267A] focus:ring-2 focus:ring-[#EECFF4] transition-all outline-none cursor-pointer"
+                      className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] transition-all outline-none cursor-pointer"
                     >
                       <option>General Dental Checkup &amp; Consultation</option>
                       <option>Teeth Cleaning &amp; Polishing (Scaling)</option>
@@ -311,7 +311,7 @@ export default function ContactPage() {
                     placeholder="Tell us briefly about any symptoms or your preferred day/time to visit..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#74267A] focus:ring-2 focus:ring-[#EECFF4] transition-all outline-none resize-none"
+                    className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 bg-gray-50/50 text-sm sm:text-base text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] transition-all outline-none resize-none"
                   />
                 </div>
 
@@ -324,7 +324,7 @@ export default function ContactPage() {
                   >
                     <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                     <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                      <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                      <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                     </span>
                   </button>
 
@@ -352,17 +352,17 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <div className="p-6 space-y-3 bg-[#FCF5FE]/50 border-t border-gray-100">
-                  <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#74267A]">
+                <div className="p-6 space-y-3 bg-[#F0F7FF]/60 border-t border-gray-100">
+                  <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0B3B8B]">
                     How to Reach Us
                   </div>
                   <ul className="space-y-2.5 text-sm sm:text-base text-gray-700 font-normal">
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#74267A] shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0B3B8B] shrink-0 mt-2" />
                       <span>About 150 meters into the Pachadhara road from the Swoyambhu Buddha Park Ring Road junction.</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#74267A] shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0B3B8B] shrink-0 mt-2" />
                       <span>Located right next to the Pachadhara Khanepani Office with dedicated on-site parking.</span>
                     </li>
                   </ul>
@@ -370,9 +370,9 @@ export default function ContactPage() {
               </div>
 
               {/* Direct Booking Shortcut */}
-              <div className="rounded-3xl border border-[#EECFF4] bg-gradient-to-br from-[#FCF5FE] via-white to-[#F9EBFC] p-6 sm:p-8 space-y-4 shadow-sm">
+              <div className="rounded-3xl border border-[#DBEAFE] bg-gradient-to-br from-[#F0F7FF] via-white to-[#EBF3FE] p-6 sm:p-8 space-y-4 shadow-sm">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-[#5C205E] text-white flex items-center justify-center shrink-0 shadow-2xs">
+                  <div className="w-11 h-11 rounded-2xl bg-[#0B3B8B] text-white flex items-center justify-center shrink-0 shadow-2xs">
                     <Calendar className="w-5 h-5" />
                   </div>
                   <div>
@@ -387,7 +387,7 @@ export default function ContactPage() {
                 >
                   <span>Book Online in 1 Minute</span>
                   <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                    <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   </span>
                 </Link>
               </div>
@@ -425,7 +425,7 @@ export default function ContactPage() {
                       </span>
                       <div
                         className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${isOpen
-                            ? "rotate-180 bg-[#FCF5FE] text-[#74267A]"
+                            ? "rotate-180 bg-[#F0F7FF] text-[#0B3B8B]"
                             : "bg-gray-100 text-gray-500"
                           }`}
                       >

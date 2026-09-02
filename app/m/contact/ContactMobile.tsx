@@ -7,59 +7,53 @@ import {
   Mail,
   MapPin,
   Clock,
-  ArrowRight,
-  ShieldCheck,
+  Car,
+  Navigation,
+  MessageCircle,
   CheckCircle2,
   ChevronDown,
-  Car,
-  Calendar,
-  MessageCircle,
-  Navigation,
+  ArrowRight,
 } from "lucide-react";
 
 export default function ContactMobile() {
-  // Form State
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
     service: "General Dental Checkup & Consultation",
     message: "",
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // FAQ Accordion State
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    // Simulate brief network submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({
         name: "",
         phone: "",
-        email: "",
         service: "General Dental Checkup & Consultation",
         message: "",
       });
-    }, 800);
+    }, 600);
   };
 
   const faqs = [
     {
-      q: "Can I just walk in, or do I need an appointment first?",
-      a: "Walk-ins are always welcome from 8:00 AM to 6:00 PM (Sunday to Friday). However, calling or messaging on WhatsApp beforehand reserves your time and keeps your waiting time to a minimum.",
+      q: "Do I need to book an appointment before visiting?",
+      a: "Walk-in patients are warmly welcome for general checkups and urgent tooth pain relief. However, booking in advance is recommended to ensure your preferred time with a specific doctor.",
     },
     {
-      q: "Is there easy parking available near the clinic?",
-      a: "Yes. We have dedicated on-site parking right outside the clinic for both motorbikes/scooters and cars.",
+      q: "Is dedicated parking available for four-wheelers?",
+      a: "Yes. Grand Dental Clinic has dedicated on-site parking directly in front of the clinic for both two-wheelers and cars.",
     },
     {
-      q: "Which treatments can be finished in a single visit?",
-      a: "Routine checkups, diagnostic X-rays, teeth cleaning (scaling & polishing), simple cavity fillings, and urgent toothache relief are usually completed during a single visit.",
+      q: "What should I do during a dental emergency?",
+      a: "For acute pain, broken teeth, or facial swelling, please call our direct hotline at 01-4950352 or message us on WhatsApp. We prioritize urgent cases for same-day relief.",
     },
     {
       q: "How do I find the clinic from Swoyambhu Ring Road?",
@@ -71,7 +65,7 @@ export default function ContactMobile() {
     <div className="space-y-6 pb-12 sm:hidden font-sans">
       {/* 1. HEADER SECTION */}
       <section className="px-4 pt-4 space-y-2.5">
-        <span className="type-eyebrow px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
+        <span className="type-eyebrow px-3 py-1 rounded-full bg-[#F0F7FF] border border-[#DBEAFE] inline-block text-[#0B3B8B]">
           We’re Here to Help &middot; Swoyambhu, Kathmandu
         </span>
 
@@ -80,7 +74,7 @@ export default function ContactMobile() {
           <span
             className="font-medium text-transparent"
             style={{
-              background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+              background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
             }}
@@ -97,9 +91,9 @@ export default function ContactMobile() {
       {/* 2. THREE QUICK CONTACT BENTO CARDS */}
       <section className="px-4 space-y-3">
         {/* Card 1: Telephone & WhatsApp */}
-        <div className="rounded-3xl border border-[#F3D5F9] bg-[#F9EBFC] p-5 space-y-3.5 shadow-2xs">
+        <div className="rounded-3xl border border-[#DBEAFE] bg-[#EBF3FE] p-5 space-y-3.5 shadow-2xs">
           <div className="flex items-center justify-between">
-            <div className="w-10 h-10 rounded-2xl bg-white flex items-center justify-center text-[#74267A] shadow-2xs border border-[#EECFF4]">
+            <div className="w-10 h-10 rounded-2xl bg-white flex items-center justify-center text-[#0B3B8B] shadow-2xs border border-[#DBEAFE]">
               <Phone className="w-5 h-5" />
             </div>
             <span className="type-meta px-2.5 py-0.5 rounded-full font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -114,10 +108,10 @@ export default function ContactMobile() {
             </p>
           </div>
 
-          <div className="pt-3 border-t border-[#74267A]/15 space-y-2">
+          <div className="pt-3 border-t border-[#0B3B8B]/15 space-y-2">
             <a
               href="tel:014950352"
-              className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-[#F3D5F9] type-ui-control font-bold text-[#5C205E] active:bg-[#FCF5FE]"
+              className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-[#DBEAFE] type-ui-control font-bold text-[#0B3B8B] active:bg-[#F0F7FF]"
             >
               <span>Landline: 01-4950352</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -163,9 +157,9 @@ export default function ContactMobile() {
         </div>
 
         {/* Card 3: Hours & Schedule */}
-        <div className="rounded-3xl border border-[#F3D5F9] bg-[#FCF5FE] p-5 space-y-3.5 shadow-2xs">
+        <div className="rounded-3xl border border-[#DBEAFE] bg-[#F0F7FF] p-5 space-y-3.5 shadow-2xs">
           <div className="flex items-center justify-between">
-            <div className="w-10 h-10 rounded-2xl bg-white flex items-center justify-center text-[#74267A] shadow-2xs border border-[#EECFF4]">
+            <div className="w-10 h-10 rounded-2xl bg-white flex items-center justify-center text-[#0B3B8B] shadow-2xs border border-[#DBEAFE]">
               <Clock className="w-5 h-5" />
             </div>
             <span className="type-meta px-2.5 py-0.5 rounded-full font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -182,17 +176,17 @@ export default function ContactMobile() {
               </div>
               <div className="flex justify-between">
                 <span className="font-semibold text-gray-900">Saturday:</span>
-                <span className="text-[#74267A] font-bold">Open by Appointment</span>
+                <span className="text-[#0B3B8B] font-bold">Open by Appointment</span>
               </div>
             </div>
           </div>
 
-          <div className="pt-2 border-t border-[#74267A]/15">
+          <div className="pt-2 border-t border-[#0B3B8B]/15">
             <a
               href="mailto:grand.dentalclinic2079@gmail.com"
-              className="type-ui-control font-semibold text-gray-700 active:text-[#74267A] transition-colors flex items-center gap-1.5"
+              className="type-ui-control font-semibold text-gray-700 active:text-[#0B3B8B] transition-colors flex items-center gap-1.5"
             >
-              <Mail className="w-4 h-4 text-[#74267A]" />
+              <Mail className="w-4 h-4 text-[#0B3B8B]" />
               <span className="break-all">grand.dentalclinic2079@gmail.com</span>
             </a>
           </div>
@@ -215,17 +209,17 @@ export default function ContactMobile() {
             />
           </div>
 
-          <div className="p-4 space-y-2.5 bg-[#FCF5FE]/60 border-t border-gray-100">
-            <div className="type-eyebrow block">
+          <div className="p-4 space-y-2.5 bg-[#F0F7FF]/60 border-t border-gray-100">
+            <div className="type-eyebrow block text-[#0B3B8B]">
               Arrival &amp; Landmark Directions
             </div>
             <ul className="space-y-1.5 type-body text-gray-700 font-normal">
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#74267A] shrink-0 mt-2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0B3B8B] shrink-0 mt-2" />
                 <span>150m from Swoyambhu Ring Road Buddha Park towards Pachadhara.</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#74267A] shrink-0 mt-2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0B3B8B] shrink-0 mt-2" />
                 <span>Next to the Pachadhara Khanepani Office with dedicated on-site parking out front.</span>
               </li>
             </ul>
@@ -234,7 +228,7 @@ export default function ContactMobile() {
               href="https://maps.google.com/?q=Swoyambhu+Kathmandu+Nepal"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white border border-[#F3D5F9] text-[#74267A] type-ui-control font-bold shadow-2xs"
+              className="mt-2 w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white border border-[#DBEAFE] text-[#0B3B8B] type-ui-control font-bold shadow-2xs"
             >
               <Navigation className="w-4 h-4" />
               <span>Open in Google Maps</span>
@@ -247,7 +241,7 @@ export default function ContactMobile() {
       <section className="px-4">
         <div className="bg-white rounded-3xl border border-gray-200 p-5 shadow-sm space-y-4">
           <div className="space-y-1">
-            <span className="type-eyebrow block">
+            <span className="type-eyebrow block text-[#0B3B8B]">
               Send a Message
             </span>
             <h2 className="type-section-title">
@@ -281,7 +275,7 @@ export default function ContactMobile() {
                 placeholder="e.g. Ramesh Shrestha"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-3.5 py-3 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#74267A] outline-none min-h-[44px]"
+                className="w-full px-3.5 py-3 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] outline-none min-h-[44px]"
               />
             </div>
 
@@ -296,7 +290,7 @@ export default function ContactMobile() {
                 placeholder="e.g. 9841XXXXXX"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-3.5 py-3 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#74267A] outline-none min-h-[44px]"
+                className="w-full px-3.5 py-3 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] outline-none min-h-[44px]"
               />
             </div>
 
@@ -308,7 +302,7 @@ export default function ContactMobile() {
                 id="mobile-service"
                 value={formData.service}
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                className="w-full px-3.5 py-3 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#74267A] outline-none min-h-[44px] cursor-pointer"
+                className="w-full px-3.5 py-3 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] outline-none min-h-[44px] cursor-pointer"
               >
                 <option>General Dental Checkup &amp; Consultation</option>
                 <option>Scaling &amp; Teeth Cleaning (Polishing)</option>
@@ -331,14 +325,14 @@ export default function ContactMobile() {
                 placeholder="Tell us about specific dental symptoms or preferred appointment time..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#74267A] outline-none resize-none"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50/50 type-ui-control text-gray-900 focus:bg-white focus:border-[#0B3B8B] focus:ring-2 focus:ring-[#DBEAFE] outline-none resize-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-[#5C205E] active:bg-[#74267A] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-[#0B3B8B] active:bg-[#134FB0] text-white type-ui-control font-bold shadow-md transition-colors min-h-[48px]"
             >
               <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
               <ArrowRight className="w-4 h-4" />
@@ -351,7 +345,7 @@ export default function ContactMobile() {
       <section className="px-4">
         <div className="bg-gray-50 rounded-3xl border border-gray-200/80 p-5 space-y-4">
           <div className="space-y-1">
-            <span className="type-eyebrow block">
+            <span className="type-eyebrow block text-[#0B3B8B]">
               Patient Information
             </span>
             <h2 className="type-section-title">
@@ -378,7 +372,7 @@ export default function ContactMobile() {
                     <div
                       className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
                         isOpen
-                          ? "rotate-180 bg-[#FCF5FE] text-[#74267A]"
+                          ? "rotate-180 bg-[#F0F7FF] text-[#0B3B8B]"
                           : "bg-gray-100 text-gray-500"
                       }`}
                     >

@@ -22,7 +22,7 @@ import {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* DESKTOP / TABLET EXPERIENCE (sm:block) */}
       <div className="hidden sm:block">
         <HeroSection />

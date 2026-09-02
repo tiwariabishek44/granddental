@@ -20,6 +20,7 @@ import {
   Zap,
   Layers,
   HeartPulse,
+  MessageCircle,
 } from "lucide-react";
 import { useAppointmentModal } from "@/context/AppointmentModalContext";
 
@@ -53,8 +54,8 @@ export default function Header() {
       href: "/services/dental-implants",
       desc: "Permanent titanium root replacements",
       icon: Layers,
-      tint: "#F9EBFC",
-      iconColor: "#74267A",
+      tint: "#EBF3FE",
+      iconColor: "#0B3B8B",
       tag: "Popular",
     },
     {
@@ -62,8 +63,8 @@ export default function Header() {
       href: "/services/clear-aligners",
       desc: "Discreet wire-free smile alignment",
       icon: Smile,
-      tint: "#EEEEFF",
-      iconColor: "#4338CA",
+      tint: "#F0F7FF",
+      iconColor: "#1E64D4",
       tag: "Trending",
     },
     {
@@ -71,23 +72,23 @@ export default function Header() {
       href: "/services/root-canal",
       desc: "Gentle pain-free tooth preservation",
       icon: HeartPulse,
-      tint: "#FDF0F2",
-      iconColor: "#BE185D",
+      tint: "#E0F2FE",
+      iconColor: "#0284C7",
     },
     {
       name: "Teeth Whitening & Polish",
       href: "/services/teeth-whitening",
       desc: "Instant shade brightening in 45 mins",
       icon: Zap,
-      tint: "#FCF5FE",
-      iconColor: "#922F9C",
+      tint: "#F0F7FF",
+      iconColor: "#388EE8",
     },
     {
       name: "Ultrasonic Scaling",
       href: "/services/scaling-polishing",
       desc: "Deep calculus & stain prophylaxis",
       icon: Stethoscope,
-      tint: "#EEEEFF",
+      tint: "#EBF3FE",
       iconColor: "#2563EB",
     },
     {
@@ -95,8 +96,8 @@ export default function Header() {
       href: "/services/paediatric-dentistry",
       desc: "Gentle, fear-free care for children",
       icon: Smile,
-      tint: "#F9EBFC",
-      iconColor: "#74267A",
+      tint: "#E0F2FE",
+      iconColor: "#0B3B8B",
     },
   ];
 
@@ -108,47 +109,147 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 transition-all duration-300">
-      {/* 1. Top Pre-Header Bar */}
+      {/* 1. Top Pre-Header Marquee Ribbon */}
       <div
-        className={`bg-[#5C205E] text-white text-xs sm:text-[13px] transition-all duration-300 font-medium ${isScrolled ? "max-h-0 opacity-0 overflow-hidden py-0" : "max-h-12 opacity-100 py-2 border-b border-white/10"
+        className={`bg-[#0B3B8B] text-white text-xs sm:text-[13px] transition-all duration-300 font-medium overflow-hidden relative ${isScrolled ? "max-h-0 opacity-0 py-0" : "max-h-12 opacity-100 py-2 border-b border-white/10"
           }`}
       >
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Left: Accreditations & Hours */}
-          <div className="flex items-center gap-3 sm:gap-6">
-            <div className="flex items-center gap-2 text-white/90">
-              <ShieldCheck className="w-4 h-4 text-[#ED91FB]" />
-              <span className="hidden sm:inline">NMC Certified Doctors &middot; Modern Dental Facility</span>
-              <span className="sm:hidden">NMC Certified Doctors</span>
+        {/* Subtle Fade Edges */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#0B3B8B] to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#0B3B8B] to-transparent z-10" />
+
+        {/* Continuous Looping Marquee Track */}
+        <div className="flex select-none overflow-hidden">
+          <div className="animate-marquee flex items-center shrink-0 gap-6 sm:gap-10">
+            {/* Cycle 1 */}
+            <div className="flex items-center gap-6 sm:gap-10">
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="font-semibold text-white">Open Today: 8:00 AM – 6:00 PM</span>
+                <span className="text-white/70 font-normal">&middot; Walk-ins &amp; Urgent Cases Welcome</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/95">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>NMC Certified Doctors &bull; 100% Autoclaved Instruments</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/95">
+                <Sparkles className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span className="font-semibold">Grand Dental Clinic</span>
+                <span className="text-white/70">&mdash; Care | Quality | Trust</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/95">
+                <MapPin className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>Swoyambhu, Kathmandu (150m from Buddha Park) &bull; On-Site Parking</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
+
+              <a
+                href="tel:014950352"
+                className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>Hotline: <strong className="font-clinical font-bold">01-4950352</strong></span>
+              </a>
+
+              <span className="text-white/30">&bull;</span>
+
+              <a
+                href="https://wa.me/9779841322789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
+              >
+                <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                <span>WhatsApp: <strong className="font-clinical font-bold">9841322789</strong></span>
+              </a>
+
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/90">
+                <HeartPulse className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>Painless Root Canal &bull; Aesthetic Fillings &bull; Clear Aligners &bull; Dental Implants</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
             </div>
 
-            <span className="hidden md:inline text-white/30">|</span>
+            {/* Cycle 2 (Exact Duplicate for seamless infinite loop) */}
+            <div className="flex items-center gap-6 sm:gap-10">
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="font-semibold text-white">Open Today: 8:00 AM – 6:00 PM</span>
+                <span className="text-white/70 font-normal">&middot; Walk-ins &amp; Urgent Cases Welcome</span>
+              </div>
 
-            <div className="hidden md:flex items-center gap-2 text-white/80">
-              <Clock className="w-4 h-4 text-[#ED91FB]" />
-              <span>Sun – Fri: 8:00 AM – 6:00 PM</span>
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/95">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>NMC Certified Doctors &bull; 100% Autoclaved Instruments</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/95">
+                <Sparkles className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span className="font-semibold">Grand Dental Clinic</span>
+                <span className="text-white/70">&mdash; Care | Quality | Trust</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/95">
+                <MapPin className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>Swoyambhu, Kathmandu (150m from Buddha Park) &bull; On-Site Parking</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
+
+              <a
+                href="tel:014950352"
+                className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>Hotline: <strong className="font-clinical font-bold">01-4950352</strong></span>
+              </a>
+
+              <span className="text-white/30">&bull;</span>
+
+              <a
+                href="https://wa.me/9779841322789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
+              >
+                <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                <span>WhatsApp: <strong className="font-clinical font-bold">9841322789</strong></span>
+              </a>
+
+              <span className="text-white/30">&bull;</span>
+
+              <div className="flex items-center gap-1.5 text-white/90">
+                <HeartPulse className="w-3.5 h-3.5 text-[#60A5FA]" />
+                <span>Painless Root Canal &bull; Aesthetic Fillings &bull; Clear Aligners &bull; Dental Implants</span>
+              </div>
+
+              <span className="text-white/30">&bull;</span>
             </div>
-          </div>
-
-          {/* Right: Live Status & Emergency */}
-          <div className="flex items-center gap-4 text-white/90">
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="text-xs sm:text-[13px] text-white/90 font-medium">Open Today</span>
-            </div>
-
-            <span className="text-white/30 hidden sm:inline">|</span>
-
-            <a
-              href="tel:014950352"
-              className="hidden sm:flex items-center gap-1.5 text-white/90 hover:text-white transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#ED91FB]" />
-              <span className="font-clinical font-semibold tracking-tight text-xs sm:text-sm">01-4950352</span>
-            </a>
           </div>
         </div>
       </div>
@@ -162,7 +263,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 sm:h-18">
             {/* Brand Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0 flex items-center justify-center rounded-full border border-[#F3D5F9] bg-white p-0.5 shadow-2xs">
+              <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0 flex items-center justify-center rounded-full border border-[#DBEAFE] bg-white p-0.5 shadow-2xs">
                 <Image
                   src="/logo.png"
                   alt="Grand Dental Clinic Logo"
@@ -173,10 +274,10 @@ export default function Header() {
                 />
               </div>
               <div className="flex flex-col justify-center">
-                <span className="font-serif text-2xl sm:text-[26px] font-normal tracking-tight text-gray-950 leading-none group-hover:text-[#5C205E] transition-colors">
+                <span className="font-serif text-2xl sm:text-[26px] font-normal tracking-tight text-gray-950 leading-none group-hover:text-[#0B3B8B] transition-colors">
                   Grand Dental
                 </span>
-                <span className="text-[9.5px] sm:text-[10px] font-bold tracking-[0.22em] uppercase text-[#74267A] mt-1 font-sans">
+                <span className="text-[9.5px] sm:text-[10px] font-bold tracking-[0.22em] uppercase text-[#0B3B8B] mt-1 font-sans">
                   Clinic &bull; Kathmandu
                 </span>
               </div>
@@ -187,8 +288,8 @@ export default function Header() {
               <Link
                 href="/"
                 className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/")
-                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] font-semibold border border-[#DBEAFE]"
+                  : "text-gray-700 hover:text-[#0B3B8B] hover:bg-gray-50/80"
                   }`}
               >
                 Home
@@ -197,8 +298,8 @@ export default function Header() {
               <Link
                 href="/about"
                 className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/about")
-                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] font-semibold border border-[#DBEAFE]"
+                  : "text-gray-700 hover:text-[#0B3B8B] hover:bg-gray-50/80"
                   }`}
               >
                 About
@@ -207,8 +308,8 @@ export default function Header() {
               <Link
                 href="/services"
                 className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/services")
-                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] font-semibold border border-[#DBEAFE]"
+                  : "text-gray-700 hover:text-[#0B3B8B] hover:bg-gray-50/80"
                   }`}
               >
                 Services
@@ -217,8 +318,8 @@ export default function Header() {
               <Link
                 href="/doctors"
                 className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/doctors")
-                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] font-semibold border border-[#DBEAFE]"
+                  : "text-gray-700 hover:text-[#0B3B8B] hover:bg-gray-50/80"
                   }`}
               >
                 Our Doctors
@@ -227,8 +328,8 @@ export default function Header() {
               <Link
                 href="/contact"
                 className={`px-4 py-2 rounded-full transition-all duration-200 ${isActive("/contact")
-                  ? "bg-[#FCF5FE] text-[#74267A] font-semibold border border-[#F7E6FA]"
-                  : "text-gray-700 hover:text-[#74267A] hover:bg-gray-50/80"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] font-semibold border border-[#DBEAFE]"
+                  : "text-gray-700 hover:text-[#0B3B8B] hover:bg-gray-50/80"
                   }`}
               >
                 Contact
@@ -240,9 +341,9 @@ export default function Header() {
               {/* Quick Phone Call Pill */}
               <a
                 href="tel:014950352"
-                className="flex items-center gap-2 text-sm sm:text-[15px] font-semibold text-gray-700 hover:text-[#74267A] transition-colors px-3 py-2 rounded-full hover:bg-gray-50/90 border border-transparent hover:border-gray-200/60"
+                className="flex items-center gap-2 text-sm sm:text-[15px] font-semibold text-gray-700 hover:text-[#0B3B8B] transition-colors px-3 py-2 rounded-full hover:bg-gray-50/90 border border-transparent hover:border-gray-200/60"
               >
-                <div className="w-8 h-8 rounded-full bg-[#FCF5FE] text-[#74267A] flex items-center justify-center border border-[#EECFF4] shadow-2xs">
+                <div className="w-8 h-8 rounded-full bg-[#F0F7FF] text-[#0B3B8B] flex items-center justify-center border border-[#BFDBFE] shadow-2xs">
                   <Phone className="w-4 h-4" />
                 </div>
                 <span className="font-clinical font-semibold">01-4950352</span>
@@ -252,11 +353,11 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => openAppointmentModal()}
-                className="group inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#5C205E] text-white hover:bg-[#74267A] h-11 sm:h-12 px-6 text-sm sm:text-base gap-2.5 shadow-sm cursor-pointer hover:shadow-md"
+                className="group inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#0B3B8B] text-white hover:bg-[#134FB0] h-11 sm:h-12 px-6 text-sm sm:text-base gap-2.5 shadow-sm cursor-pointer hover:shadow-md"
               >
                 <span>Book Appointment</span>
                 <span className="flex items-center justify-center rounded-full bg-white p-1.5 shadow-2xs transition-transform duration-200 group-hover:translate-x-1">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 </span>
               </button>
             </div>
@@ -266,7 +367,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => openAppointmentModal()}
-                className="inline-flex items-center justify-center rounded-full bg-[#5C205E] text-white text-xs font-medium px-3.5 py-1.5 gap-1.5 shadow-2xs cursor-pointer"
+                className="inline-flex items-center justify-center rounded-full bg-[#0B3B8B] text-white text-xs font-medium px-3.5 py-1.5 gap-1.5 shadow-2xs cursor-pointer"
               >
                 <Calendar className="w-3.5 h-3.5 text-white/90" />
                 <span>Book</span>
@@ -327,7 +428,7 @@ export default function Header() {
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/")
-                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] border border-[#DBEAFE]"
                   : "text-gray-800 hover:bg-gray-50"
                   }`}
               >
@@ -338,7 +439,7 @@ export default function Header() {
                 href="/about"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/about")
-                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] border border-[#DBEAFE]"
                   : "text-gray-800 hover:bg-gray-50"
                   }`}
               >
@@ -349,7 +450,7 @@ export default function Header() {
                 href="/services"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/services")
-                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] border border-[#DBEAFE]"
                   : "text-gray-800 hover:bg-gray-50"
                   }`}
               >
@@ -360,7 +461,7 @@ export default function Header() {
                 href="/doctors"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/doctors")
-                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] border border-[#DBEAFE]"
                   : "text-gray-800 hover:bg-gray-50"
                   }`}
               >
@@ -371,7 +472,7 @@ export default function Header() {
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-sm font-semibold transition-colors ${isActive("/contact")
-                  ? "bg-[#FCF5FE] text-[#74267A] border border-[#F7E6FA]"
+                  ? "bg-[#F0F7FF] text-[#0B3B8B] border border-[#DBEAFE]"
                   : "text-gray-800 hover:bg-gray-50"
                   }`}
               >
@@ -382,7 +483,7 @@ export default function Header() {
             {/* Timings Quick Badge */}
             <div className="p-3.5 rounded-2xl bg-gray-50 border border-gray-100 text-xs text-gray-600 space-y-1">
               <div className="font-semibold text-gray-900 flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5 text-[#74267A]" />
+                <Clock className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 <span>Working Hours</span>
               </div>
               <p className="text-xs text-gray-500">Sun – Fri: 8:00 AM – 6:00 PM</p>
@@ -396,7 +497,7 @@ export default function Header() {
               href="tel:014950352"
               className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 border border-gray-200/70 transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#74267A]" />
+              <Phone className="w-3.5 h-3.5 text-[#0B3B8B]" />
               <span className="font-clinical text-xs font-semibold">01-4950352</span>
             </a>
 
@@ -406,11 +507,11 @@ export default function Header() {
                 setIsMobileMenuOpen(false);
                 openAppointmentModal();
               }}
-              className="group inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#5C205E] text-white hover:bg-[#74267A] h-11 px-5 text-sm gap-2 shadow-sm w-full cursor-pointer"
+              className="group inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#0B3B8B] text-white hover:bg-[#134FB0] h-11 px-5 text-sm gap-2 shadow-sm w-full cursor-pointer"
             >
               <span>Book Appointment Now</span>
               <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
               </span>
             </button>
           </div>

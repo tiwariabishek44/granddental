@@ -17,7 +17,7 @@ export default function MobileBottomBar() {
           className="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-gray-100/90 active:bg-gray-200 text-gray-900 text-xs sm:text-[13px] font-bold transition-colors"
           aria-label="Call Clinic at 01-4950352"
         >
-          <Phone className="w-4 h-4 text-[#74267A] mb-0.5" />
+          <Phone className="w-4 h-4 text-[#0B3B8B] mb-0.5" />
           <span>Call</span>
         </a>
 
@@ -36,7 +36,7 @@ export default function MobileBottomBar() {
         {/* Primary Book Consultation CTA */}
         <Link
           href="/appointment"
-          className="flex-[2] flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#5C205E] active:bg-[#74267A] text-white text-xs sm:text-sm font-bold shadow-sm transition-all text-center tracking-tight"
+          className="flex-[2] flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#0B3B8B] active:bg-[#134FB0] text-white text-xs sm:text-sm font-bold shadow-sm transition-all text-center tracking-tight"
         >
           <Calendar className="w-4 h-4" />
           <span>Book Visit</span>

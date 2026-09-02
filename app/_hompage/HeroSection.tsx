@@ -12,7 +12,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-full max-w-[1400px] mx-auto px-6 lg:px-8 mt-4 mb-2">
       {/* Cinematic Editorial Canvas */}
-      <div className="relative h-[80vh] min-h-[560px] max-h-[720px] w-full rounded-3xl overflow-hidden bg-[#101828] shadow-sm border border-black/5 flex flex-col justify-between p-12 lg:p-16">
+      <div className="relative h-[80vh] min-h-[560px] max-h-[720px] w-full rounded-3xl overflow-hidden bg-[#0B192C] shadow-sm border border-black/5 flex flex-col justify-between p-12 lg:p-16">
         {/* Editorial Photograph with Natural Light & Clean Negative Space */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -33,14 +33,14 @@ export default function HeroSection() {
           {/* Eyebrow Pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white/90 text-xs font-semibold uppercase tracking-wider">
             <span>Swoyambhu, Kathmandu</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ED91FB]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#388EE8]" />
             <span>Grand Dental Clinic</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.08]">
             Thoughtful dental care,{" "}
-            <span className="font-serif italic font-normal text-[#ED91FB]">
+            <span className="font-serif italic font-normal text-[#60A5FA]">
               designed around you.
             </span>
           </h1>
@@ -55,7 +55,7 @@ export default function HeroSection() {
             <button
               type="button"
               onClick={() => openAppointmentModal()}
-              className="inline-flex items-center gap-3 bg-[#5C205E] hover:bg-[#74267A] text-white px-8 py-4 rounded-full text-base font-semibold shadow-md transition-all duration-300 hover:scale-[1.02] group cursor-pointer"
+              className="inline-flex items-center gap-3 bg-[#0B3B8B] hover:bg-[#134FB0] text-white px-8 py-4 rounded-full text-base font-semibold shadow-md transition-all duration-300 hover:scale-[1.02] group cursor-pointer"
             >
               <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

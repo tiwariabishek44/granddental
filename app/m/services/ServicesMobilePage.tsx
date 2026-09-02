@@ -29,7 +29,7 @@ export default function ServicesMobilePage() {
     <div className="space-y-6 pb-12 sm:hidden font-sans">
       {/* 1. HERO HEADER SECTION */}
       <section className="px-4 pt-4 space-y-2.5">
-        <span className="type-eyebrow px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
+        <span className="type-eyebrow px-3 py-1 rounded-full bg-[#F0F7FF] border border-[#DBEAFE] inline-block text-[#0B3B8B]">
           Treatments &amp; Dental Care
         </span>
 
@@ -38,7 +38,7 @@ export default function ServicesMobilePage() {
           <span
             className="font-medium text-transparent"
             style={{
-              background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+              background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
             }}
@@ -55,7 +55,7 @@ export default function ServicesMobilePage() {
         <div className="pt-2 flex flex-col gap-2.5">
           <Link
             href="/appointment"
-            className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-3.5 px-5 rounded-full type-ui-control font-semibold shadow-md transition-all min-h-[48px]"
+            className="w-full flex items-center justify-center gap-2.5 bg-[#0B3B8B] active:bg-[#134FB0] text-white py-3.5 px-5 rounded-full type-ui-control font-semibold shadow-md transition-all min-h-[48px]"
           >
             <span>Book Appointment</span>
             <ArrowRight className="w-4 h-4" />
@@ -72,20 +72,20 @@ export default function ServicesMobilePage() {
       {/* 2. PEDIGREE & CREDENTIALS MATRIX */}
       <section className="px-4">
         <div className="grid grid-cols-2 gap-2.5">
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="text-lg font-bold text-[#5C205E]">Comfort First</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-1">
+            <div className="text-lg font-bold text-[#0B3B8B]">Comfort First</div>
             <div className="text-xs font-semibold text-gray-800">Gentle &amp; Pain-Free</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="text-lg font-bold text-[#5C205E]">Experienced</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-1">
+            <div className="text-lg font-bold text-[#0B3B8B]">Experienced</div>
             <div className="text-xs font-semibold text-gray-800">Specialist Dental Doctors</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="text-lg font-bold text-[#5C205E]">Honest Plans</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-1">
+            <div className="text-lg font-bold text-[#0B3B8B]">Honest Plans</div>
             <div className="text-xs font-semibold text-gray-800">Clear &amp; Upfront Pricing</div>
           </div>
-          <div className="p-3.5 rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] text-center space-y-1">
-            <div className="text-lg font-bold text-[#5C205E]">100% Sterile</div>
+          <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] text-center space-y-1">
+            <div className="text-lg font-bold text-[#0B3B8B]">100% Sterile</div>
             <div className="text-xs font-semibold text-gray-800">Autoclaved Instruments</div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function ServicesMobilePage() {
       {/* 3. TREATMENT DIRECTORY CARDS */}
       <section className="px-4 space-y-4">
         <div className="space-y-1">
-          <span className="type-eyebrow block">
+          <span className="type-eyebrow block text-[#0B3B8B]">
             Explore Treatments &middot; {filteredServices.length} Treatments
           </span>
           <h2 className="type-section-title">
@@ -122,7 +122,7 @@ export default function ServicesMobilePage() {
 
               {/* Bottom Details */}
               <div className="relative z-10 space-y-1.5">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#ED91FB]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#60A5FA]">
                   {srv.categoryLabel}
                 </span>
 
@@ -137,8 +137,8 @@ export default function ServicesMobilePage() {
 
       {/* 4. INVITATION CTA BANNER */}
       <section className="px-4">
-        <div className="rounded-3xl bg-[#5C205E] text-white p-6 space-y-4 shadow-lg relative overflow-hidden">
-          <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-[#CE59DC]/20 blur-3xl pointer-events-none" />
+        <div className="rounded-3xl bg-[#0B192C] text-white p-6 space-y-4 shadow-lg relative overflow-hidden">
+          <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-[#388EE8]/20 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 space-y-2">
             <span className="type-eyebrow px-3 py-1 rounded-full bg-white/20 text-white inline-block">
@@ -156,7 +156,7 @@ export default function ServicesMobilePage() {
             <button
               type="button"
               onClick={() => openAppointmentModal()}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px] cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#0B3B8B] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors min-h-[48px] cursor-pointer"
             >
               <Calendar className="w-4 h-4" />
               <span>Book an Appointment</span>

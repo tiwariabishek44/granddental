@@ -73,7 +73,7 @@ export default function OurClinicSection() {
               <span
                 className="font-medium text-transparent"
                 style={{
-                  background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                  background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                 }}
@@ -85,7 +85,7 @@ export default function OurClinicSection() {
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 text-base font-semibold text-[#5C205E] hover:text-[#74267A] shrink-0 group cursor-pointer"
+            className="inline-flex items-center gap-2 text-base font-semibold text-[#0B3B8B] hover:text-[#134FB0] shrink-0 group cursor-pointer"
           >
             <span>Tour our clinic</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

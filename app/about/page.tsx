@@ -113,7 +113,7 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* Mobile About Page View */}
       <div className="block sm:hidden">
         <AboutMobile />
@@ -126,14 +126,14 @@ export default function AboutPage() {
           <div
             className="rounded-3xl border border-gray-200/80 p-6 sm:p-10 lg:p-12 shadow-sm space-y-10"
             style={{
-              background: "radial-gradient(100% 286.18% at 100% 100%, #FCF5FE 0%, #F5F3F6 100%)",
+              background: "radial-gradient(100% 286.18% at 100% 100%, #F0F7FF 0%, #F8FAFC 100%)",
             }}
           >
             {/* Narrative Header */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-8 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#F7E6FA] text-[#74267A] text-xs font-semibold uppercase tracking-wider shadow-2xs">
-                  <Sparkles className="w-3.5 h-3.5 text-[#922F9C]" />
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DBEAFE] text-[#0B3B8B] text-xs font-semibold uppercase tracking-wider shadow-2xs">
+                  <Sparkles className="w-3.5 h-3.5 text-[#388EE8]" />
                   <span>About Our Practice &bull; Swoyambhu</span>
                 </div>
 
@@ -142,7 +142,7 @@ export default function AboutPage() {
                   <span
                     className="font-normal text-transparent"
                     style={{
-                      background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                      background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                       backgroundClip: "text",
                       WebkitBackgroundClip: "text",
                     }}
@@ -162,32 +162,32 @@ export default function AboutPage() {
 
                 {/* 4 Feature Badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 pt-2">
-                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#F7E6FA] space-y-1">
-                    <div className="font-semibold text-sm sm:text-base text-[#5C205E] flex items-center gap-1.5">
+                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#DBEAFE] space-y-1">
+                    <div className="font-semibold text-sm sm:text-base text-[#0B3B8B] flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Gentle Care</span>
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm font-normal">Pain-free approach &amp; relaxed visits</p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#F7E6FA] space-y-1">
-                    <div className="font-semibold text-sm sm:text-base text-[#5C205E] flex items-center gap-1.5">
+                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#DBEAFE] space-y-1">
+                    <div className="font-semibold text-sm sm:text-base text-[#0B3B8B] flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Strict Hygiene</span>
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm font-normal">Autoclave sterilization on all tools</p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#F7E6FA] space-y-1">
-                    <div className="font-semibold text-sm sm:text-base text-[#5C205E] flex items-center gap-1.5">
+                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#DBEAFE] space-y-1">
+                    <div className="font-semibold text-sm sm:text-base text-[#0B3B8B] flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Modern Setup</span>
                     </div>
                     <p className="text-gray-600 text-xs sm:text-sm font-normal">Digital imaging &amp; precision equipment</p>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#F7E6FA] space-y-1">
-                    <div className="font-semibold text-sm sm:text-base text-[#5C205E] flex items-center gap-1.5">
+                  <div className="p-3.5 rounded-2xl bg-white/80 border border-[#DBEAFE] space-y-1">
+                    <div className="font-semibold text-sm sm:text-base text-[#0B3B8B] flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Honest Advice</span>
                     </div>
@@ -214,13 +214,13 @@ export default function AboutPage() {
                   <Link href="/appointment" className="group btn-pill-primary w-full text-center justify-between">
                     <span>Book Appointment</span>
                     <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                      <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                      <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                     </span>
                   </Link>
 
                   <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between text-xs sm:text-sm text-gray-700">
                     <span className="font-medium">Direct Line:</span>
-                    <a href="tel:014950352" className="font-semibold text-[#5C205E] hover:underline">
+                    <a href="tel:014950352" className="font-semibold text-[#0B3B8B] hover:underline">
                       01-4950352
                     </a>
                   </div>
@@ -241,7 +241,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
-                  <div className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-bold bg-[#5C205E] text-white uppercase tracking-wider shadow-sm">
+                  <div className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-bold bg-[#0B3B8B] text-white uppercase tracking-wider shadow-sm">
                     Patient Experience
                   </div>
                   <h3 className="type-card-title text-white leading-snug">Calm, Unrushed Consultations</h3>
@@ -274,7 +274,7 @@ export default function AboutPage() {
               {/* Doctor Qualifications */}
               <div className="md:col-span-3 relative min-h-[320px] sm:h-[380px] rounded-3xl overflow-hidden shadow-md border-2 border-white bg-white p-6 flex flex-col justify-between">
                 <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-2xl bg-[#FCF5FE] border border-[#EECFF4] flex items-center justify-center text-[#74267A] shadow-2xs">
+                  <div className="w-12 h-12 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] flex items-center justify-center text-[#0B3B8B] shadow-2xs">
                     <Stethoscope className="w-6 h-6" />
                   </div>
                   <div>
@@ -286,7 +286,7 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-gray-100 flex items-center justify-between text-xs sm:text-sm font-semibold text-[#5C205E]">
+                <div className="pt-3 border-t border-gray-100 flex items-center justify-between text-xs sm:text-sm font-semibold text-[#0B3B8B]">
                   <span>Swoyambhu, Kathmandu</span>
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 </div>
@@ -296,22 +296,22 @@ export default function AboutPage() {
             {/* Quick Summary Bar */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-gray-200/80">
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">10,000+</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">10,000+</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Patients Welcomed</div>
                 <div className="text-xs sm:text-sm text-gray-500 font-normal">Kathmandu Valley &amp; Beyond</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">100%</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">100%</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Sterilized Equipment</div>
                 <div className="text-xs sm:text-sm text-gray-500 font-normal">Safe &amp; Clean Environment</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">Experienced</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">Experienced</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Dental Specialists</div>
                 <div className="text-xs sm:text-sm text-gray-500 font-normal">Focus on Natural Teeth</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">Swoyambhu</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">Swoyambhu</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Convenient Location</div>
                 <div className="text-xs sm:text-sm text-gray-500 font-normal">Dedicated On-Site Parking</div>
               </div>
@@ -330,7 +330,7 @@ export default function AboutPage() {
               <span
                 className="font-medium text-transparent"
                 style={{
-                  background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                  background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                 }}
@@ -350,7 +350,7 @@ export default function AboutPage() {
                   type="button"
                   onClick={() => setActivePillar(key)}
                   className={`px-6 py-3.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-200 cursor-pointer ${isActive
-                      ? "bg-[#5C205E] text-white shadow-md"
+                      ? "bg-[#0B3B8B] text-white shadow-md"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                     }`}
                 >
@@ -375,7 +375,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="lg:col-span-7 space-y-4">
-                  <span className="inline-block px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-[#74267A] bg-[#FCF5FE] border border-[#EECFF4] uppercase tracking-wider">
+                  <span className="inline-block px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-[#0B3B8B] bg-[#F0F7FF] border border-[#DBEAFE] uppercase tracking-wider">
                     {pillar.subtitle}
                   </span>
 
@@ -390,7 +390,7 @@ export default function AboutPage() {
                   <div className="space-y-2.5 pt-3 border-t border-gray-200/80">
                     {pillar.points.map((pt) => (
                       <div key={pt} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#74267A] shrink-0 mt-1" />
+                        <CheckCircle2 className="w-4 h-4 text-[#0B3B8B] shrink-0 mt-1" />
                         <span className="text-sm sm:text-base text-gray-800 font-medium">{pt}</span>
                       </div>
                     ))}
@@ -413,7 +413,7 @@ export default function AboutPage() {
                 <span
                   className="font-medium text-transparent"
                   style={{
-                    background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                    background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                     backgroundClip: "text",
                     WebkitBackgroundClip: "text",
                   }}
@@ -427,7 +427,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-3xl border border-gray-800 bg-[#101828] shadow-xl">
+          <div className="relative overflow-hidden rounded-3xl border border-gray-800 bg-[#0B192C] shadow-xl">
             <div className="relative aspect-video max-h-[520px] w-full overflow-hidden flex items-center justify-center">
               <video
                 ref={videoRef}
@@ -454,7 +454,7 @@ export default function AboutPage() {
                 <button
                   type="button"
                   onClick={handleTogglePlay}
-                  className="group flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-[#5C205E] text-white shadow-2xl ring-8 ring-white/20 transition-all duration-300 hover:scale-110 hover:bg-[#74267A] hover:ring-white/30 cursor-pointer"
+                  className="group flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-[#0B3B8B] text-white shadow-2xl ring-8 ring-white/20 transition-all duration-300 hover:scale-110 hover:bg-[#134FB0] hover:ring-white/30 cursor-pointer"
                   aria-label={isPlaying ? "Pause Tour" : "Play Virtual Clinic Tour"}
                 >
                   {isPlaying ? (
@@ -514,7 +514,7 @@ export default function AboutPage() {
                 <span
                   className="font-medium text-transparent"
                   style={{
-                    background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                    background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                     backgroundClip: "text",
                     WebkitBackgroundClip: "text",
                   }}
@@ -531,7 +531,7 @@ export default function AboutPage() {
                 <Link href="/services" className="btn-pill-primary inline-flex">
                   <span>View All Services</span>
                   <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-0.5">
-                    <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   </span>
                 </Link>
               </div>
@@ -637,7 +637,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-black/40" />
 
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white space-y-1.5">
-                    <span className="type-eyebrow text-[#ED91FB] block">
+                    <span className="type-eyebrow text-[#60A5FA] block">
                       {srv.categoryLabel}
                     </span>
                     <h3 className="type-card-title text-white leading-tight">
@@ -692,10 +692,12 @@ export default function AboutPage() {
                   <button
                     type="button"
                     onClick={() => openAppointmentModal()}
-                    className="btn-pill-primary cursor-pointer"
+                    className="group btn-pill-primary cursor-pointer"
                   >
                     <span>Book an Appointment</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
+                      <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
+                    </span>
                   </button>
                   <a href="tel:014950352" className="btn-pill-outline bg-white/15 hover:bg-white/25 text-white border-white/30 backdrop-blur-md">
                     <span>Call 01-4950352</span>

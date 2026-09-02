@@ -30,7 +30,7 @@ export default function ClinicSectionMobile({
             <span
               className="font-medium text-transparent"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
@@ -60,8 +60,8 @@ export default function ClinicSectionMobile({
             className="w-full h-[210px] rounded-3xl shadow-sm border border-gray-200/80"
           />
 
-          {/* Purple Pastel Experience Card */}
-          <div className="rounded-3xl bg-[#F9EBFC] p-6 border border-[#F0CEF6] space-y-4 shadow-2xs">
+          {/* Clinical Blue Experience Card */}
+          <div className="rounded-3xl bg-[#EBF3FE] p-6 border border-[#DBEAFE] space-y-4 shadow-2xs">
             <div>
               <p className="text-base sm:text-lg font-medium leading-relaxed text-gray-900">
                 A calm environment, attentive care, and clear guidance — because feeling comfortable is part of good dental care.
@@ -70,12 +70,12 @@ export default function ClinicSectionMobile({
 
             <Link
               href="/about"
-              className="flex items-center justify-between border-t border-[#74267A]/15 pt-3 transition-opacity active:opacity-75 group cursor-pointer"
+              className="flex items-center justify-between border-t border-[#0B3B8B]/15 pt-3 transition-opacity active:opacity-75 group cursor-pointer"
             >
-              <span className="text-sm font-semibold text-[#5C205E]">
+              <span className="text-sm font-semibold text-[#0B3B8B]">
                 Explore Our Clinic
               </span>
-              <ArrowRight className="h-4 w-4 text-[#74267A] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 text-[#0B3B8B] transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

@@ -3,37 +3,39 @@
 @tailwind utilities;
 
 /* ============================================================
-   Design Tokens & CSS Variables (ViScan Plum Inspiration)
+   Design Tokens & CSS Variables (Clinical Blue & Navy)
    ============================================================ */
 :root {
-  /* Brand Plum Spectrum */
-  --c-primary-900: #5c205e;
-  /* Brand Dark Plum (Primary buttons, hero dark) */
-  --c-primary-800: #74267a;
-  /* Deep Plum (Hover, gradient end) */
-  --c-primary-700: #922f9c;
-  /* Medium Plum */
-  --c-primary-600: #b43abf;
-  /* Vibrant Magenta (Gradient start) */
-  --c-primary-500: #ce59dc;
-  /* Bright Orchid */
-  --c-primary-400: #d886e2;
-  /* Light Orchid */
-  --c-primary-100: #f7e6fa;
-  /* Pale Lavender */
-  --c-primary-50: #fcf5fe;
-  /* Whisper Tint */
+  /* Brand Clinical Blue & Navy Spectrum */
+  --c-primary-900: #0b3b8b;
+  /* Brand Deep Navy (Primary buttons, hero dark, header accents) */
+  --c-primary-800: #134fb0;
+  /* Royal Blue (Hover, gradient end) */
+  --c-primary-700: #1e64d4;
+  /* Medium Clinical Blue */
+  --c-primary-600: #388ee8;
+  /* Cerulean Sky Blue (Gradient start, badges) */
+  --c-primary-500: #60a5fa;
+  /* Bright Sky Blue */
+  --c-primary-400: #93c5fd;
+  /* Light Sky Blue */
+  --c-primary-200: #bfdbfe;
+  /* Soft Ice Tint */
+  --c-primary-100: #dbeafe;
+  /* Pale Ice Blue */
+  --c-primary-50: #f0f7ff;
+  /* Whisper Sky Tint */
 
   /* Neutral & Dark Surface Tokens */
-  --c-dark-surface: #101828;
-  /* High-tech dark section */
-  --c-text-primary: #111827;
+  --c-dark-surface: #0b192c;
+  /* High-tech dark clinical section */
+  --c-text-primary: #0f172a;
   /* Heading text */
-  --c-text-body: #4b5563;
+  --c-text-body: #475569;
   /* Paragraph body */
-  --c-text-muted: #6b7280;
+  --c-text-muted: #64748b;
   /* Subtitles & footers */
-  --c-border-light: #e5e7eb;
+  --c-border-light: #e2e8f0;
   --c-white: #ffffff;
 
   /* Typography Variables */
@@ -144,44 +146,44 @@ button {
    ============================================================ */
 @layer components {
 
-  /* 1. Display / Hero H1 (32px mobile -> 60px desktop - PRESERVED) */
+  /* 1. Display / Hero H1 (32px mobile -> 60px desktop) */
   .type-display {
-    @apply text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] text-gray-900;
+    @apply text-3xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] text-slate-900;
   }
 
-  /* 2. Main Section Title H2 (24px mobile -> 36px desktop - PRESERVED) */
+  /* 2. Main Section Title H2 (24px mobile -> 36px desktop) */
   .type-section-title {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight leading-tight text-gray-900;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight leading-tight text-slate-900;
   }
 
   /* 3. Card & Bento Feature Title H3 (18px -> 20px) */
   .type-card-title {
-    @apply text-lg sm:text-xl font-semibold leading-snug text-gray-900;
+    @apply text-lg sm:text-xl font-semibold leading-snug text-slate-900;
   }
 
   /* 4. Sub-Feature & Accordion Title H4 (16px -> 18px) */
   .type-sub-title {
-    @apply text-base sm:text-lg font-semibold leading-snug text-gray-900;
+    @apply text-base sm:text-lg font-semibold leading-snug text-slate-900;
   }
 
   /* 5. Lead Intro Paragraph (18px -> 20px, rich contrast) */
   .type-lead {
-    @apply text-lg sm:text-xl leading-relaxed text-gray-700 font-normal;
+    @apply text-lg sm:text-xl leading-relaxed text-slate-700 font-normal;
   }
 
   /* 6. Standard Body Paragraph (16px -> 17px, effortless reading) */
   .type-body {
-    @apply text-base sm:text-[17px] leading-relaxed text-gray-700 font-normal;
+    @apply text-base sm:text-[17px] leading-relaxed text-slate-700 font-normal;
   }
 
   /* 7. Eyebrow Category Tag (13px -> 14px, Uppercase tracking) */
   .type-eyebrow {
-    @apply text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#74267A];
+    @apply text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#0B3B8B];
   }
 
   /* 8. Secondary Meta / Footnote / Badges (13px -> 14px, high contrast) */
   .type-meta {
-    @apply text-xs sm:text-sm text-gray-600 font-normal leading-normal;
+    @apply text-xs sm:text-sm text-slate-600 font-normal leading-normal;
   }
 
   /* 9. UI Controls (Buttons, Form Inputs, Nav Links - 15px -> 16px) */
@@ -192,29 +194,29 @@ button {
   /* ============================================================
      Button Architecture Utility Classes
      ============================================================ */
-  /* Primary Plum Capsule Button */
+  /* Primary Navy Capsule Button */
   .btn-pill-primary {
-    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#5C205E] text-white hover:bg-[#74267A] h-12 px-6 text-sm sm:text-base gap-2.5 shadow-sm cursor-pointer;
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-[#0B3B8B] text-white hover:bg-[#134FB0] h-12 px-6 text-sm sm:text-base gap-2.5 shadow-sm cursor-pointer;
   }
 
   /* Secondary Badge Pill (AI Tools / Features) */
   .btn-pill-secondary {
-    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-gray-100 text-gray-900 hover:bg-gray-200 h-11 px-5 text-sm sm:text-base shadow-sm cursor-pointer;
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-blue-50 text-slate-900 hover:bg-blue-100 h-11 px-5 text-sm sm:text-base shadow-sm cursor-pointer;
   }
 
   /* Inverted Hero White Button */
   .btn-pill-hero-white {
-    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-white text-gray-900 hover:bg-[#5C205E] hover:text-white h-12 px-6 text-sm sm:text-base shadow-sm gap-2.5 cursor-pointer;
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-white text-slate-900 hover:bg-[#0B3B8B] hover:text-white h-12 px-6 text-sm sm:text-base shadow-sm gap-2.5 cursor-pointer;
   }
 
   /* Outline / Soft Border Pill */
   .btn-pill-outline {
-    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 hover:border-gray-300 h-12 px-6 text-sm sm:text-base gap-2.5 cursor-pointer;
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-full font-medium transition-all duration-200 bg-white text-slate-800 border border-slate-200 hover:bg-slate-50 hover:border-slate-300 h-12 px-6 text-sm sm:text-base gap-2.5 cursor-pointer;
   }
 
   /* Micro Card Link */
   .btn-card-link {
-    @apply inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-[#74267A] transition-colors cursor-pointer;
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-[#0B3B8B] transition-colors cursor-pointer;
   }
 }
 
@@ -235,3 +237,38 @@ button {
   scrollbar-width: none !important;
   /* Firefox */
 }
+
+/* ============================================================
+   Marquee Animation Utilities
+   ============================================================ */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-mobile {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-mobile:active,
+.animate-marquee-mobile:hover {
+  animation-play-state: paused;
+}

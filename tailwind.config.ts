@@ -10,20 +10,30 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#5c205e",
-          50: "#fcf5fe",
-          100: "#f7e6fa",
-          200: "#eecff4",
-          300: "#e2adeb",
-          400: "#d886e2",
-          500: "#ce59dc",
-          600: "#b43abf",
-          700: "#922f9c",
-          800: "#74267a",
-          900: "#5c205e",
+          DEFAULT: "#0b3b8b",
+          50: "#f0f7ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#388ee8",
+          700: "#1e64d4",
+          800: "#134fb0",
+          900: "#0b3b8b",
+          950: "#07265c",
+        },
+        navy: {
+          DEFAULT: "#0b3b8b",
+          900: "#07265c",
+          800: "#0b3b8b",
+        },
+        cerulean: {
+          DEFAULT: "#388ee8",
+          light: "#60a5fa",
         },
         dark: {
-          surface: "#101828",
+          surface: "#0b192c",
         },
       },
       fontFamily: {

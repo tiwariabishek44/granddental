@@ -39,7 +39,7 @@ export default async function DoctorDetailPage({
   }
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* MOBILE DOCTOR DETAIL VIEW (sm:hidden) */}
       <div className="block sm:hidden">
         <DoctorDetailMobile doctor={doctor} />
@@ -48,24 +48,24 @@ export default async function DoctorDetailPage({
       {/* DESKTOP DOCTOR DETAIL VIEW (hidden sm:block) */}
       <div className="hidden sm:block pb-24">
         {/* 1. BREADCRUMBS & SECTION HEADER */}
-        <section className="relative overflow-hidden pt-10 pb-12 lg:pt-14 lg:pb-16 border-b border-gray-100 bg-[#FCF5FE]/40">
+        <section className="relative overflow-hidden pt-10 pb-12 lg:pt-14 lg:pb-16 border-b border-gray-100 bg-[#F0F7FF]/50">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
             {/* Breadcrumb Path */}
             <nav className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-500">
-            <Link href="/" className="hover:text-[#74267A] transition-colors">
+            <Link href="/" className="hover:text-[#0B3B8B] transition-colors">
               Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link href="/doctors" className="hover:text-[#74267A] transition-colors">
+            <Link href="/doctors" className="hover:text-[#0B3B8B] transition-colors">
               Doctors &amp; Specialists
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#74267A] font-bold">{doctor.name}</span>
+            <span className="text-[#0B3B8B] font-bold">{doctor.name}</span>
           </nav>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-2">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EECFF4] text-xs sm:text-sm font-semibold text-[#74267A] shadow-2xs mb-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DBEAFE] text-xs sm:text-sm font-semibold text-[#0B3B8B] shadow-2xs mb-3">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Specialist Profile</span>
               </div>
@@ -74,7 +74,7 @@ export default async function DoctorDetailPage({
                 <span
                   style={{
                     background:
-                      "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                      "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                     WebkitBackgroundClip: "text",
                     backgroundClip: "text",
                     color: "transparent",
@@ -93,7 +93,7 @@ export default async function DoctorDetailPage({
               >
                 <span>Book Consultation</span>
                 <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 </span>
               </Link>
             </div>
@@ -132,8 +132,8 @@ export default async function DoctorDetailPage({
               </div>
 
               {/* Clinic Schedule Info */}
-              <div className="p-5 rounded-2xl bg-[#FCF5FE] border border-[#EECFF4] space-y-2">
-                <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#74267A] flex items-center gap-1.5">
+              <div className="p-5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] space-y-2">
+                <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0B3B8B] flex items-center gap-1.5">
                   <Clock className="w-4 h-4" />
                   <span>Clinical Hours</span>
                 </div>
@@ -145,7 +145,7 @@ export default async function DoctorDetailPage({
             {/* Direct Consultation Card */}
             <div className="rounded-3xl border border-gray-200 bg-gray-50/70 p-6 space-y-4">
               <div className="flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-2xl bg-[#5C205E] text-white flex items-center justify-center shadow-2xs">
+                <div className="w-11 h-11 rounded-2xl bg-[#0B3B8B] text-white flex items-center justify-center shadow-2xs">
                   <Calendar className="w-5 h-5" />
                 </div>
                 <div>
@@ -160,7 +160,7 @@ export default async function DoctorDetailPage({
               >
                 <span>Select Appointment Slot</span>
                 <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                 </span>
               </Link>
             </div>
@@ -178,7 +178,7 @@ export default async function DoctorDetailPage({
 
             {/* Education & Academic Honors */}
             <div className="space-y-4 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-2xs">
-              <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#74267A]">
+              <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#0B3B8B]">
                 <GraduationCap className="w-4 h-4" />
                 <span>Education &amp; Fellowships</span>
               </div>
@@ -205,7 +205,7 @@ export default async function DoctorDetailPage({
                 {doctor.keyProcedures.map((proc) => (
                   <div
                     key={proc.name}
-                    className="p-5 rounded-2xl border border-gray-200 bg-white hover:border-[#EECFF4] transition-colors space-y-1 shadow-2xs"
+                    className="p-5 rounded-2xl border border-gray-200 bg-white hover:border-[#DBEAFE] transition-colors space-y-1 shadow-2xs"
                   >
                     <div className="text-base font-bold text-gray-900">{proc.name}</div>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">{proc.desc}</p>
@@ -221,7 +221,7 @@ export default async function DoctorDetailPage({
                 {doctor.specialties.map((spec) => (
                   <span
                     key={spec}
-                    className="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#FCF5FE] border border-[#EECFF4] text-[#74267A]"
+                    className="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#F0F7FF] border border-[#DBEAFE] text-[#0B3B8B]"
                   >
                     {spec}
                   </span>
@@ -244,7 +244,7 @@ export default async function DoctorDetailPage({
             className="btn-pill-outline"
           >
             <span>View All Doctors</span>
-            <ArrowRight className="w-4 h-4 text-[#74267A]" />
+            <ArrowRight className="w-4 h-4 text-[#0B3B8B]" />
           </Link>
         </div>
       </section>

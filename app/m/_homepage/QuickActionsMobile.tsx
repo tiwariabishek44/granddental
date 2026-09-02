@@ -20,7 +20,7 @@ export default function QuickActionsMobile() {
       href: "/services/scaling-polishing",
       icon: Sparkles,
       badge: "Popular",
-      badgeColor: "bg-purple-600 text-white",
+      badgeColor: "bg-[#0B3B8B] text-white",
     },
     {
       label: "Braces & Aligners",
@@ -52,7 +52,7 @@ export default function QuickActionsMobile() {
     <section className="px-4 py-2 sm:hidden">
       <div className="text-[11px] font-bold uppercase tracking-wider text-gray-500 mb-2.5 flex items-center justify-between">
         <span>Quick Treatment Shortcuts</span>
-        <span className="text-[10px] text-[#74267A] font-semibold">Swipe &rarr;</span>
+        <span className="text-[10px] text-[#0B3B8B] font-semibold">Swipe &rarr;</span>
       </div>
 
       <div className="flex gap-2.5 overflow-x-auto pb-2 -mx-4 px-4 no-scrollbar snap-x snap-mandatory">
@@ -60,10 +60,10 @@ export default function QuickActionsMobile() {
           <Link
             key={action.label}
             href={action.href}
-            className="flex-shrink-0 snap-start w-36 rounded-2xl bg-white border border-gray-200/90 p-3 shadow-2xs active:bg-[#FCF5FE] active:border-[#F3D5F9] transition-all"
+            className="flex-shrink-0 snap-start w-36 rounded-2xl bg-white border border-gray-200/90 p-3 shadow-2xs active:bg-[#F0F7FF] active:border-[#DBEAFE] transition-all"
           >
             <div className="flex items-center justify-between mb-2">
-              <div className="w-8 h-8 rounded-xl bg-[#FCF5FE] border border-[#F3D5F9] flex items-center justify-center text-[#74267A]">
+              <div className="w-8 h-8 rounded-xl bg-[#F0F7FF] border border-[#DBEAFE] flex items-center justify-center text-[#0B3B8B]">
                 <action.icon className="w-4 h-4" />
               </div>
               <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-md ${action.badgeColor}`}>

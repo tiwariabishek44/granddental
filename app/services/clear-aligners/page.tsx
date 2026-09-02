@@ -20,41 +20,38 @@ import { servicesData } from "@/data/services";
 import LocationBookingSection from "@/components/LocationBookingSection";
 import { ServiceDetailMobile } from "@/app/m/services";
 
-
 export default function ClearAlignersPage() {
   const service = servicesData.find((s) => s.id === "clear-aligners")!;
-
-
 
   const whyUsCards = [
     {
       title: "100% Wire-Free Transparency",
       desc: "SmartTrack medical polymer trays that are virtually invisible when speaking and smiling.",
-      tint: "#F8EFF8",
+      tint: "#EBF3FE",
       icon: "✨",
     },
     {
       title: "35% Faster Movement",
       desc: "Accelerated orthodontic protocols reducing typical treatment duration to under 6 months.",
-      tint: "#EEEEFF",
+      tint: "#F0F7FF",
       icon: "⚡",
     },
     {
       title: "Digital 3D Smile Preview",
       desc: "Preview your exact tooth movement week-by-week on our ClinCheck 3D simulator before starting.",
-      tint: "#F3D5F9",
+      tint: "#E0F2FE",
       icon: "💎",
     },
     {
       title: "Removable Freedom",
       desc: "Eat whatever you like and maintain perfect brushing and flossing without bracket restrictions.",
-      tint: "#FDF0F2",
+      tint: "#DBEAFE",
       icon: "🛡️",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* MOBILE SERVICE DETAIL VIEW (sm:hidden) */}
       <div className="block sm:hidden">
         <ServiceDetailMobile service={service} />
@@ -65,15 +62,15 @@ export default function ClearAlignersPage() {
       {/* 1. HERO BANNER */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-4 sm:mt-6 mb-16">
         <div
-          className="rounded-3xl border border-indigo-100 p-6 sm:p-10 lg:p-12 shadow-sm space-y-6"
+          className="rounded-3xl border border-gray-200/80 p-6 sm:p-10 lg:p-12 shadow-sm space-y-6"
           style={{
-            background: "radial-gradient(100% 286.18% at 100% 100%, #EEEEFF 0%, #F5F3F6 100%)",
+            background: "radial-gradient(100% 286.18% at 100% 100%, #F0F7FF 0%, #F8FAFC 100%)",
           }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left: Content */}
             <div className="lg:col-span-7 space-y-4">
-              <span className="type-eyebrow text-indigo-700">
+              <span className="type-eyebrow text-[#0B3B8B]">
                 Orthodontic Excellence &middot; Invisible Smile Alignment
               </span>
 
@@ -82,7 +79,7 @@ export default function ClearAlignersPage() {
                 <span
                   className="font-normal text-transparent"
                   style={{
-                    background: "linear-gradient(246.94deg, #4338CA -28.81%, #74267A 100%)",
+                    background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                     backgroundClip: "text",
                     WebkitBackgroundClip: "text",
                   }}
@@ -99,24 +96,24 @@ export default function ClearAlignersPage() {
                 <Link href="/appointment" className="group btn-pill-primary">
                   <span>Book Orthodontic Consult</span>
                   <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                    <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   </span>
                 </Link>
 
                 <a href="tel:014950352" className="btn-pill-outline">
-                  <Phone className="w-3.5 h-3.5 text-[#5C205E]" />
+                  <Phone className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   <span>Call Helpline</span>
                 </a>
               </div>
 
               {/* Trust highlights */}
-              <div className="pt-4 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-gray-600 border-t border-indigo-100">
+              <div className="pt-4 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-gray-600 border-t border-gray-200/80">
                 <span className="flex items-center gap-1.5 font-medium">
-                  <ShieldCheck className="w-4 h-4 text-indigo-600" />
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
                   <span>Certified Orthodontic Faculty</span>
                 </span>
                 <span className="flex items-center gap-1.5 font-medium">
-                  <Clock className="w-4 h-4 text-indigo-600" />
+                  <Clock className="w-4 h-4 text-[#0B3B8B]" />
                   <span>{service.duration}</span>
                 </span>
               </div>
@@ -136,8 +133,6 @@ export default function ClearAlignersPage() {
         </div>
       </section>
 
-
-
       {/* 3. SECTION 02: "WHY CHOOSE US?" PASTEL BENTO GRID */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-16 space-y-10">
         <div className="space-y-4">
@@ -154,7 +149,7 @@ export default function ClearAlignersPage() {
               <span
                 style={{
                   background:
-                    "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                    "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                   WebkitBackgroundClip: "text",
                   backgroundClip: "text",
                   color: "transparent",
@@ -202,15 +197,15 @@ export default function ClearAlignersPage() {
               />
             </div>
 
-            <div className="p-6 rounded-3xl bg-[#EEEEFF] border border-indigo-100 flex items-center justify-between gap-4">
+            <div className="p-6 rounded-3xl bg-[#F0F7FF] border border-[#DBEAFE] flex items-center justify-between gap-4">
               <div className="flex items-center gap-3.5">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-700 text-white flex items-center justify-center font-bold text-lg shadow-2xs">
+                <div className="w-12 h-12 rounded-2xl bg-[#0B3B8B] text-white flex items-center justify-center font-bold text-lg shadow-2xs">
                   GD
                 </div>
                 <div>
                   <div className="text-xs sm:text-sm text-gray-500 font-medium">Orthodontic Director</div>
                   <div className="text-base font-bold text-gray-900">{service.leadDoctorName}</div>
-                  <span className="text-xs sm:text-sm font-semibold text-indigo-700">{service.leadDoctorRole}</span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B3B8B]">{service.leadDoctorRole}</span>
                 </div>
               </div>
               <Link
@@ -231,7 +226,7 @@ export default function ClearAlignersPage() {
             <div className="space-y-3.5 bg-gray-50/70 p-6 sm:p-8 rounded-3xl border border-gray-200">
               {service.procedureSteps.map((step, idx) => (
                 <div key={step.title} className="flex items-start gap-4 p-4 sm:p-5 bg-white rounded-2xl border border-gray-100 shadow-2xs">
-                  <div className="w-8 h-8 rounded-full bg-indigo-700 text-white font-bold text-xs flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-[#0B3B8B] text-white font-bold text-xs flex items-center justify-center shrink-0">
                     0{idx + 1}
                   </div>
                   <div className="space-y-1">

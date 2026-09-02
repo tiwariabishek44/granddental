@@ -19,10 +19,10 @@ export default function LocationBookingMobile() {
       />
 
       {/* Value Points Bento Card */}
-      <div className="rounded-3xl bg-[#FCF5FE] border border-[#F3D5F9] p-5 space-y-3.5 shadow-2xs">
+      <div className="rounded-3xl bg-[#F0F7FF] border border-[#DBEAFE] p-5 space-y-3.5 shadow-2xs">
         <div className="flex items-center gap-3">
-          <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-            <Check className="w-3 h-3 text-[#ED91FB]" />
+          <div className="w-5 h-5 rounded-full bg-[#0B3B8B] flex items-center justify-center shrink-0">
+            <Check className="w-3 h-3 text-[#93C5FD]" />
           </div>
           <p className="type-meta text-gray-900 font-semibold">
             Same-day consultations &amp; urgent pain relief
@@ -30,8 +30,8 @@ export default function LocationBookingMobile() {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-            <Check className="w-3 h-3 text-[#ED91FB]" />
+          <div className="w-5 h-5 rounded-full bg-[#0B3B8B] flex items-center justify-center shrink-0">
+            <Check className="w-3 h-3 text-[#93C5FD]" />
           </div>
           <p className="type-meta text-gray-900 font-semibold">
             Transparent treatment plans with zero pressure
@@ -39,8 +39,8 @@ export default function LocationBookingMobile() {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-            <Check className="w-3 h-3 text-[#ED91FB]" />
+          <div className="w-5 h-5 rounded-full bg-[#0B3B8B] flex items-center justify-center shrink-0">
+            <Check className="w-3 h-3 text-[#93C5FD]" />
           </div>
           <p className="type-meta text-gray-900 font-semibold">
             Gentle, step-by-step care designed to keep you at ease
@@ -49,8 +49,8 @@ export default function LocationBookingMobile() {
       </div>
 
       {/* Instant Appointment Card */}
-      <div className="rounded-3xl bg-[#5C205E] text-white p-6 space-y-4 shadow-lg relative overflow-hidden">
-        <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-[#CE59DC]/20 blur-3xl pointer-events-none" />
+      <div className="rounded-3xl bg-[#0B192C] text-white p-6 space-y-4 shadow-lg relative overflow-hidden">
+        <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-[#388EE8]/20 blur-3xl pointer-events-none" />
 
         <div className="relative z-10 space-y-2">
           <span className="type-eyebrow px-3 py-1 rounded-full bg-white/20 text-white inline-block">
@@ -68,7 +68,7 @@ export default function LocationBookingMobile() {
           <button
             type="button"
             onClick={() => openAppointmentModal()}
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#5C205E] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-white text-[#0B3B8B] type-ui-control font-bold shadow-sm active:bg-gray-100 transition-colors cursor-pointer"
           >
             <Calendar className="w-4 h-4" />
             <span>Book Online Appointment</span>
@@ -80,7 +80,7 @@ export default function LocationBookingMobile() {
               href="tel:014950352"
               className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#ED91FB]" />
+              <Phone className="w-3.5 h-3.5 text-[#60A5FA]" />
               <span>Call Us</span>
             </a>
 

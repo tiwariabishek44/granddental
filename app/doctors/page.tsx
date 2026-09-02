@@ -16,7 +16,7 @@ import { useAppointmentModal } from "@/context/AppointmentModalContext";
 export default function DoctorsPage() {
   const { openAppointmentModal } = useAppointmentModal();
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* MOBILE DOCTORS VIEW (sm:hidden) */}
       <div className="block sm:hidden">
         <DoctorsMobile />
@@ -29,7 +29,7 @@ export default function DoctorsPage() {
           <div
             className="rounded-3xl border border-gray-200/80 p-6 sm:p-10 lg:p-12 shadow-sm space-y-6"
             style={{
-              background: "radial-gradient(100% 286.18% at 100% 100%, #FCF5FE 0%, #F5F3F6 100%)",
+              background: "radial-gradient(100% 286.18% at 100% 100%, #F0F7FF 0%, #F8FAFC 100%)",
             }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -42,7 +42,7 @@ export default function DoctorsPage() {
                   <span
                     className="font-normal text-transparent"
                     style={{
-                      background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                      background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                       backgroundClip: "text",
                       WebkitBackgroundClip: "text",
                     }}
@@ -60,7 +60,7 @@ export default function DoctorsPage() {
                 <Link href="/appointment" className="group btn-pill-primary w-full sm:w-auto text-center justify-center">
                   <span>Book Consultation</span>
                   <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                    <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   </span>
                 </Link>
                 <Link href="/contact" className="btn-pill-outline w-full sm:w-auto text-center justify-center">
@@ -72,19 +72,19 @@ export default function DoctorsPage() {
             {/* Quick Pedigree Bar */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-gray-200/80">
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">100%</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">100%</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">NMC Registered Surgeons</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">BDS &amp; MDS</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">BDS &amp; MDS</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Specialized Clinical Faculty</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">Gentle Care</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">Gentle Care</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Painless Treatment Focus</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">Swoyambhu</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">Swoyambhu</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Open 6 Days a Week</div>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function DoctorsPage() {
 
                 {/* Bottom Profile Details */}
                 <div className="relative z-10 space-y-1">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#ED91FB]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#60A5FA]">
                     {doc.role}
                   </span>
                   <h3 className="text-xl font-medium text-white leading-snug">
@@ -137,8 +137,8 @@ export default function DoctorsPage() {
 
         {/* 3. BOTTOM INVITATION BANNER */}
         <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="rounded-3xl bg-[#5C205E] text-white p-8 sm:p-12 shadow-xl relative overflow-hidden">
-            <div className="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#CE59DC]/20 blur-3xl pointer-events-none" />
+          <div className="rounded-3xl bg-[#0B192C] text-white p-8 sm:p-12 shadow-xl relative overflow-hidden">
+            <div className="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#388EE8]/20 blur-3xl pointer-events-none" />
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-3">
                 <span className="inline-block px-3.5 py-1 rounded-full text-xs sm:text-sm font-semibold bg-white/15 backdrop-blur-md text-white border border-white/20">

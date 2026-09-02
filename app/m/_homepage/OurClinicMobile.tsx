@@ -72,7 +72,7 @@ export default function OurClinicMobile() {
           <span
             className="font-medium text-transparent"
             style={{
-              background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+              background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
             }}
@@ -83,7 +83,7 @@ export default function OurClinicMobile() {
 
         <Link
           href="/about"
-          className="inline-flex items-center gap-2 type-ui-control font-semibold text-[#5C205E] active:text-[#74267A] group cursor-pointer pt-0.5"
+          className="inline-flex items-center gap-2 type-ui-control font-semibold text-[#0B3B8B] active:text-[#134FB0] group cursor-pointer pt-0.5"
         >
           <span>Tour our clinic</span>
           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />

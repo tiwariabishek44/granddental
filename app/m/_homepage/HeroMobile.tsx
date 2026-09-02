@@ -12,7 +12,7 @@ export default function HeroMobile() {
   return (
     <section className="w-full sm:hidden">
       {/* Full-Width Edge-to-Edge Flagship Hero Canvas with Fixed Stable Height (No Scroll Resize) */}
-      <div className="relative min-h-[580px] h-[calc(100svh-3.5rem)] w-full overflow-hidden bg-[#101828] flex flex-col justify-between p-5 pt-6 pb-8">
+      <div className="relative min-h-[580px] h-[calc(100svh-3.5rem)] w-full overflow-hidden bg-[#0B192C] flex flex-col justify-between p-5 pt-6 pb-8">
         {/* Fullscreen Background Editorial Photograph */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
@@ -53,7 +53,7 @@ export default function HeroMobile() {
             <button
               type="button"
               onClick={() => openAppointmentModal()}
-              className="w-full flex items-center justify-center gap-2.5 bg-[#5C205E] active:bg-[#74267A] text-white py-3.5 px-6 rounded-full type-ui-control font-semibold shadow-lg transition-all group min-h-[48px] cursor-pointer"
+              className="w-full flex items-center justify-center gap-2.5 bg-[#0B3B8B] active:bg-[#134FB0] text-white py-3.5 px-6 rounded-full type-ui-control font-semibold shadow-lg transition-all group min-h-[48px] cursor-pointer"
             >
               <span>Book an Appointment</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

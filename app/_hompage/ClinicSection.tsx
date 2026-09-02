@@ -37,7 +37,7 @@ export default function ClinicSection({
                 className="font-medium text-transparent"
                 style={{
                   background:
-                    "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                    "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                 }}
@@ -75,7 +75,7 @@ export default function ClinicSection({
             />
 
             {/* Experience Card */}
-            <div className="flex flex-1 flex-col justify-between rounded-3xl bg-[#F9EBFC] p-7 lg:p-8 border border-[#F0CEF6]">
+            <div className="flex flex-1 flex-col justify-between rounded-3xl bg-[#EBF3FE] p-7 lg:p-8 border border-[#DBEAFE]">
               <div>
 
 
@@ -88,14 +88,14 @@ export default function ClinicSection({
               {/* About / Clinic Link */}
               <Link
                 href="/about"
-                className="mt-8 flex items-center justify-between border-t border-[#74267A]/15 pt-4 transition-opacity hover:opacity-80 group"
+                className="mt-8 flex items-center justify-between border-t border-[#0B3B8B]/15 pt-4 transition-opacity hover:opacity-80 group"
               >
-                <span className="text-sm lg:text-base font-semibold text-[#5C205E]">
+                <span className="text-sm lg:text-base font-semibold text-[#0B3B8B]">
                   Explore Our Clinic
                 </span>
 
                 <ArrowRight
-                  className="h-4 w-4 text-[#74267A] transition-transform duration-300 group-hover:translate-x-1"
+                  className="h-4 w-4 text-[#134FB0] transition-transform duration-300 group-hover:translate-x-1"
                   aria-hidden="true"
                 />
               </Link>

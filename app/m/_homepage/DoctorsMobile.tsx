@@ -23,7 +23,7 @@ export default function DoctorsMobile() {
             <span
               className="font-medium text-transparent"
               style={{
-                background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
               }}
@@ -38,32 +38,32 @@ export default function DoctorsMobile() {
         </div>
 
         {/* Practice Standards Box */}
-        <div className="rounded-2xl bg-[#FCF5FE] border border-[#F3D5F9] p-4 sm:p-5 space-y-3 shadow-2xs">
-          <div className="text-xs font-bold text-[#74267A] uppercase tracking-wider">
+        <div className="rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] p-4 sm:p-5 space-y-3 shadow-2xs">
+          <div className="text-xs font-bold text-[#0B3B8B] uppercase tracking-wider">
             Our Care Standard
           </div>
           <div className="grid grid-cols-2 gap-2.5 text-xs sm:text-sm text-gray-800 font-medium">
             <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-[#74267A] shrink-0" />
+              <Award className="w-4 h-4 text-[#0B3B8B] shrink-0" />
               <span>Experienced Specialists</span>
             </div>
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#74267A] shrink-0" />
+              <Sparkles className="w-4 h-4 text-[#0B3B8B] shrink-0" />
               <span>Painless Procedures</span>
             </div>
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#74267A] shrink-0" />
+              <ShieldCheck className="w-4 h-4 text-[#0B3B8B] shrink-0" />
               <span>Transparent Pricing</span>
             </div>
             <div className="flex items-center gap-2">
-              <HeartHandshake className="w-4 h-4 text-[#74267A] shrink-0" />
+              <HeartHandshake className="w-4 h-4 text-[#0B3B8B] shrink-0" />
               <span>Gentle &amp; Patient-First</span>
             </div>
           </div>
-          <div className="pt-2.5 border-t border-[#F3D5F9]">
+          <div className="pt-2.5 border-t border-[#DBEAFE]">
             <Link
               href="/doctors"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5C205E] active:text-[#74267A] group cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B3B8B] active:text-[#134FB0] group cursor-pointer"
             >
               <span>Meet All Our Doctors</span>
               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -99,6 +99,6 @@ export default function DoctorsMobile() {
           </div>
         ))}
       </div>
-    </section >
+    </section>
   );
 }

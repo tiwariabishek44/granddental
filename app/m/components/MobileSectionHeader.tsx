@@ -19,7 +19,7 @@ export default function MobileSectionHeader({
 }: MobileSectionHeaderProps) {
   return (
     <div className={`space-y-1.5 ${className}`}>
-      <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#74267A] px-3 py-1 rounded-full bg-[#FCF5FE] border border-[#F3D5F9] inline-block">
+      <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0B3B8B] px-3 py-1 rounded-full bg-[#F0F7FF] border border-[#DBEAFE] inline-block">
         {eyebrow}
       </span>
 
@@ -29,7 +29,7 @@ export default function MobileSectionHeader({
           <span
             className="font-bold text-transparent"
             style={{
-              background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+              background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
             }}

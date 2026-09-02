@@ -39,7 +39,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#F3D5F9] selection:text-[#5C205E] font-sans">
+    <main className="min-h-screen bg-white text-gray-900 selection:bg-[#DBEAFE] selection:text-[#0B3B8B] font-sans">
       {/* Mobile Services View */}
       <div className="block sm:hidden">
         <ServicesMobilePage />
@@ -52,7 +52,7 @@ export default function ServicesPage() {
           <div
             className="rounded-3xl border border-gray-200/80 p-6 sm:p-10 lg:p-12 shadow-sm space-y-6"
             style={{
-              background: "radial-gradient(100% 286.18% at 100% 100%, #FCF5FE 0%, #F5F3F6 100%)",
+              background: "radial-gradient(100% 286.18% at 100% 100%, #F0F7FF 0%, #F8FAFC 100%)",
             }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -65,7 +65,7 @@ export default function ServicesPage() {
                   <span
                     className="font-normal text-transparent"
                     style={{
-                      background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                      background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                       backgroundClip: "text",
                       WebkitBackgroundClip: "text",
                     }}
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                 <Link href="/appointment" className="group btn-pill-primary w-full sm:w-auto text-center justify-center">
                   <span>Book Appointment</span>
                   <span className="flex items-center justify-center rounded-full bg-white p-1.5 transition-transform duration-200 group-hover:translate-x-1">
-                    <ArrowRight className="w-3.5 h-3.5 text-[#5C205E]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                   </span>
                 </Link>
                 <Link href="/contact" className="btn-pill-outline w-full sm:w-auto text-center justify-center">
@@ -94,19 +94,19 @@ export default function ServicesPage() {
             {/* Quick Reassurance Bar */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-gray-200/80">
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">Comfort First</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">Comfort First</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Gentle &amp; Pain-Free</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">Experienced</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">Experienced</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Specialist Dental Doctors</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">Honest Plans</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">Honest Plans</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Clear &amp; Upfront Pricing</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-gray-200/80 shadow-2xs space-y-1 text-center">
-                <div className="text-xl sm:text-2xl font-bold text-[#5C205E]">100% Sterile</div>
+                <div className="text-xl sm:text-2xl font-bold text-[#0B3B8B]">100% Sterile</div>
                 <div className="text-sm sm:text-base text-gray-800 font-semibold">Autoclaved Instruments</div>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function ServicesPage() {
                   <span
                     className="font-medium text-transparent"
                     style={{
-                      background: "linear-gradient(246.94deg, #B43ABF -28.81%, #74267A 100%)",
+                      background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
                       backgroundClip: "text",
                       WebkitBackgroundClip: "text",
                     }}
@@ -240,7 +240,7 @@ export default function ServicesPage() {
 
                   {/* Card Content Overlay */}
                   <div className="absolute inset-x-0 bottom-0 p-6 text-white space-y-1.5">
-                    <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#ED91FB]">
+                    <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#60A5FA]">
                       {srv.categoryLabel}
                     </span>
                     <h3 className="type-card-title text-white">

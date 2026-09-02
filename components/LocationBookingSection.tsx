@@ -36,14 +36,14 @@ export default function LocationBookingSection() {
           <div className="lg:col-span-7 flex flex-col justify-center max-w-xl lg:ml-auto">
 
             {/* Eyebrow */}
-            <span className="text-xs font-bold uppercase tracking-widest text-[#ED91FB] mb-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#60A5FA] mb-2">
               Book Your Visit
             </span>
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl font-medium leading-tight mb-3 text-white">
               Ready to fix your smile?{" "}
-              <span className="text-[#ED91FB]">Let’s get started.</span>
+              <span className="text-[#60A5FA]">Let’s get started.</span>
             </h2>
 
             {/* Subtext */}
@@ -54,8 +54,8 @@ export default function LocationBookingSection() {
             {/* Key Value Points */}
             <div className="mb-7 space-y-2.5">
               <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-                  <Check className="w-3 h-3 text-[#ED91FB]" />
+                <div className="w-5 h-5 rounded-full bg-[#0B3B8B] flex items-center justify-center shrink-0">
+                  <Check className="w-3 h-3 text-[#93C5FD]" />
                 </div>
                 <p className="text-white/90 text-sm font-medium">
                   Same-day consultations &amp; urgent pain relief
@@ -63,8 +63,8 @@ export default function LocationBookingSection() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-                  <Check className="w-3 h-3 text-[#ED91FB]" />
+                <div className="w-5 h-5 rounded-full bg-[#0B3B8B] flex items-center justify-center shrink-0">
+                  <Check className="w-3 h-3 text-[#93C5FD]" />
                 </div>
                 <p className="text-white/90 text-sm font-medium">
                   Transparent treatment plans with zero pressure
@@ -72,8 +72,8 @@ export default function LocationBookingSection() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-[#5C205E] flex items-center justify-center shrink-0">
-                  <Check className="w-3 h-3 text-[#ED91FB]" />
+                <div className="w-5 h-5 rounded-full bg-[#0B3B8B] flex items-center justify-center shrink-0">
+                  <Check className="w-3 h-3 text-[#93C5FD]" />
                 </div>
                 <p className="text-white/90 text-sm font-medium">
                   Gentle, step-by-step care designed to keep you at ease
@@ -86,7 +86,7 @@ export default function LocationBookingSection() {
               <button
                 type="button"
                 onClick={() => openAppointmentModal()}
-                className="group flex-1 bg-[#5C205E] hover:bg-[#74267A] text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-[#B43ABF]/30 flex items-center justify-center gap-2 cursor-pointer"
+                className="group flex-1 bg-[#0B3B8B] hover:bg-[#134FB0] text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-[#388EE8]/30 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Book an Appointment</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -98,7 +98,7 @@ export default function LocationBookingSection() {
                   className="flex-1 sm:flex-initial bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 text-white font-medium text-sm px-4 py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   aria-label="Call clinic directly"
                 >
-                  <Phone className="w-4 h-4 text-[#ED91FB]" />
+                  <Phone className="w-4 h-4 text-[#60A5FA]" />
                   <span>Call Us</span>
                 </a>
 
