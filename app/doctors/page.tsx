@@ -56,6 +56,7 @@ export default function DoctorsPage() {
                 </p>
               </div>
 
+              {/* Doctors-page hero actions intentionally hidden.
               <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center lg:items-end">
                 <Link href="/appointment" className="group btn-pill-primary w-full sm:w-auto text-center justify-center">
                   <span>Book Consultation</span>
@@ -66,7 +67,7 @@ export default function DoctorsPage() {
                 <Link href="/contact" className="btn-pill-outline w-full sm:w-auto text-center justify-center">
                   <span>Contact Clinic</span>
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Pedigree Bar */}
