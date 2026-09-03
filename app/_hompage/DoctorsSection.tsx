@@ -94,11 +94,18 @@ export default function DoctorsSection() {
             </div>
 
             {/* Bottom Profile Details */}
-            <div className="relative z-10 space-y-1.5">
+            <div className="relative z-10 space-y-1">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#60A5FA]">
+                  {doc.role}
+                </span>
+                <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-white/15 text-white/90 border border-white/20">
+                  {doc.nmc}
+                </span>
+              </div>
               <h3 className="text-xl font-medium text-white leading-snug">
                 {doc.name}
               </h3>
-
             </div>
           </div>
         ))}

@@ -92,6 +92,14 @@ export default function DoctorsMobile() {
 
             {/* Bottom Profile Details */}
             <div className="relative z-10 space-y-1">
+              <div className="flex items-center justify-between gap-1.5">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#60A5FA]">
+                  {doc.role}
+                </span>
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-white/15 text-white/90 border border-white/20">
+                  {doc.nmc}
+                </span>
+              </div>
               <h3 className="type-card-title text-white">
                 {doc.name}
               </h3>
