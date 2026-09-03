@@ -146,13 +146,13 @@ export default function DoctorsMobile() {
             </button>
 
             <a
-              href="https://wa.me/9779841322789"
+              href="https://wa.me/9779861161359"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors min-h-[44px]"
             >
               <MessageCircle className="w-4 h-4 text-emerald-300" />
-              <span>WhatsApp: 9841322789</span>
+              <span>WhatsApp: 9861161359</span>
             </a>
           </div>
         </div>

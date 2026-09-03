@@ -128,8 +128,8 @@ export default function Header() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="font-semibold text-white">Open Today: 8:00 AM – 6:00 PM</span>
-                <span className="text-white/70 font-normal">&middot; Walk-ins &amp; Urgent Cases Welcome</span>
+                <span className="font-semibold text-white">Open Today: 9:00 AM – 7:00 PM</span>
+                <span className="text-white/70 font-normal">&middot; Walk-ins Welcome (9 AM – 6 PM)</span>
               </div>
 
               <span className="text-white/30">&bull;</span>
@@ -141,10 +141,9 @@ export default function Header() {
 
               <span className="text-white/30">&bull;</span>
 
-              <div className="flex items-center gap-1.5 text-white/95">
+              <div className="flex items-center gap-1.5 text-white font-semibold">
                 <Sparkles className="w-3.5 h-3.5 text-[#60A5FA]" />
-                <span className="font-semibold">Grand Dental Clinic</span>
-                <span className="text-white/70">&mdash; Care | Quality | Trust</span>
+                <span>Quality Dental Care &bull; Honest Pricing &bull; Every Smile Matters</span>
               </div>
 
               <span className="text-white/30">&bull;</span>
@@ -157,23 +156,23 @@ export default function Header() {
               <span className="text-white/30">&bull;</span>
 
               <a
-                href="tel:014950352"
+                href="tel:9861161359"
                 className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-[#60A5FA]" />
-                <span>Hotline: <strong className="font-clinical font-bold">01-4950352</strong></span>
+                <span>Hotline: <strong className="font-clinical font-bold">9861161359</strong> / <strong className="font-clinical font-bold">01-4950352</strong></span>
               </a>
 
               <span className="text-white/30">&bull;</span>
 
               <a
-                href="https://wa.me/9779841322789"
+                href="https://wa.me/9779861161359"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
-                <span>WhatsApp: <strong className="font-clinical font-bold">9841322789</strong></span>
+                <span>WhatsApp: <strong className="font-clinical font-bold">9861161359</strong></span>
               </a>
 
               <span className="text-white/30">&bull;</span>
@@ -193,8 +192,8 @@ export default function Header() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="font-semibold text-white">Open Today: 8:00 AM – 6:00 PM</span>
-                <span className="text-white/70 font-normal">&middot; Walk-ins &amp; Urgent Cases Welcome</span>
+                <span className="font-semibold text-white">Open Today: 9:00 AM – 7:00 PM</span>
+                <span className="text-white/70 font-normal">&middot; Walk-ins Welcome (9 AM – 6 PM)</span>
               </div>
 
               <span className="text-white/30">&bull;</span>
@@ -206,10 +205,9 @@ export default function Header() {
 
               <span className="text-white/30">&bull;</span>
 
-              <div className="flex items-center gap-1.5 text-white/95">
+              <div className="flex items-center gap-1.5 text-white font-semibold">
                 <Sparkles className="w-3.5 h-3.5 text-[#60A5FA]" />
-                <span className="font-semibold">Grand Dental Clinic</span>
-                <span className="text-white/70">&mdash; Care | Quality | Trust</span>
+                <span>Quality Dental Care &bull; Honest Pricing &bull; Every Smile Matters</span>
               </div>
 
               <span className="text-white/30">&bull;</span>
@@ -222,23 +220,23 @@ export default function Header() {
               <span className="text-white/30">&bull;</span>
 
               <a
-                href="tel:014950352"
+                href="tel:9861161359"
                 className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-[#60A5FA]" />
-                <span>Hotline: <strong className="font-clinical font-bold">01-4950352</strong></span>
+                <span>Hotline: <strong className="font-clinical font-bold">9861161359</strong> / <strong className="font-clinical font-bold">01-4950352</strong></span>
               </a>
 
               <span className="text-white/30">&bull;</span>
 
               <a
-                href="https://wa.me/9779841322789"
+                href="https://wa.me/9779861161359"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-white/95 hover:text-white transition-colors"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
-                <span>WhatsApp: <strong className="font-clinical font-bold">9841322789</strong></span>
+                <span>WhatsApp: <strong className="font-clinical font-bold">9861161359</strong></span>
               </a>
 
               <span className="text-white/30">&bull;</span>
@@ -260,27 +258,17 @@ export default function Header() {
           }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-18">
+          <div className="flex items-center justify-between h-18 sm:h-21">
             {/* Brand Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative h-11 w-11 sm:h-12 sm:w-12 shrink-0 flex items-center justify-center rounded-full border border-[#DBEAFE] bg-white p-0.5 shadow-2xs">
-                <Image
-                  src="/logo.png"
-                  alt="Grand Dental Clinic Logo"
-                  width={48}
-                  height={48}
-                  className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  priority
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <span className="font-serif text-2xl sm:text-[26px] font-normal tracking-tight text-gray-950 leading-none group-hover:text-[#0B3B8B] transition-colors">
-                  Grand Dental
-                </span>
-                <span className="text-[9.5px] sm:text-[10px] font-bold tracking-[0.22em] uppercase text-[#0B3B8B] mt-1 font-sans">
-                  Clinic &bull; Kathmandu
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Grand Dental Clinic Logo"
+                width={234}
+                height={67}
+                className="h-12 sm:h-16 lg:h-18 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation Links */}
@@ -340,13 +328,13 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-3.5">
               {/* Quick Phone Call Pill */}
               <a
-                href="tel:014950352"
+                href="tel:9861161359"
                 className="flex items-center gap-2 text-sm sm:text-[15px] font-semibold text-gray-700 hover:text-[#0B3B8B] transition-colors px-3 py-2 rounded-full hover:bg-gray-50/90 border border-transparent hover:border-gray-200/60"
               >
                 <div className="w-8 h-8 rounded-full bg-[#F0F7FF] text-[#0B3B8B] flex items-center justify-center border border-[#BFDBFE] shadow-2xs">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span className="font-clinical font-semibold">01-4950352</span>
+                <span className="font-clinical font-semibold">9861161359</span>
               </a>
 
               {/* Signature Primary CTA Pill Button (Tier 1) */}

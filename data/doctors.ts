@@ -4,6 +4,7 @@ import doctor1 from "../assets/doctors/doctor1.png"
 import doctor2 from "../assets/doctors/doctor_3.jpeg_2K_202609012055.jpeg"
 import doctor3 from "../assets/doctors/doctr_4.jpeg_202609012056.jpeg"
 import doctor4 from "../assets/doctors/doctor_5.jpeg_202609012057.jpeg"
+import doctorAnuna from "../assets/doctors/dr_anuna.jpg"
 
 
 
@@ -29,6 +30,34 @@ export interface Doctor {
 }
 
 export const doctorsData: Doctor[] = [
+  {
+    id: "Dr. Anuna Lama ",
+    name: "Dr. Anuna Lama ",
+    title: "Dental surgeon ",
+    role: "Dental Surgeon",
+    category: "cosmetic",
+    experience: "13+ Years Experience",
+    image: doctorAnuna,
+    education: "BDS, MDS (Prosthodontics & Crown-Bridge)",
+    certifications: [
+      "Specialist in Dental Crowns, Bridges & Dentures",
+      "Expert in High-Strength Zirconia Restorations",
+      "Full Smile Function & Chewing Restoration",
+    ],
+    bio: "Specializing in durable Zirconia crowns, fixed bridges, and comfortable dentures designed to restore natural chewing strength and appearance.",
+    longBio: "With over 13 years of clinical practice, Dr. Roshan Karki crafts dental crowns and tooth replacements tailored to fit your bite naturally. He works with high-precision dental ceramics to ensure every restoration feels completely comfortable and looks natural.",
+    specialties: ["Zirconia Crowns", "Fixed Dental Bridges", "Full & Partial Dentures", "Smile Restoration", "Tooth Replacement"],
+    keyProcedures: [
+      { name: "Custom Zirconia & Ceramic Crowns", desc: "Strong, lifelike tooth caps that protect fractured or treated teeth." },
+      { name: "Fixed Bridges for Missing Teeth", desc: "Securely anchored replacements to fill gaps and restore chewing ability." },
+      { name: "Comfortable Dentures", desc: "Custom-fitted full or partial prosthetics designed for natural speech and eating." },
+    ],
+    schedule: "Mon, Wed, Thu, Fri (9:00 AM – 5:30 PM)",
+    rating: "4.96",
+    reviewsCount: 310,
+    tint: "#FDF0F2",
+    badgeColor: "#E11D48",
+  },
   {
     id: "Dr. Mukunda jha",
     name: "Dr. Mukunda jha",
@@ -57,7 +86,6 @@ export const doctorsData: Doctor[] = [
     tint: "#F9EBFC",
     badgeColor: "#74267A",
   },
-
   {
     id: "Dr. Shekhar Das",
     name: "Dr. Shekhar Das ",
@@ -87,34 +115,6 @@ export const doctorsData: Doctor[] = [
     badgeColor: "#922F9C",
   },
   {
-    id: "Dr. Anuna Lama ",
-    name: "Dr. Anuna Lama ",
-    title: "Dental surgeon ",
-    role: "Dental Surgeon",
-    category: "cosmetic",
-    experience: "13+ Years Experience",
-    image: doctor3,
-    education: "BDS, MDS (Prosthodontics & Crown-Bridge)",
-    certifications: [
-      "Specialist in Dental Crowns, Bridges & Dentures",
-      "Expert in High-Strength Zirconia Restorations",
-      "Full Smile Function & Chewing Restoration",
-    ],
-    bio: "Specializing in durable Zirconia crowns, fixed bridges, and comfortable dentures designed to restore natural chewing strength and appearance.",
-    longBio: "With over 13 years of clinical practice, Dr. Roshan Karki crafts dental crowns and tooth replacements tailored to fit your bite naturally. He works with high-precision dental ceramics to ensure every restoration feels completely comfortable and looks natural.",
-    specialties: ["Zirconia Crowns", "Fixed Dental Bridges", "Full & Partial Dentures", "Smile Restoration", "Tooth Replacement"],
-    keyProcedures: [
-      { name: "Custom Zirconia & Ceramic Crowns", desc: "Strong, lifelike tooth caps that protect fractured or treated teeth." },
-      { name: "Fixed Bridges for Missing Teeth", desc: "Securely anchored replacements to fill gaps and restore chewing ability." },
-      { name: "Comfortable Dentures", desc: "Custom-fitted full or partial prosthetics designed for natural speech and eating." },
-    ],
-    schedule: "Mon, Wed, Thu, Fri (9:00 AM – 5:30 PM)",
-    rating: "4.96",
-    reviewsCount: 310,
-    tint: "#FDF0F2",
-    badgeColor: "#E11D48",
-  },
-  {
     id: "dr-puja-thapa",
     name: "Dr shrisha pant",
     title: "BDS, MDS (Prosthodontics)",
@@ -142,5 +142,4 @@ export const doctorsData: Doctor[] = [
     tint: "#FCF5FE",
     badgeColor: "#4F46E5",
   },
-
 ];

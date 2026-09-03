@@ -13,9 +13,9 @@ export default function MobileBottomBar() {
       <div className="flex items-center gap-2 max-w-md mx-auto">
         {/* Quick Phone Call Button */}
         <a
-          href="tel:01-4950352"
+          href="tel:9861161359"
           className="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-gray-100/90 active:bg-gray-200 text-gray-900 text-xs sm:text-[13px] font-bold transition-colors"
-          aria-label="Call Clinic at 01-4950352"
+          aria-label="Call Clinic at 9861161359"
         >
           <Phone className="w-4 h-4 text-[#0B3B8B] mb-0.5" />
           <span>Call</span>
@@ -23,7 +23,7 @@ export default function MobileBottomBar() {
 
         {/* WhatsApp Direct Chat Button */}
         <a
-          href="https://wa.me/9779841322789?text=Hello%20Grand%20Dental,%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
+          href="https://wa.me/9779861161359?text=Hello%20Grand%20Dental,%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-emerald-50 active:bg-emerald-100 text-emerald-900 text-xs sm:text-[13px] font-bold border border-emerald-200/80 transition-colors"

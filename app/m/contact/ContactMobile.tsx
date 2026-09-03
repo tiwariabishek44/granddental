@@ -45,7 +45,7 @@ export default function ContactMobile() {
   const faqs = [
     {
       q: "Do I need to book an appointment before visiting?",
-      a: "Walk-in patients are warmly welcome for general checkups and urgent tooth pain relief. However, booking in advance is recommended to ensure your preferred time with a specific doctor.",
+      a: "Walk-in patients are welcome from 9:00 AM to 6:00 PM (Sun–Fri), with clinic opening hours from 9:00 AM to 7:00 PM. However, booking in advance is recommended to ensure your preferred time with a specific doctor.",
     },
     {
       q: "Is dedicated parking available for four-wheelers?",
@@ -53,7 +53,7 @@ export default function ContactMobile() {
     },
     {
       q: "What should I do during a dental emergency?",
-      a: "For acute pain, broken teeth, or facial swelling, please call our direct hotline at 01-4950352 or message us on WhatsApp. We prioritize urgent cases for same-day relief.",
+      a: "For acute pain, broken teeth, or facial swelling, please call our hotline at 9861161359 / 01-4950352 or message us on WhatsApp. We prioritize urgent cases for same-day relief.",
     },
     {
       q: "How do I find the clinic from Swoyambhu Ring Road?",
@@ -110,22 +110,22 @@ export default function ContactMobile() {
 
           <div className="pt-3 border-t border-[#0B3B8B]/15 space-y-2">
             <a
-              href="tel:014950352"
+              href="tel:9861161359"
               className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-[#DBEAFE] type-ui-control font-bold text-[#0B3B8B] active:bg-[#F0F7FF]"
             >
-              <span>Landline: 01-4950352</span>
+              <span>Hotline: 9861161359 / 01-4950352</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
 
             <a
-              href="https://wa.me/9779841322789"
+              href="https://wa.me/9779861161359"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 type-ui-control font-bold text-emerald-800 active:bg-emerald-100"
             >
               <div className="flex items-center gap-1.5">
                 <MessageCircle className="w-4 h-4 text-emerald-600" />
-                <span>WhatsApp: 9841322789</span>
+                <span>WhatsApp: 9861161359</span>
               </div>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
@@ -172,7 +172,11 @@ export default function ContactMobile() {
             <div className="space-y-1.5 type-meta text-gray-700 pt-1">
               <div className="flex justify-between">
                 <span className="font-semibold text-gray-900">Sun — Fri:</span>
-                <span>8:00 AM – 6:00 PM</span>
+                <span>9:00 AM – 7:00 PM</span>
+              </div>
+              <div className="flex justify-between text-xs text-gray-600">
+                <span>Walk-ins Welcome:</span>
+                <span>9:00 AM – 6:00 PM</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-semibold text-gray-900">Saturday:</span>

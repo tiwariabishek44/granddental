@@ -160,12 +160,12 @@ export default function DoctorsPage() {
                   Book Appointment
                 </button>
                 <a
-                  href="https://wa.me/9779841322789"
+                  href="https://wa.me/9779861161359"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto text-center justify-center inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white border border-white/30 px-7 py-4 rounded-full text-base font-semibold transition-colors cursor-pointer"
                 >
-                  <span>WhatsApp: 9841322789</span>
+                  <span>WhatsApp: 9861161359</span>
                 </a>
               </div>
             </div>

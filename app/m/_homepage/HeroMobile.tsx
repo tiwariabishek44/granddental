@@ -26,24 +26,25 @@ export default function HeroMobile() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 pointer-events-none" />
         </div>
 
-        {/* Top Status & Location Badge */}
-        <div className="relative z-10 flex items-center justify-between text-xs sm:text-sm text-white/95">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20  text-[11px] font-semibold uppercase tracking-wider">
-            GRAND DENTAL CLINIC &middot; KATHMANDU
+        {/* Top Status & Slogan Badge */}
+        <div className="relative z-10 flex items-center justify-start text-xs sm:text-sm text-white/95">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0B3B8B]/90 backdrop-blur-md border border-[#388EE8]/50 text-white text-[11px] font-semibold tracking-wide shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#60A5FA] animate-pulse shrink-0" />
+            <span>Quality Dental Care &bull; Honest Pricing &bull; Every Smile Matters</span>
           </span>
         </div>
 
         {/* Bottom Hero Anchor: Flagship Typography & Direct Booking */}
-        <div className="relative z-10 space-y-4 pt-10">
+        <div className="relative z-10 space-y-4 pt-8">
           {/* Core Headlines */}
           <div className="space-y-2">
-            <h1 className="text-5xl sm:text-4xl font-light text-white tracking-tight leading-[1.12]">
+            <h1 className="text-4xl sm:text-4xl font-light text-white tracking-tight leading-[1.12]">
               Smile without{" "}
               <span className="font-normal text-white block">
                 thinking twice.
               </span>
             </h1>
-            <p className="type-lead text-white/90 text-md leading-relaxed max-w-sm font-normal">
+            <p className="type-lead text-white/90 text-sm leading-relaxed max-w-sm font-normal">
               Your smile is part of how you eat, speak, laugh, and connect. Grand Dental Clinic brings thoughtful, comprehensive dental care together with a calm, personal approach.
             </p>
           </div>
@@ -68,8 +69,10 @@ export default function HeroMobile() {
           </div>
 
           {/* Minimal Trust Strip */}
-          <div className="pt-2.5 border-t border-white/15 text-center text-xs text-white/80 font-normal">
-            <span>General Dentistry &middot; Implants &middot; Orthodontics &middot; Cosmetic &middot; Pediatric</span>
+          <div className="pt-2.5 border-t border-white/20 text-center text-[11px] sm:text-xs text-white font-semibold">
+            <div className="px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/25 inline-block text-white shadow-2xs">
+              General Dentistry &middot; Implants &middot; Orthodontics &middot; Cosmetic &middot; Pediatric
+            </div>
           </div>
         </div>
       </div>

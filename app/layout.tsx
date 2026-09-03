@@ -58,9 +58,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${outfit.variable} ${urbanist.variable} ${syne.variable} ${instrumentSerif.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="min-h-screen flex flex-col justify-between antialiased">
+      <body suppressHydrationWarning className="min-h-screen flex flex-col justify-between antialiased">
         <AppointmentModalProvider>
           <a className="skip-link" href="#main-content">Skip to content</a>
 

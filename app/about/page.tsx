@@ -220,8 +220,8 @@ export default function AboutPage() {
 
                   <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between text-xs sm:text-sm text-gray-700">
                     <span className="font-medium">Direct Line:</span>
-                    <a href="tel:014950352" className="font-semibold text-[#0B3B8B] hover:underline">
-                      01-4950352
+                    <a href="tel:9861161359" className="font-semibold text-[#0B3B8B] hover:underline">
+                      9861161359 / 01-4950352
                     </a>
                   </div>
                 </div>
@@ -401,106 +401,7 @@ export default function AboutPage() {
           })()}
         </section>
 
-        {/* 3. Visual Clinic Walkthrough Video */}
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 mb-16 space-y-6">
-          <div className="grid grid-cols-1 gap-6 text-center md:grid-cols-2 md:items-start md:gap-12 md:text-left">
-            <div className="space-y-2">
-              <span className="type-eyebrow">
-                Clinic Tour
-              </span>
-              <h2 className="type-section-title">
-                Take a look inside{" "}
-                <span
-                  className="font-medium text-transparent"
-                  style={{
-                    background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
-                    backgroundClip: "text",
-                    WebkitBackgroundClip: "text",
-                  }}
-                >
-                  Grand Dental
-                </span>
-              </h2>
-            </div>
-            <p className="type-lead md:pt-4">
-              Explore our reception area, modern treatment rooms, and clean setup located in Swoyambhu, Kathmandu.
-            </p>
-          </div>
 
-          <div className="relative overflow-hidden rounded-3xl border border-gray-800 bg-[#0B192C] shadow-xl">
-            <div className="relative aspect-video max-h-[520px] w-full overflow-hidden flex items-center justify-center">
-              <video
-                ref={videoRef}
-                src="/video.mp4"
-                poster={receptionImg.src}
-                className="w-full h-full object-cover"
-                playsInline
-                loop
-                muted={isMuted}
-                onClick={handleTogglePlay}
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-              />
-
-              <div
-                className={`absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-30" : "opacity-80"
-                  }`}
-              />
-
-              <div
-                className={`absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4 transition-opacity duration-300 ${isPlaying ? "opacity-0 hover:opacity-100" : "opacity-100"
-                  }`}
-              >
-                <button
-                  type="button"
-                  onClick={handleTogglePlay}
-                  className="group flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-[#0B3B8B] text-white shadow-2xl ring-8 ring-white/20 transition-all duration-300 hover:scale-110 hover:bg-[#134FB0] hover:ring-white/30 cursor-pointer"
-                  aria-label={isPlaying ? "Pause Tour" : "Play Virtual Clinic Tour"}
-                >
-                  {isPlaying ? (
-                    <Pause className="w-7 h-7 sm:w-8 sm:h-8 fill-current" />
-                  ) : (
-                    <Play className="w-7 h-7 sm:w-8 sm:h-8 fill-current ml-1" />
-                  )}
-                </button>
-
-                <div className="mt-4 space-y-1">
-                  <h3 className="type-card-title text-white tracking-wide">
-                    {isPlaying ? "Clinic Tour Playing" : "Watch Clinic Walkthrough"}
-                  </h3>
-                  <p className="text-sm sm:text-base text-white/90 max-w-md font-normal">
-                    A quick preview of our treatment suites and clean clinical environment.
-                  </p>
-                </div>
-              </div>
-
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/90 to-transparent z-20 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={handleTogglePlay}
-                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer transition-colors"
-                    aria-label={isPlaying ? "Pause" : "Play"}
-                  >
-                    {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleToggleMute}
-                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer transition-colors"
-                    aria-label={isMuted ? "Unmute" : "Mute"}
-                  >
-                    {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                  </button>
-                </div>
-
-                <div className="text-xs sm:text-sm text-white/85 font-medium">
-                  Grand Dental Clinic &mdash; Swoyambhu, Kathmandu
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 4. Services Carousel Section */}
         <section className="max-w-[1400px] mx-auto px-6 lg:px-8 py-10 mb-16 space-y-6">
@@ -686,7 +587,7 @@ export default function AboutPage() {
                   Visit us for gentle dental care in Kathmandu
                 </h2>
                 <p className="mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-white/95 font-normal">
-                  Open Sunday to Friday (8:00 AM – 6:00 PM). Walk in or schedule a consultation with our experienced dental team in Swoyambhu.
+                  Open Sunday to Friday (9:00 AM – 7:00 PM &bull; Walk-ins Welcome 9 AM – 6 PM). Walk in or schedule a consultation with our experienced dental team in Swoyambhu.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
                   <button
@@ -699,8 +600,8 @@ export default function AboutPage() {
                       <ArrowRight className="w-3.5 h-3.5 text-[#0B3B8B]" />
                     </span>
                   </button>
-                  <a href="tel:014950352" className="btn-pill-outline bg-white/15 hover:bg-white/25 text-white border-white/30 backdrop-blur-md">
-                    <span>Call 01-4950352</span>
+                  <a href="tel:9861161359" className="btn-pill-outline bg-white/15 hover:bg-white/25 text-white border-white/30 backdrop-blur-md">
+                    <span>Call 9861161359</span>
                   </a>
                 </div>
               </div>

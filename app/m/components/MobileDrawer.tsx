@@ -68,26 +68,16 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <Link
             href="/"
             onClick={onClose}
-            className="flex items-center gap-2 select-none"
+            className="flex items-center select-none"
           >
-            <div className="relative h-9 w-9 rounded-full border border-[#DBEAFE] bg-white p-0.5 shadow-2xs flex items-center justify-center shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Grand Dental Clinic"
-                width={36}
-                height={36}
-                className="object-contain w-full h-full"
-                priority
-              />
-            </div>
-            <div className="flex flex-col justify-center">
-              <span className="font-serif text-2xl font-normal tracking-tight text-gray-950 leading-none group-hover:text-[#0B3B8B] transition-colors">
-                Grand Dental
-              </span>
-              <span className="text-[9.5px] font-bold tracking-[0.22em] uppercase text-[#0B3B8B] mt-1 font-sans">
-                Clinic &bull; Kathmandu
-              </span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Grand Dental Clinic Logo"
+              width={162}
+              height={45}
+              className="h-11 w-auto object-contain"
+              priority
+            />
           </Link>
 
           <button
@@ -165,18 +155,19 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             <div className="p-3.5 rounded-2xl bg-[#F0F7FF] border border-[#DBEAFE] space-y-2.5">
               <div className="flex items-center gap-2 text-xs text-gray-700">
                 <Clock className="w-3.5 h-3.5 text-[#0B3B8B]" />
-                <span className="font-semibold text-gray-900">Sun – Fri: 8:00 AM – 6:00 PM</span>
+                <span className="font-semibold text-gray-900">Sun – Fri: 9:00 AM – 7:00 PM</span>
               </div>
+              <p className="text-[11px] text-gray-600 font-normal">Walk-ins Welcome: 9:00 AM – 6:00 PM</p>
               <div className="grid grid-cols-2 gap-2 pt-1 border-t border-[#DBEAFE]">
                 <a
-                  href="tel:014950352"
+                  href="tel:9861161359"
                   className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-white border border-[#DBEAFE] text-[#0B3B8B] font-bold shadow-2xs text-xs"
                 >
                   <Phone className="w-3.5 h-3.5" />
-                  <span>01-4950352</span>
+                  <span>9861161359</span>
                 </a>
                 <a
-                  href="https://wa.me/9779841322789"
+                  href="https://wa.me/9779861161359"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold shadow-2xs text-xs"

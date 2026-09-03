@@ -192,11 +192,11 @@ export default function AboutMobile() {
           </Link>
 
           <a
-            href="tel:014950352"
+            href="tel:9861161359"
             className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-[#F0F7FF] border border-[#DBEAFE] text-[#0B3B8B] type-ui-control font-semibold min-h-[44px]"
           >
             <Phone className="w-4 h-4" />
-            <span>Call 01-4950352</span>
+            <span>Call 9861161359</span>
           </a>
         </div>
 
@@ -327,75 +327,7 @@ export default function AboutMobile() {
         </div>
       </section>
 
-      {/* 3. SECTION 03: INTERACTIVE CLINIC VIDEO TOUR */}
-      <section className="px-4 py-6 border-t border-gray-100 space-y-4">
-        <div className="space-y-2">
-          <span className="type-eyebrow block text-[#0B3B8B]">
-            Clinic Tour
-          </span>
-          <h2 className="type-section-title">
-            Take a look inside{" "}
-            <span
-              className="font-medium text-transparent"
-              style={{
-                background: "linear-gradient(246.94deg, #388EE8 -28.81%, #0B3B8B 100%)",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-              }}
-            >
-              Grand Dental
-            </span>
-          </h2>
-          <p className="type-body font-normal text-sm">
-            Explore our reception area, modern treatment rooms, and clean setup located in Swoyambhu, Kathmandu.
-          </p>
-        </div>
 
-        {/* Video Player Card */}
-        <div className="relative rounded-3xl overflow-hidden shadow-lg border border-gray-200 bg-[#0B192C] min-h-[300px] h-[530px] w-full flex items-center justify-center">
-          <video
-            ref={videoRef}
-            src="/video.mp4"
-            poster={receptionImg.src}
-            muted={isMuted}
-            playsInline
-            loop
-            className="w-full h-full object-cover"
-          />
-
-          {/* Interactive Play/Pause & Mute Overlay */}
-          <div className="absolute inset-0 bg-black/25 flex flex-col justify-between p-4 pointer-events-none">
-            <div className="flex items-center justify-between pointer-events-auto">
-              <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white type-meta font-semibold">
-                Clinic Walkthrough
-              </span>
-              <button
-                type="button"
-                onClick={handleToggleMute}
-                className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md text-white flex items-center justify-center active:bg-black/80 transition-colors"
-                aria-label={isMuted ? "Unmute video" : "Mute video"}
-              >
-                {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-              </button>
-            </div>
-
-            <div className="flex justify-center pointer-events-auto">
-              <button
-                type="button"
-                onClick={handleTogglePlay}
-                className="w-14 h-14 rounded-full bg-[#0B3B8B]/90 text-white flex items-center justify-center shadow-xl active:scale-95 transition-transform"
-                aria-label={isPlaying ? "Pause video" : "Play video"}
-              >
-                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5" />}
-              </button>
-            </div>
-
-            <div className="type-meta text-white/90 font-medium text-center pointer-events-auto">
-              {isPlaying ? "Tap to Pause" : "Tap to Play Video Tour"}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 4. SECTION 04: SIGNATURE CLINICAL PROCEDURES */}
       <section className="px-4 py-6 border-t border-gray-100 bg-[#F0F7FF]/30 space-y-5">
@@ -567,7 +499,7 @@ export default function AboutMobile() {
               Visit us for gentle dental care in Kathmandu
             </h3>
             <p className="type-body text-gray-200 font-normal leading-relaxed text-sm">
-              Open Sunday to Friday (8:00 AM – 6:00 PM). Walk in or schedule a consultation with our experienced dental team in Swoyambhu.
+              Open Sunday to Friday (9:00 AM – 7:00 PM &bull; Walk-ins 9 AM – 6 PM). Walk in or schedule a consultation with our experienced dental team in Swoyambhu.
             </p>
           </div>
 
@@ -582,11 +514,11 @@ export default function AboutMobile() {
             </button>
 
             <a
-              href="tel:014950352"
+              href="tel:9861161359"
               className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white/15 active:bg-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold border border-white/25 backdrop-blur-xs min-h-[44px]"
             >
               <Phone className="w-4 h-4" />
-              <span>Call 01-4950352</span>
+              <span>Call 9861161359</span>
             </a>
           </div>
         </div>

@@ -94,7 +94,7 @@ export default function LocationBookingSection() {
 
               <div className="flex gap-2.5">
                 <a
-                  href="tel:014950352"
+                  href="tel:9861161359"
                   className="flex-1 sm:flex-initial bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 text-white font-medium text-sm px-4 py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   aria-label="Call clinic directly"
                 >
@@ -103,7 +103,7 @@ export default function LocationBookingSection() {
                 </a>
 
                 <a
-                  href="https://wa.me/9779841322789?text=Namaste%20Grand%20Dental,%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
+                  href="https://wa.me/9779861161359?text=Namaste%20Grand%20Dental,%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 sm:flex-initial bg-emerald-600/20 backdrop-blur-md hover:bg-emerald-600/30 border border-emerald-500/40 text-white font-medium text-sm px-4 py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"

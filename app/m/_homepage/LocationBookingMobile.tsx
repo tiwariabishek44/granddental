@@ -77,7 +77,7 @@ export default function LocationBookingMobile() {
 
           <div className="grid grid-cols-2 gap-2">
             <a
-              href="tel:014950352"
+              href="tel:9861161359"
               className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#60A5FA]" />
@@ -85,7 +85,7 @@ export default function LocationBookingMobile() {
             </a>
 
             <a
-              href="https://wa.me/9779841322789?text=Namaste%20Grand%20Dental,%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
+              href="https://wa.me/9779861161359?text=Namaste%20Grand%20Dental,%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-emerald-600/30 border border-emerald-400/40 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-emerald-600/40 transition-colors"

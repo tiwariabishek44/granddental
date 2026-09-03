@@ -60,12 +60,12 @@ export default function ServicesMobilePage() {
             <span>Book Appointment</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link
-            href="/contact"
+          <a
+            href="tel:9861161359"
             className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white border border-gray-200 text-gray-800 type-ui-control text-xs sm:text-sm font-semibold active:bg-gray-50 transition-colors min-h-[44px]"
           >
-            <span>Call 01-4950352</span>
-          </Link>
+            <span>Call 9861161359</span>
+          </a>
         </div>
       </section>
 
@@ -164,13 +164,13 @@ export default function ServicesMobilePage() {
             </button>
 
             <a
-              href="https://wa.me/9779841322789"
+              href="https://wa.me/9779861161359"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white/15 border border-white/25 text-white type-ui-control text-xs sm:text-sm font-semibold active:bg-white/25 transition-colors min-h-[44px]"
             >
               <MessageCircle className="w-4 h-4 text-emerald-300" />
-              <span>WhatsApp: 9841322789</span>
+              <span>WhatsApp: 9861161359</span>
             </a>
           </div>
         </div>

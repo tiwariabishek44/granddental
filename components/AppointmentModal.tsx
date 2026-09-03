@@ -107,7 +107,7 @@ ${notes.trim() ? `📝 *Patient Notes:* ${notes.trim()}` : ""}
 ────────────────────────────
 _Sent via granddentalclinic.com_`;
 
-    const whatsappUrl = `https://wa.me/9779841322789?text=${encodeURIComponent(formattedMessage)}`;
+    const whatsappUrl = `https://wa.me/9779861161359?text=${encodeURIComponent(formattedMessage)}`;
 
     // Open WhatsApp in new tab / app
     window.open(whatsappUrl, "_blank");
@@ -134,23 +134,16 @@ _Sent via granddentalclinic.com_`;
         {/* Modal Header */}
         <div className="px-5 sm:px-6 py-4 bg-gradient-to-r from-[#F0F7FF] to-[#DBEAFE] border-b border-[#BFDBFE] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 rounded-full border border-[#DBEAFE] bg-white p-0.5 shadow-2xs flex items-center justify-center shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Grand Dental Clinic"
-                width={36}
-                height={36}
-                className="object-contain w-full h-full"
-                priority
-              />
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="type-eyebrow text-[#0B3B8B]">
-                  Grand Dental Clinic
-                </span>
-              </div>
-              <h2 className="text-lg sm:text-xl font-bold text-gray-900 leading-tight">
+            <Image
+              src="/logo.png"
+              alt="Grand Dental Clinic Logo"
+              width={162}
+              height={45}
+              className="h-11 w-auto object-contain shrink-0"
+              priority
+            />
+            <div className="pl-2 border-l border-[#BFDBFE]">
+              <h2 className="text-base sm:text-lg font-bold text-gray-900 leading-tight">
                 Book an Appointment
               </h2>
             </div>
@@ -339,11 +332,11 @@ _Sent via granddentalclinic.com_`;
             <div className="flex items-center justify-center gap-2 pt-1 text-xs text-gray-500">
               <span>Or call reception directly:</span>
               <a
-                href="tel:014950352"
+                href="tel:9861161359"
                 className="font-bold text-[#0B3B8B] hover:underline flex items-center gap-1"
               >
                 <Phone className="w-3 h-3 text-[#0B3B8B]" />
-                <span>01-4950352</span>
+                <span>9861161359 / 01-4950352</span>
               </a>
             </div>
           </div>

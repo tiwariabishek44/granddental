@@ -48,7 +48,7 @@ export default function ContactPage() {
   const faqs = [
     {
       q: "Can I just walk in, or do I need an appointment first?",
-      a: "Walk-ins are always welcome from 8:00 AM to 6:00 PM (Sunday to Friday). However, calling or messaging on WhatsApp beforehand reserves your time and keeps your waiting time to a minimum.",
+      a: "Walk-ins are welcome from 9:00 AM to 6:00 PM (Sunday to Friday), with clinic opening hours from 9:00 AM to 7:00 PM. However, reserving an appointment beforehand keeps your waiting time to a minimum.",
     },
     {
       q: "Is there easy parking available near the clinic?",
@@ -121,20 +121,20 @@ export default function ContactPage() {
               </div>
               <div className="pt-6 border-t border-black/5 space-y-2.5">
                 <a
-                  href="tel:014950352"
+                  href="tel:9861161359"
                   className="group flex items-center justify-between text-base font-bold text-[#0B3B8B] hover:text-[#134FB0]"
                 >
-                  <span>Landline: 01-4950352</span>
+                  <span>Hotline: 9861161359 / 01-4950352</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </a>
                 <a
-                  href="https://wa.me/9779841322789"
+                  href="https://wa.me/9779861161359"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0B3B8B]"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-600" />
-                  <span>WhatsApp: 9841322789</span>
+                  <span>WhatsApp: 9861161359</span>
                 </a>
               </div>
             </div>
@@ -177,7 +177,11 @@ export default function ContactPage() {
                 <div className="space-y-2 text-sm sm:text-base text-gray-700">
                   <div className="flex justify-between">
                     <span className="font-semibold text-gray-900">Sun &ndash; Fri:</span>
-                    <span>8:00 AM &ndash; 6:00 PM</span>
+                    <span>9:00 AM &ndash; 7:00 PM</span>
+                  </div>
+                  <div className="flex justify-between text-xs text-gray-600">
+                    <span>Walk-ins Welcome:</span>
+                    <span>9:00 AM &ndash; 6:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-semibold text-gray-900">Saturday:</span>

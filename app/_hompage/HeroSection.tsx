@@ -30,11 +30,10 @@ export default function HeroSection() {
 
         {/* Narrative Core (Patient Reassurance) */}
         <div className="relative z-10 max-w-xl space-y-6 my-auto">
-          {/* Eyebrow Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white/90 text-xs font-semibold uppercase tracking-wider">
-            <span>Swoyambhu, Kathmandu</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#388EE8]" />
-            <span>Grand Dental Clinic</span>
+          {/* Slogan Pill */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#0B3B8B]/90 backdrop-blur-md border border-[#388EE8]/50 text-white text-xs sm:text-sm font-semibold tracking-wide shadow-md">
+            <span className="w-2 h-2 rounded-full bg-[#60A5FA] animate-pulse shrink-0" />
+            <span>Quality Dental Care &bull; Honest Pricing &bull; Every Smile Matters</span>
           </div>
 
           {/* Main Headline */}
@@ -46,7 +45,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Human, Reassuring Subtitle */}
-          <p className="text-lg sm:text-xl font-normal text-white/85 leading-relaxed max-w-lg">
+          <p className="text-lg sm:text-xl font-normal text-white/90 leading-relaxed max-w-lg">
             Experienced doctors, clear conversations, and gentle treatments — so you always know what to expect.
           </p>
 
@@ -70,12 +69,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Understated Minimalist Footer Note */}
-        <div className="relative z-10 flex items-center justify-between text-sm text-white/85 pt-4 border-t border-white/15 gap-4 font-normal">
-          <span>
-            General Dentistry &middot; Implants &middot; Orthodontics &middot; Cosmetic Dentistry &middot; Pediatric Care
-          </span>
-          <span>
+        {/* Highlighted Footer Note */}
+        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between text-xs sm:text-sm text-white pt-4 border-t border-white/20 gap-4 font-medium">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white shadow-2xs font-semibold">
+            <span>General Dentistry &middot; Implants &middot; Orthodontics &middot; Cosmetic Dentistry &middot; Pediatric Care</span>
+          </div>
+          <span className="text-white/85 font-normal text-xs sm:text-sm">
             Swoyambhu, Kathmandu &middot; Sun &ndash; Fri: 8 AM &ndash; 6 PM
           </span>
         </div>
