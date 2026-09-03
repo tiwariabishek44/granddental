@@ -114,7 +114,7 @@ export default function MobileHeader() {
           {/* Rectangular Brand Logo */}
           <Link href="/" className="flex items-center group py-0.5 select-none shrink-0">
             <Image
-              src="/logo.png"
+              src="/logo.png?v=3"
               alt="Grand Dental Clinic Logo"
               width={180}
               height={50}

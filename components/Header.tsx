@@ -262,7 +262,7 @@ export default function Header() {
             {/* Brand Logo */}
             <Link href="/" className="flex items-center group shrink-0">
               <Image
-                src="/logo.png"
+                src="/logo.png?v=3"
                 alt="Grand Dental Clinic Logo"
                 width={234}
                 height={67}

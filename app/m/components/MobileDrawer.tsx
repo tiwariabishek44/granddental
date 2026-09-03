@@ -71,7 +71,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             className="flex items-center select-none"
           >
             <Image
-              src="/logo.png"
+              src="/logo.png?v=3"
               alt="Grand Dental Clinic Logo"
               width={162}
               height={45}

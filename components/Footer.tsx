@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-2 space-y-6">
             <Link href="/" className="inline-flex items-center group">
               <Image
-                src="/logo.png"
+                src="/logo.png?v=3"
                 alt="Grand Dental Clinic"
                 width={234}
                 height={67}

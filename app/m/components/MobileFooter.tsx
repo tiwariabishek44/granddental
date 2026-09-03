@@ -44,7 +44,7 @@ export default function MobileFooter() {
         <div className="space-y-3.5">
           <Link href="/" className="inline-flex items-center select-none">
             <Image
-              src="/logo.png"
+              src="/logo.png?v=3"
               alt="Grand Dental Clinic"
               width={198}
               height={54}

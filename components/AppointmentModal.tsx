@@ -135,7 +135,7 @@ _Sent via granddentalclinic.com_`;
         <div className="px-5 sm:px-6 py-4 bg-gradient-to-r from-[#F0F7FF] to-[#DBEAFE] border-b border-[#BFDBFE] flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src="/logo.png?v=3"
               alt="Grand Dental Clinic Logo"
               width={162}
               height={45}
